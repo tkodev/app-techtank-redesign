@@ -1,7 +1,7 @@
-# How It Works — `/how-it-works`
+# Get Involved — `/get-involved`
 
-**URL:** https://www.techtankto.com/how-it-works
-**Page title:** How It Works — TechTank TO
+**URL:** https://www.techtankto.com/get-involved
+**Page title:** Get Involved — TechTank TO
 **Role:** Onboarding hub. Primary entry point for anyone who wants to
 contribute to TechTank, routing them to the role that fits.
 
@@ -36,7 +36,7 @@ intake.
   sub-page (karma, community, marketing, skills).
 - Consistent intake CTA card style (email us) reused across all four sub-pages.
 
-## 5. Content sections (on `/how-it-works` itself)
+## 5. Content sections (on `/get-involved` itself)
 
 1. **Hero**
    - Overline kicker: `GET INVOLVED`.
@@ -56,19 +56,19 @@ intake.
      - Three checkmark bullets of what you get / what's required
      - Primary CTA linking into the sub-page
    - Card content:
-     - **Speak** → `/how-it-works/speaker`
+     - **Speak** → `/get-involved/speaker`
        - Overline: `SHARE WHAT YOU KNOW`
        - Checkmarks: 30–45 min talk + Q&A · Any tech topic · Recorded
          and published to YouTube
-     - **Host** → `/how-it-works/host`
+     - **Host** → `/get-involved/host`
        - Overline: `BRING US TO YOUR SPACE`
        - Checkmarks: 40–100 attendees · 6:00–8:30pm weeknight · Logo
          on event marketing
-     - **Sponsor** → `/how-it-works/sponsor`
+     - **Sponsor** → `/get-involved/sponsor`
        - Overline: `SUPPORT THE COMMUNITY`
        - Checkmarks: Logo on website and marketing · Speaker slot
          options · Tasteful brand visibility
-     - **Volunteer** → `/how-it-works/volunteer`
+     - **Volunteer** → `/get-involved/volunteer`
        - Overline: `HELP RUN THE CREW`
        - Checkmarks: Event-day or ongoing · No speaking required ·
          Portfolio-quality work for creatives
@@ -102,7 +102,7 @@ intake.
 
 ## 7. Functional requirements
 
-- Shared layout renders in all `/how-it-works/*` routes.
+- Shared layout renders in all `/get-involved/*` routes.
 - Sub-nav highlights the active sub-page.
 - Each role card has a stable anchor for deep-linking.
 - The role-card component is shared with the home page (see
@@ -114,7 +114,7 @@ intake.
 ## 8. Acceptance criteria
 
 - Every role in the community has a clearly-labeled path within one
-  click of `/how-it-works`.
+  click of `/get-involved`.
 - A visitor understands the difference between Host and Sponsor without
   having to read both sub-pages.
 - All four role cards are reachable without horizontal scroll on

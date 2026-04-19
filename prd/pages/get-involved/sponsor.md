@@ -1,6 +1,6 @@
-# Sponsor — `/how-it-works/sponsor`
+# Sponsor — `/get-involved/sponsor`
 
-**URL:** https://www.techtankto.com/how-it-works/sponsor
+**URL:** https://www.techtankto.com/get-involved/sponsor
 **Page title:** Sponsor TechTank — TechTank TO
 **Role:** Recruit corporate sponsors to support TechTank financially or
 in-kind, separately from hosting an individual event.
@@ -25,7 +25,7 @@ partnership, swag, travel budget for speakers, etc.).
 - TechTank is volunteer-run and non-commercial.
 - Sponsorship keeps the community sustainable beyond single events.
 - Sponsor brand visibility is tasteful, not spammy.
-- We'll send a sponsorship package on request with tier details.
+- We'll send sponsorship info on request with tier details.
 
 ## 4. Content sections
 
@@ -33,7 +33,7 @@ partnership, swag, travel budget for speakers, etc.).
    - Headline: "Sponsor the Toronto tech community."
    - Sub-headline: "Support the monthly events, speakers, and programs
      that bring the community together."
-   - Primary CTA: "Request sponsorship package" → email us (`techtankto@gmail.com`).
+   - Primary CTA: "Request sponsorship info" → email us (`techtankto@gmail.com`).
 
 2. **Why sponsor**
    - **Brand** — align with Toronto's most inclusive tech community.
@@ -42,19 +42,17 @@ partnership, swag, travel budget for speakers, etc.).
 
 3. **What sponsorship supports**
    - Monthly event operations (when no host is available).
-   - Speaker travel and honoraria where applicable.
-   - Programs like Guppy Talks, Study Tank, Code Diversity.
+   - Programs like Code Diversity for underrepresented voices.
    - Equipment (AV, recording) and production costs.
 
 4. **Sponsor tiers (illustrative; finalize with organizers)**
    - **Friend of the Community** — logo on site + mentions.
-   - **Event Sponsor** — logo + callouts across a quarter of events.
-   - **Annual Partner** — year-long placement, speaker slot, attendee
-     list.
-   - Exact numbers intentionally soft until we send the deck.
+   - **Event Sponsor** — logo + callouts tied to sponsored events.
+   - **Annual Partner** — year-long placement and a speaker slot.
+   - Exact numbers intentionally soft until we send the info.
 
 5. **What sponsors get (base package)**
-   - Placement on the `/` logo cloud and in Press Kit.
+   - Placement on the `/` logo cloud.
    - Mentions in event marketing.
    - Social shout-outs (LinkedIn, Instagram).
    - Option to speak at an event.
@@ -62,7 +60,7 @@ partnership, swag, travel budget for speakers, etc.).
 6. **Past sponsors (social proof)**
    - Logo cloud + 1–2 partner quotes.
 
-7. **Sponsorship package download**
+7. **Sponsorship info delivery**
    - Sent by email on request; not hosted as a public download.
 
 8. **Intake action (email us)**
@@ -76,16 +74,16 @@ partnership, swag, travel budget for speakers, etc.).
 
 ## 5. Calls to action (priority order)
 
-1. Email `techtankto@gmail.com` to request the sponsorship package
+1. Email `techtankto@gmail.com` to request sponsorship info
 2. Visit `/press-kit` for brand context
-3. Read about hosting (`/how-it-works/host`) if a single-event fit is better
+3. Read about hosting (`/get-involved/host`) if a single-event fit is better
 
 ## 6. Functional requirements
 
 - Prominent intake CTA (`mailto:techtankto@gmail.com`) with a clear
   button and suggested-details scaffold.
 - Page clearly distinguishes sponsoring vs. hosting and links to
-  `/how-it-works/host`.
+  `/get-involved/host`.
 - Sponsor logos render server-side and include a link where possible.
 
 ## 7. Acceptance criteria

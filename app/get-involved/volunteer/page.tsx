@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Check, Users, Palette, Camera, MessageSquare, Calendar, Settings, Code } from "lucide-react";
+import { Check, Users, Palette, Camera, MessageSquare, Calendar, Settings } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
@@ -68,12 +68,6 @@ const volunteerRoles = [
     title: "Organizing",
     description: "Help plan events, outreach, speaker sourcing",
     commitment: "Variable; onboarding conversation first",
-  },
-  {
-    icon: Code,
-    title: "Code & open source",
-    description: "Contribute to our website, tools, and open source projects on GitHub",
-    commitment: "Project-based, flexible async work",
   },
 ];
 
@@ -197,7 +191,8 @@ export default function VolunteerPage() {
             Ready to join the crew?
           </h2>
           <p className="text-muted mb-8">
-            Sign up to volunteer, contribute code on GitHub, or come to an event first to meet the team.
+            Sign up to volunteer, or come to an event first to meet the team in
+            person.
           </p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             <Button variant="primary" size="sm" asChild>
@@ -206,16 +201,7 @@ export default function VolunteerPage() {
               </a>
             </Button>
             <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://github.com/tech-tankorg"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                GitHub
-              </a>
-            </Button>
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/events">See events</Link>
+              <Link href="/events">Meet the team</Link>
             </Button>
           </div>
         </div>

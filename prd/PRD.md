@@ -18,7 +18,7 @@ visitors into active contributors — attendees, speakers, hosts, sponsors,
 and volunteers.
 
 The site remains content-driven marketing: it does not own accounts or
-ticketing. It funnels visitors to external platforms (Meetup, Luma, Slack,
+ticketing. It funnels visitors to external platforms (Luma, Slack,
 LinkedIn, GitHub, YouTube, Instagram) and captures intake via email to
 `techtankto@gmail.com`.
 
@@ -45,7 +45,7 @@ levels can explore, create, and thrive in technology.
 ### 1.4 Event types
 
 - **Tech talks** — Lightning talks, deep dives, and technical presentations
-- **Socials / Meetups** — Casual networking and community building
+- **Socials** — Casual networking and community building
 - **Sports** — Active events like volleyball and softball
 - **Code Diversity** — Inclusive events for underrepresented groups in tech
 - **Panels** — Multi-speaker discussions on industry topics
@@ -59,7 +59,7 @@ have associated costs. Do not advertise all events as "free".
 1. Build social trust via **social proof** — testimonials, event
    photography, sponsor/host logo cloud.
 2. Convert visitors into specific roles through a dedicated onboarding
-   funnel (`/how-it-works/*`).
+   funnel (`/get-involved/*`).
 3. Keep event discovery effortless (embedded Luma calendar).
 4. Provide a professional, one-stop resource for press and sponsors.
 5. Centralize legal / compliance docs cleanly.
@@ -85,7 +85,7 @@ under Ontario/Canadian jurisdiction.
 ### 1.6 Success metrics
 
 - Intake emails per role (speaker / host / sponsor / volunteer)
-- RSVP click-throughs to Meetup / Luma
+- RSVP click-throughs to Luma
 - Press Kit downloads
 - Scroll depth and CTA click-through rate on `/` and `/about`
 - Returning visitors and newsletter / Slack joins
@@ -97,7 +97,7 @@ under Ontario/Canadian jurisdiction.
 ```
 /
 ├── about
-├── how-it-works                 (onboarding hub — shared layout)
+├── get-involved                 (onboarding hub — shared layout)
 │   ├── speaker
 │   ├── host
 │   ├── sponsor
@@ -116,11 +116,11 @@ under Ontario/Canadian jurisdiction.
 |---|---|---|
 | `/` | Home | Social-proof-driven overview and primary CTAs |
 | `/about` | About | Values & community manifesto (the four pillars) |
-| `/how-it-works` | Get Involved | Onboarding hub; routes visitors to a role |
-| `/how-it-works/speaker` | Speak | Speaker logistics + intake action (email us) |
-| `/how-it-works/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake action (email us) |
-| `/how-it-works/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
-| `/how-it-works/volunteer` | Volunteer | Crew onboarding + intake action (email us) |
+| `/get-involved` | Get Involved | Onboarding hub; routes visitors to a role |
+| `/get-involved/speaker` | Speak | Speaker logistics + intake action (email us) |
+| `/get-involved/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake action (email us) |
+| `/get-involved/sponsor` | Sponsor | Corporate partner pitch + intake action (email us) |
+| `/get-involved/volunteer` | Volunteer | Crew onboarding + intake action (email us) |
 | `/events` | Events | Upcoming events via Luma calendar |
 | `/press-kit` | Press Kit | Brand guidelines, logos, fast facts |
 | `/legal/terms-of-service` | Terms of Service | — |
@@ -130,7 +130,7 @@ under Ontario/Canadian jurisdiction.
 ### 2.2 Shared layouts (Next.js)
 
 - **Root layout** — global header, footer, theme, SEO defaults.
-- **`/how-it-works` layout** — sticky sub-nav (Speaker / Host / Sponsor /
+- **`/get-involved` layout** — sticky sub-nav (Speaker / Host / Sponsor /
   Volunteer), persistent "Join our Slack" CTA, shared "Why get involved"
   strip, consistent intake CTA styling (email us).
 - **`/legal` layout** — document-style narrow column, table of contents
@@ -138,10 +138,10 @@ under Ontario/Canadian jurisdiction.
 
 ### 2.3 Global navigation
 
-- **Primary nav:** About, How it Works, Events, Code of Conduct
+- **Primary nav:** About, Get Involved, Events, Code of Conduct
 - **Header CTA:** "Join our Slack" (secondary: "RSVP on Luma")
 - **Footer:**
-  - Column 1 — Community: Meetup, Luma, Slack, LinkedIn, Instagram, GitHub, YouTube
+  - Column 1 — Community: Luma, Slack, LinkedIn, Instagram, GitHub, YouTube
   - Column 2 — Get Involved: Speak, Host, Sponsor, Volunteer
   - Column 3 — Resources: Press Kit, Events
   - Column 4 — Legal: Terms of Service, Privacy Policy, Code of Conduct
@@ -149,7 +149,6 @@ under Ontario/Canadian jurisdiction.
 
 ### 2.4 External destinations
 
-- Meetup: https://www.meetup.com/techtank-to/
 - Luma: https://luma.com/techtank
 - Slack: direct invite link
 - LinkedIn: https://ca.linkedin.com/company/techtank-to
@@ -157,7 +156,7 @@ under Ontario/Canadian jurisdiction.
 - YouTube: https://www.youtube.com/@TechTankTo
 - GitHub: https://github.com/tech-tankorg
 - Google Photos albums (per-event)
-- Email intake: `techtankto@gmail.com` (one inbox for all `/how-it-works/*` roles)
+- Email intake: `techtankto@gmail.com` (one inbox for all `/get-involved/*` roles)
 
 ---
 
@@ -165,13 +164,13 @@ under Ontario/Canadian jurisdiction.
 
 1. **Curious newcomer** → `/` (sees event photos, testimonials, logo
    cloud) → `/about` (values) → `/events` (RSVPs on Luma) → joins Slack.
-2. **Aspiring speaker** → `/` → `/how-it-works/speaker` → emails
+2. **Aspiring speaker** → `/` → `/get-involved/speaker` → emails
    `techtankto@gmail.com` with their talk proposal.
-3. **Company host** → `/` or `/how-it-works` → `/how-it-works/host` →
+3. **Company host** → `/` or `/get-involved` → `/get-involved/host` →
    submits intake → receives sponsorship package via email.
-4. **Corporate sponsor** → `/press-kit` or `/how-it-works/sponsor` →
+4. **Corporate sponsor** → `/press-kit` or `/get-involved/sponsor` →
    downloads brand assets → submits sponsor intake.
-5. **Volunteer** → Slack invite or `/` → `/how-it-works/volunteer` →
+5. **Volunteer** → Slack invite or `/` → `/get-involved/volunteer` →
    submits intake.
 6. **Journalist / partner** → `/press-kit` → downloads logos + fast-facts
    → emails `techtankto@gmail.com`.
@@ -187,11 +186,11 @@ relative to this file, `prd/PRD.md`):
 - [pages/home.md](pages/home.md)
 - [pages/about.md](pages/about.md)
 - [pages/events.md](pages/events.md)
-- [pages/how-it-works/index.md](pages/how-it-works/index.md)
-- [pages/how-it-works/speaker.md](pages/how-it-works/speaker.md)
-- [pages/how-it-works/host.md](pages/how-it-works/host.md)
-- [pages/how-it-works/sponsor.md](pages/how-it-works/sponsor.md)
-- [pages/how-it-works/volunteer.md](pages/how-it-works/volunteer.md)
+- [pages/get-involved/index.md](pages/get-involved/index.md)
+- [pages/get-involved/speaker.md](pages/get-involved/speaker.md)
+- [pages/get-involved/host.md](pages/get-involved/host.md)
+- [pages/get-involved/sponsor.md](pages/get-involved/sponsor.md)
+- [pages/get-involved/volunteer.md](pages/get-involved/volunteer.md)
 - [pages/press-kit.md](pages/press-kit.md)
 - [pages/legal/terms-of-service.md](pages/legal/terms-of-service.md)
 - [pages/legal/privacy-policy.md](pages/legal/privacy-policy.md)
@@ -219,7 +218,7 @@ Every page must have exactly **one dominant CTA** that moves the visitor
 toward interacting (Join Slack / RSVP / Email us). Secondary
 CTAs are fine; tertiary links belong in the footer.
 
-### 5.3 Social proof patterns (required on `/` and relevant `/how-it-works/*`)
+### 5.3 Social proof patterns (required on `/` and relevant `/get-involved/*`)
 
 - **Social feed over testimonials:** Embedded LinkedIn and Instagram posts
   from organizers showing real, organic community moments. No curated
@@ -230,7 +229,7 @@ CTAs are fine; tertiary links belong in the footer.
   events + 20+ CodeDiversity events), monthly cadence since 2023
 - Sponsor / host logo cloud
 - Linked previews of recent Google Photos albums and Instagram posts
-- YouTube links to recent Guppy Talks / talks
+- YouTube links to recent talks
 
 ### 5.4 Accessibility
 
@@ -240,7 +239,7 @@ CTAs are fine; tertiary links belong in the footer.
 ### 5.5 Responsiveness
 
 - Mobile-first. Break at 640 / 1024 / 1280. The sticky sub-nav on
-  `/how-it-works` must collapse into a single-line segmented control on
+  `/get-involved` must collapse into a single-line segmented control on
   mobile.
 
 ### 5.6 Event archive & recap pattern
@@ -273,8 +272,8 @@ and is explicitly out of scope for the initial launch.
   all-caps kicker (e.g. `WAYS TO GET INVOLVED`, `NEXT UP`, `RECENT
   EVENTS`, `LATEST HIGHLIGHTS`, `GET IN TOUCH`) above the headline.
   Establishes a clear scanning rhythm.
-- **Role cards with checkmarks.** The four `/how-it-works` role
-  teasers share one shape on `/` and `/how-it-works`: icon → overline
+- **Role cards with checkmarks.** The four `/get-involved` role
+  teasers share one shape on `/` and `/get-involved`: icon → overline
   → headline → one-paragraph pitch → three bulleted checkmarks of
   what the contributor gets. Reused verbatim so the four paths feel
   like siblings.
@@ -284,11 +283,11 @@ and is explicitly out of scope for the initial launch.
   complementary to, the logo cloud higher up the page.
 - **Dual end-of-page CTA cards.** Long pages close with a two-up
   card block: one "stay in the loop" card (Luma / Slack) and one
-  "collaborate with us" card (email / `/how-it-works`). Used on `/`
+  "collaborate with us" card (email / `/get-involved`). Used on `/`
   and `/events`.
 - **Direct-email contact card.** `techtankto@gmail.com` appears as a
   prominent, copy-friendly contact card (not just a hyperlink) at the
-  end of `/how-it-works`, `/how-it-works/*`, and `/press-kit`. One
+  end of `/get-involved`, `/get-involved/*`, and `/press-kit`. One
   line of context explains what we respond to.
 
 ---
@@ -297,7 +296,7 @@ and is explicitly out of scope for the initial launch.
 
 ### 6.1 Must-have
 
-- Next.js App Router with shared layouts for `/how-it-works` and `/legal`.
+- Next.js App Router with shared layouts for `/get-involved` and `/legal`.
 - Global header + footer on every route.
 - `/events` renders an embedded Luma calendar (or API-backed list),
   **and** a hand-curated "Next Up" + "Past Events" timeline driven by
@@ -306,7 +305,7 @@ and is explicitly out of scope for the initial launch.
   carries: date, venue, title, tags, host/sponsor attribution, status
   (`upcoming` | `past`), RSVP URL, Google Photos album URL, YouTube
   recording URL. Powers both `/events` and the home-page preview.
-- Prominent intake action on each `/how-it-works/*` page — a
+- Prominent intake action on each `/get-involved/*` page — a
   `mailto:techtankto@gmail.com` CTA with a role-specific subject line
   and a suggested-details scaffold (copy-to-clipboard friendly).
 - Press Kit exposes a downloadable ZIP of logos + a brand-guidelines PDF.
@@ -320,7 +319,7 @@ and is explicitly out of scope for the initial launch.
 - Newsletter / Slack invite capture block in footer.
 - Google Photos album preview cards (Home and event detail).
 - Branded slide deck template (Google Slides / PPTX) linked from
-  `/how-it-works/speaker` and `/press-kit`.
+  `/get-involved/speaker` and `/press-kit`.
 - Speaker run-of-show and host checklist (linked PDFs).
 - Per-event recap surface: Google Photos album + YouTube recording +
   host/sponsor acknowledgment, reached via "View Recap" from the
@@ -386,7 +385,7 @@ and is explicitly out of scope for the initial launch.
 ## 9. Event Support (Organizer Tooling)
 
 Not user-facing pages, but assets produced and surfaced via `/press-kit`
-and `/how-it-works/speaker`:
+and `/get-involved/speaker`:
 
 - Branded Google Slides / Keynote / PPTX templates (speaker + title card)
 - Host checklist PDF (AV, food, timing)
@@ -399,19 +398,19 @@ and `/how-it-works/speaker`:
 ## 10. Out of Scope
 
 - Member accounts / login
-- Paid ticketing (RSVPs remain on Meetup / Luma)
+- Paid ticketing (RSVPs remain on Luma)
 - Merchandise store
 - Native mobile app
 - On-site donation processing (individual donations de-prioritized;
-  corporate support happens via `/how-it-works/sponsor`)
+  corporate support happens via `/get-involved/sponsor`)
 
 ---
 
 ## 11. Open Questions
 
-- Do we keep a first-party blog, or continue relying on YouTube / Guppy
-  Talks for long-form content?
-- Should `/how-it-works/volunteer` gate behind Slack membership, or stay
+- Do we keep a first-party blog, or continue relying on YouTube for
+  long-form content?
+- Should `/get-involved/volunteer` gate behind Slack membership, or stay
   open?
 - Is individual donation still a funded path, or fully replaced by
   corporate sponsorship?

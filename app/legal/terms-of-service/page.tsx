@@ -58,9 +58,9 @@ export default function TermsOfServicePage() {
             3. External Platforms
           </h2>
           <p className="text-muted">
-            TechTank uses third-party platforms for event registration
-            (Meetup, Luma), community discussion (Slack), and content hosting
-            (YouTube, GitHub). Use of these platforms is subject to their
+            TechTank uses third-party platforms for event registration (Luma),
+            community discussion (Slack), and content hosting (YouTube,
+            GitHub). Use of these platforms is subject to their
             respective terms of service. TechTank is not responsible for the
             policies or practices of these third parties.
           </p>

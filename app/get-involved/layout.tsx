@@ -4,14 +4,14 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const subNav = [
-  { name: "Overview", href: "/how-it-works" },
-  { name: "Speaker", href: "/how-it-works/speaker" },
-  { name: "Host", href: "/how-it-works/host" },
-  { name: "Sponsor", href: "/how-it-works/sponsor" },
-  { name: "Volunteer", href: "/how-it-works/volunteer" },
+  { name: "Overview", href: "/get-involved" },
+  { name: "Speaker", href: "/get-involved/speaker" },
+  { name: "Host", href: "/get-involved/host" },
+  { name: "Sponsor", href: "/get-involved/sponsor" },
+  { name: "Volunteer", href: "/get-involved/volunteer" },
 ];
 
-export default function HowItWorksLayout({
+export default function GetInvolvedLayout({
   children,
 }: {
   children: React.ReactNode;
@@ -28,8 +28,8 @@ export default function HowItWorksLayout({
             <div className="flex items-center justify-center gap-1 overflow-x-auto -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
               {subNav.map((item) => {
                 const isActive =
-                  item.href === "/how-it-works"
-                    ? pathname === "/how-it-works"
+                  item.href === "/get-involved"
+                    ? pathname === "/get-involved"
                     : pathname.startsWith(item.href);
 
                 return (

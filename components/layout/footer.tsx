@@ -50,10 +50,10 @@ const footerLinks = {
   getInvolved: {
     title: "Get Involved",
     links: [
-      { name: "Speak", href: "/how-it-works/speaker", external: false },
-      { name: "Host", href: "/how-it-works/host", external: false },
-      { name: "Sponsor", href: "/how-it-works/sponsor", external: false },
-      { name: "Volunteer", href: "/how-it-works/volunteer", external: false },
+      { name: "Speak", href: "/get-involved/speaker", external: false },
+      { name: "Host", href: "/get-involved/host", external: false },
+      { name: "Sponsor", href: "/get-involved/sponsor", external: false },
+      { name: "Volunteer", href: "/get-involved/volunteer", external: false },
     ],
   },
   resources: {

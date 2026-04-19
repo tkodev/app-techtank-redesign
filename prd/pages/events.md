@@ -50,7 +50,7 @@ giving them a full past-events timeline with recaps.
      - Secondary CTA: "View details" → Luma event URL (anchor)
      - Right-rail "Supported by" block with host/sponsor logo; if
        none confirmed, shows "Looking for a host" with a link to
-       `/how-it-works/host`.
+       `/get-involved/host`.
    - If no event is scheduled yet, the card degrades to a "Next event
      announcing soon — join Slack to be first to hear" state.
 
@@ -75,7 +75,7 @@ giving them a full past-events timeline with recaps.
      - CTA: **"View Recap"** — opens an anchored recap block that
        surfaces:
        - Linked Google Photos album
-       - Linked YouTube recording (Guppy Talks / talk)
+       - Linked YouTube recording (talk)
        - Speaker list (name + talk title)
        - One-line host/sponsor thank-you
    - A dedicated `/events/<slug>` detail route is explicitly out of
@@ -88,7 +88,7 @@ giving them a full past-events timeline with recaps.
        notified when the next event goes live." — CTA: "Follow on
        Luma".
      - **Want to contribute?** "Speak, host, sponsor, or volunteer
-       for the next one." — CTA: "Get involved" → `/how-it-works`.
+       for the next one." — CTA: "Get involved" → `/get-involved`.
 
 6. **Contact strip**
    - Overline kicker: `GET IN TOUCH`.
@@ -99,8 +99,8 @@ giving them a full past-events timeline with recaps.
 
 1. RSVP to the next event (Luma)
 2. View a past recap (builds trust → pushes them into Slack / CTAs)
-3. Subscribe on Luma / Meetup
-4. Get involved → `/how-it-works`
+3. Subscribe on Luma
+4. Get involved → `/get-involved`
 
 ## 6. Functional requirements
 
@@ -130,6 +130,6 @@ giving them a full past-events timeline with recaps.
 - The Next Up card always carries an explicit host/sponsor
   attribution or a "Looking for a host" link — never blank space.
 - If Luma's embed is down, the page still communicates the next
-  event and offers an RSVP path (Meetup fallback).
+  event and offers an RSVP path via the structured event fallback.
 - Every number on the page (event count, capacity, etc.) comes from
   structured content, not hardcoded copy.

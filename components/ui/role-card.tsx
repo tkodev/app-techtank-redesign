@@ -80,7 +80,7 @@ export const roleCardsData: RoleCardProps[] = [
       "Any tech topic welcome",
       "Recorded and published to YouTube",
     ],
-    href: "/how-it-works/speaker",
+    href: "/get-involved/speaker",
     ctaText: "Apply to speak",
   },
   {
@@ -94,7 +94,7 @@ export const roleCardsData: RoleCardProps[] = [
       "6:00-8:30pm weeknight",
       "Logo on event marketing",
     ],
-    href: "/how-it-works/host",
+    href: "/get-involved/host",
     ctaText: "Host an event",
   },
   {
@@ -108,7 +108,7 @@ export const roleCardsData: RoleCardProps[] = [
       "Speaker slot options",
       "Reach Toronto tech talent",
     ],
-    href: "/how-it-works/sponsor",
+    href: "/get-involved/sponsor",
     ctaText: "Sponsor TechTank",
   },
   {
@@ -122,7 +122,7 @@ export const roleCardsData: RoleCardProps[] = [
       "No speaking required",
       "Portfolio-quality work",
     ],
-    href: "/how-it-works/volunteer",
+    href: "/get-involved/volunteer",
     ctaText: "Join the crew",
   },
 ];

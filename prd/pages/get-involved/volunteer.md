@@ -1,6 +1,6 @@
-# Volunteer — `/how-it-works/volunteer`
+# Volunteer — `/get-involved/volunteer`
 
-**URL:** https://www.techtankto.com/how-it-works/volunteer
+**URL:** https://www.techtankto.com/get-involved/volunteer
 **Page title:** Volunteer with TechTank — TechTank TO
 **Role:** Onboard the crew that keeps TechTank running — organizers,
 event-day volunteers, content volunteers, community moderators.

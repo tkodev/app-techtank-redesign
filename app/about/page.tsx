@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Users, Lightbulb, Handshake, Heart, ExternalLink } from "lucide-react";
+import { Users, Lightbulb, Handshake, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { DualCTA } from "@/components/ui/dual-cta";
 
 export const metadata: Metadata = {
   title: "About",
@@ -59,7 +58,7 @@ const timeline = [
     year: "2024",
     title: "Community programs launch",
     description:
-      "Guppy Talks for first-time speakers. Study Tank for learning groups. The volunteer crew expanded to support larger events.",
+      "Code Diversity for underrepresented voices. The volunteer crew expanded to support larger events.",
   },
   {
     year: "2025",
@@ -88,13 +87,21 @@ export default function AboutPage() {
             <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-6">
               We build the community we wanted to find
             </h1>
-            <p className="text-xl text-muted leading-relaxed">
+            <p className="text-xl text-muted leading-relaxed mb-8">
               TechTank TO is a volunteer-run, Toronto-based tech community
               founded in 2022. We host monthly in-person events where
               developers, designers, PMs, and tech-curious people gather to
               learn, share, and connect. No gatekeeping—just people
               helping people grow in tech.
             </p>
+            <div className="flex flex-wrap gap-3">
+              <Button variant="primary" size="lg" asChild>
+                <Link href="/events">See upcoming events</Link>
+              </Button>
+              <Button variant="outline" size="lg" asChild>
+                <Link href="/get-involved">Get involved</Link>
+              </Button>
+            </div>
           </div>
         </div>
       </section>
@@ -166,8 +173,8 @@ export default function AboutPage() {
             <div className="space-y-4 text-muted leading-relaxed">
               <p>
                 <strong className="text-foreground">Monthly meetups:</strong>{" "}
-                In-person events featuring technical talks, networking, and free
-                food. 100-120 attendees, hosted at companies across Toronto.
+                In-person events featuring technical talks and networking.
+                40-100 attendees, hosted at companies across Toronto.
               </p>
               <p>
                 <strong className="text-foreground">Slack community:</strong>{" "}
@@ -181,8 +188,7 @@ export default function AboutPage() {
               </p>
               <p>
                 <strong className="text-foreground">Community programs:</strong>{" "}
-                Guppy Talks for first-time speakers. Study Tank for learning
-                groups. Code Diversity for underrepresented voices.
+                Code Diversity for underrepresented voices in tech.
               </p>
             </div>
           </div>
@@ -211,10 +217,10 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="primary" asChild>
-              <Link href="/how-it-works/host">Host an event</Link>
+              <Link href="/get-involved/host">Host an event</Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link href="/how-it-works/sponsor">Become a sponsor</Link>
+              <Link href="/get-involved/sponsor">Become a sponsor</Link>
             </Button>
           </div>
         </div>
@@ -267,38 +273,26 @@ export default function AboutPage() {
 
       {/* Closing CTA */}
       <Section className="gradient-brand-soft">
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Join us
           </span>
-          <h2 className="font-display text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Ready to be part of TechTank?
           </h2>
-          <p className="text-lg text-muted mb-8">
+          <p className="text-muted mb-8">
             Whether you want to attend, speak, host, or volunteer — there&apos;s
             a place for you here.
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="primary" size="lg" asChild>
-              <a
-                href="https://luma.com/techtank"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSVP to the next event
-                <ExternalLink className="ml-2 h-5 w-5" />
-              </a>
+              <Link href="/events">See upcoming events</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/how-it-works">Get involved</Link>
+              <Link href="/get-involved">Get involved</Link>
             </Button>
           </div>
         </div>
-      </Section>
-
-      {/* Dual CTA */}
-      <Section>
-        <DualCTA />
       </Section>
     </>
   );

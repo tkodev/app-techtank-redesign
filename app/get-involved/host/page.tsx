@@ -43,7 +43,7 @@ const logistics = [
 
 const techTankHandles = [
   "Speaker sourcing (unless you want to bring your own)",
-  "Marketing (Meetup, Slack, LinkedIn, Instagram)",
+  "Marketing (Slack, LinkedIn, Instagram)",
   "Registration and attendee tracking",
   "Event coordination and MCing",
   "Recording and publishing to YouTube",

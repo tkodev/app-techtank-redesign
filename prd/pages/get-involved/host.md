@@ -1,6 +1,6 @@
-# Host — `/how-it-works/host`
+# Host — `/get-involved/host`
 
-**URL:** https://www.techtankto.com/how-it-works/host
+**URL:** https://www.techtankto.com/get-involved/host
 **Page title:** Host a TechTank Event — TechTank TO
 **Role:** Recruit Toronto companies to provide venue and food for a
 TechTank monthly meetup.
@@ -51,7 +51,7 @@ host" action is the single most important CTA.
 
 4. **What TechTank handles**
    - Speaker sourcing (unless you want to bring your own).
-   - Marketing (Meetup, Slack, LinkedIn, Instagram).
+   - Marketing (Slack, LinkedIn, Instagram).
    - Registration and attendee tracking.
    - Event coordination and MCing.
    - Recording + publishing to YouTube.

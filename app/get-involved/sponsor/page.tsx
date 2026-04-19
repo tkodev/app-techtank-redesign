@@ -9,7 +9,7 @@ import { ContactCard } from "@/components/ui/contact-card";
 export const metadata: Metadata = {
   title: "Sponsor TechTank",
   description:
-    "Support Toronto's most inclusive tech community. Tasteful brand visibility, recruiting pipeline, and community karma.",
+    "Support Toronto's most inclusive tech community. Request sponsorship info and see how you can help the community thrive.",
 };
 
 const whySponsor = [
@@ -35,8 +35,7 @@ const whySponsor = [
 
 const whatSponsorshipSupports = [
   "Monthly event operations when no host venue is available",
-  "Speaker travel and honoraria where applicable",
-  "Community programs: Guppy Talks, Study Tank, Code Diversity",
+  "Community programs like Code Diversity for underrepresented voices",
   "Equipment, recording, and production costs",
   "Slack community and online resources",
 ];
@@ -49,19 +48,18 @@ const sponsorTiers = [
   },
   {
     name: "Event Sponsor",
-    description: "Logo + callouts across a quarter of events",
+    description: "Logo + callouts tied to sponsored events",
     highlight: false,
   },
   {
     name: "Annual Partner",
-    description: "Year-long placement, speaker slot, attendee list access",
+    description: "Year-long placement and a speaker slot",
     highlight: true,
   },
 ];
 
 const basePackage = [
   "Placement on techtankto.com logo cloud",
-  "Listed in Press Kit as a supporter",
   "Mentions in event marketing",
   "Social shout-outs (LinkedIn, Instagram)",
   "Option to speak at an event",
@@ -86,7 +84,7 @@ export default function SponsorPage() {
             </p>
             <Button variant="primary" size="lg" asChild>
               <a href="mailto:techtankto@gmail.com?subject=Sponsorship%20Inquiry%20-%20TechTank">
-                Request sponsorship package
+                Request sponsorship info
               </a>
             </Button>
           </div>
@@ -152,7 +150,7 @@ export default function SponsorPage() {
         <SectionHeader
           overline="Sponsorship tiers"
           title="Ways to support"
-          description="We offer flexible sponsorship options. Request our sponsorship package for full details."
+          description="We offer flexible sponsorship options. Request our sponsorship info for full details."
           className="mb-12"
         />
         <div className="grid gap-6 lg:grid-cols-3">
@@ -178,7 +176,7 @@ export default function SponsorPage() {
           ))}
         </div>
         <p className="text-center text-sm text-muted mt-8">
-          Exact pricing and benefits in our sponsorship package. Tiers are
+          Exact pricing and benefits in our sponsorship info. Tiers are
           illustrative — we&apos;ll work with your budget.
         </p>
       </Section>
@@ -233,7 +231,7 @@ export default function SponsorPage() {
             programs, or multiple events.
           </p>
           <Button variant="outline" asChild>
-            <Link href="/how-it-works/host">Learn about hosting</Link>
+            <Link href="/get-involved/host">Learn about hosting</Link>
           </Button>
         </div>
       </Section>
@@ -245,11 +243,11 @@ export default function SponsorPage() {
             Ready to sponsor?
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Get the sponsorship package
+            Get the sponsorship info
           </h2>
           <p className="text-muted mb-8">
             Tell us about your company and goals. We&apos;ll send our full
-            sponsorship deck within a week.
+            sponsorship details within a week.
           </p>
           <Button variant="primary" size="lg" asChild>
             <a href="mailto:techtankto@gmail.com?subject=Sponsorship%20Inquiry%20-%20TechTank">

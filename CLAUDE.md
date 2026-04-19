@@ -31,12 +31,12 @@ For developer-facing setup (scripts, directory tree, route map), see
         ├── about.md               # /about
         ├── events.md              # /events
         ├── press-kit.md           # /press-kit
-        ├── how-it-works/          # Onboarding hub (shared layout)
-        │   ├── index.md           # /how-it-works
-        │   ├── speaker.md         # /how-it-works/speaker
-        │   ├── host.md            # /how-it-works/host
-        │   ├── sponsor.md         # /how-it-works/sponsor
-        │   └── volunteer.md       # /how-it-works/volunteer
+        ├── get-involved/          # Onboarding hub (shared layout)
+        │   ├── index.md           # /get-involved
+        │   ├── speaker.md         # /get-involved/speaker
+        │   ├── host.md            # /get-involved/host
+        │   ├── sponsor.md         # /get-involved/sponsor
+        │   └── volunteer.md       # /get-involved/volunteer
         └── legal/                 # Legal folder (shared layout)
             ├── terms-of-service.md
             ├── privacy-policy.md
@@ -55,14 +55,14 @@ The redesign replaces a flat "link-tree" layout with a
 - `/` — social-proof-driven home (testimonials, event photos, logo cloud).
 - `/about` — values manifesto built on four pillars: **Community,
   Innovation, Teamwork, Respect**.
-- `/how-it-works` — onboarding hub with four role sub-pages (Speaker,
+- `/get-involved` — onboarding hub with four role sub-pages (Speaker,
   Host, Sponsor, Volunteer), each ending in an intake action (email us
   at `techtankto@gmail.com`).
 - `/events` — embedded Luma calendar.
 - `/press-kit` — standalone brand assets and fast facts for media.
 - `/legal` — grouped compliance documents.
 
-The `/how-it-works` and `/legal` sections are designed for **Next.js
+The `/get-involved` and `/legal` sections are designed for **Next.js
 shared layouts** (sticky sub-nav, persistent CTA, consistent form/
 document styling).
 
@@ -87,14 +87,14 @@ document styling).
 - Concrete, not aspirational. If organizers haven't confirmed a number
   (attendance, tier, timing), flag it instead of inventing one.
 - Conversion-oriented: every page spec must declare **one dominant
-  CTA**, and `/how-it-works/*` must end in an intake action (email us).
+  CTA**, and `/get-involved/*` must end in an intake action (email us).
 - Social proof first: testimonials, real event photography, and
   logo clouds are required patterns, not decoration.
 
 ### Adding a new page
 
 1. Decide where it belongs in the IA. If it's a role, it goes under
-   `/how-it-works`; if it's legal, under `/legal`; if it's a resource,
+   `/get-involved`; if it's legal, under `/legal`; if it's a resource,
    it's probably a sibling of `/press-kit`.
 2. Create `prd/pages/<path>.md` following the existing section
    structure.
@@ -119,7 +119,7 @@ document styling).
   than to publish fiction.
 - Don't re-introduce the old flat structure (separate `/speak`,
   `/host`, `/mentors`, `/donate`, `/terms-conditions` pages) — those
-  were intentionally rolled into `/how-it-works/*` and `/legal/*`.
+  were intentionally rolled into `/get-involved/*` and `/legal/*`.
 - Don't touch settings or hooks without being asked.
 
 ## Git workflow
@@ -129,3 +129,35 @@ document styling).
 - Create new commits rather than amending. Use HEREDOC commit messages.
 - Never force-push or skip hooks without explicit permission.
 - Do not open a pull request unless explicitly asked.
+- Do not sign commits or PRs as Claude, and do not include
+  `claude.ai/code` session links, `Co-Authored-By: Claude` trailers,
+  or any other "Generated with Claude Code" markers in commit messages
+  or PR bodies.
+
+### Conventional commits
+
+- Use [Conventional Commits](https://www.conventionalcommits.org/)
+  for every commit subject:
+  `<type>(<optional scope>): <imperative summary>`
+- Allowed types: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`,
+  `test`, `build`, `ci`, `chore`, `revert`.
+- Pick a scope that matches the page or area (`about`, `events`,
+  `get-involved/sponsor`, `prd`, `legal`, etc.) when one is obvious;
+  omit it when the change is global.
+- Keep the subject under ~72 characters, lowercase, no trailing
+  period; explain the *why* in the body if the diff alone doesn't.
+- Use `!` (e.g. `feat(get-involved)!: …`) and a `BREAKING CHANGE:`
+  footer for changes that move URLs, rename routes, or alter
+  documented behavior.
+
+### Branch naming
+
+- Branches follow `<type>/<short-kebab-summary>` using the same
+  type vocabulary as commits — e.g. `feat/sponsor-intake-form`,
+  `fix/events-luma-fallback`, `docs/prd-route-map`,
+  `refactor/get-involved-layout`.
+- Session-managed Claude branches keep the `claude/<slug>` prefix
+  given in the session brief; treat the slug as the conventional
+  summary and don't rename it.
+- Keep slugs short (≤40 chars), lowercase, hyphen-separated, and
+  reference the affected area rather than the ticket number.

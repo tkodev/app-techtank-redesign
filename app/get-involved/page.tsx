@@ -5,7 +5,7 @@ import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { ContactCard } from "@/components/ui/contact-card";
 
 export const metadata: Metadata = {
-  title: "How It Works",
+  title: "Get Involved",
   description:
     "Get involved with TechTank TO. Speak, host, sponsor, or volunteer — there are multiple ways to contribute to Toronto's tech community.",
 };
@@ -54,7 +54,7 @@ const faqs = [
   },
 ];
 
-export default function HowItWorksPage() {
+export default function GetInvolvedPage() {
   return (
     <>
       {/* Hero */}

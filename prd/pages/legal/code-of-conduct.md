@@ -17,14 +17,14 @@ issues. This document operationalizes the **Respect** pillar from
 ## 2. Primary audience
 
 - All attendees at TechTank events
-- All members of TechTank-operated channels (Slack, Meetup, etc.)
+- All members of TechTank-operated channels (Slack, etc.)
 - Speakers, hosts, sponsors, and volunteers
 
 ## 3. Structure
 
 Rendered in the `/legal` shared layout with a narrow column, table of
 contents sidebar, and a last-updated stamp. Linked prominently from
-`/about`, `/events`, and every `/how-it-works/*` page.
+`/about`, `/events`, and every `/get-involved/*` page.
 
 ## 4. Content sections
 
@@ -79,7 +79,7 @@ contents sidebar, and a last-updated stamp. Linked prominently from
 
 - Shared `/legal` layout with table of contents.
 - Linked from primary nav / footer and from `/about`, `/events`,
-  `/how-it-works/*`.
+  `/get-involved/*`.
 - Last-updated timestamp rendered from source metadata.
 - License notice rendered at the bottom if the document derives from a
   licensed template.
