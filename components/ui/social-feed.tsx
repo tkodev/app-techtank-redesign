@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { getAllSocialLinks } from "@/constants/social-links";
 import {
   getCoverImage,
+  getCoverVideo,
   getFeaturedInstagramPosts,
   type InstagramPostWithId,
 } from "@/constants/instagram-posts";
@@ -27,21 +28,34 @@ const instagramUrl = getAllSocialLinks().find((l) => l.id === "instagram")?.url;
 
 function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
   const cover = getCoverImage(post);
+  const video = getCoverVideo(post);
   const postUrl = post.shortcode
     ? `https://www.instagram.com/p/${post.shortcode}/`
     : instagramUrl ?? "https://www.instagram.com/techtankto/";
 
   return (
     <article className="group relative glass rounded-2xl overflow-hidden transition-all flex flex-col">
-      {cover && (
+      {(video || cover) && (
         <div className="relative aspect-[4/5] w-full overflow-hidden bg-sand">
-          <Image
-            src={cover}
-            alt=""
-            fill
-            sizes="(min-width: 768px) 50vw, 100vw"
-            className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-          />
+          {video ? (
+            <video
+              src={video}
+              poster={cover}
+              autoPlay
+              loop
+              muted
+              playsInline
+              className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          ) : cover ? (
+            <Image
+              src={cover}
+              alt=""
+              fill
+              sizes="(min-width: 1024px) 25vw, (min-width: 768px) 50vw, 100vw"
+              className="object-cover transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          ) : null}
           {post.featured && (
             <span className="absolute top-3 left-3 tag bg-coral text-white text-xs">
               Featured
