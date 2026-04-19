@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, Calendar, ExternalLink, Heart, Users } from "lucide-react";
+import { ArrowRight, Calendar, ExternalLink, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { HeroStatsMarquee } from "@/components/ui/hero-stats-marquee";
@@ -61,9 +61,6 @@ export default function HomePage() {
                 </Button>
                 <Button variant="outline" size="lg" asChild>
                   <Link href="/get-involved">Get involved</Link>
-                </Button>
-                <Button variant="outline" size="lg" asChild>
-                  <Link href="/about">About us</Link>
                 </Button>
               </div>
             </div>
@@ -205,15 +202,15 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Three-flow CTA */}
+      {/* Two-flow CTA */}
       <Section id="join-us" className="gradient-brand-vertical texture-grain py-8 lg:py-12">
         <SectionHeader
           overline="Take the next step"
           title="Where to next?"
-          description="Three ways to plug in right now."
+          description="Two ways to plug in right now."
           className="mb-8"
         />
-        <div className="grid gap-4 md:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2">
           <Link
             href="/events"
             className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
@@ -253,28 +250,6 @@ export default function HomePage() {
               </p>
               <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
                 Pick your path
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </span>
-            </div>
-          </Link>
-
-          <Link
-            href="/about"
-            className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
-          >
-            <Heart className="absolute top-4 right-4 h-14 w-14 text-teal-dark/10" />
-            <div className="relative">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
-                Know who we are
-              </span>
-              <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
-                About us
-              </h3>
-              <p className="text-sm text-muted mb-4">
-                Our values, our story, and the people behind TechTank.
-              </p>
-              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
-                Meet the community
                 <ArrowRight className="ml-2 h-4 w-4" />
               </span>
             </div>
