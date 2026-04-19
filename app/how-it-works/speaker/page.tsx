@@ -35,7 +35,7 @@ const logistics = [
   { label: "Talk duration", value: "30-45 minutes + Q&A" },
   { label: "Topics", value: "Anything related to tech" },
   { label: "Format", value: "In-person at a host venue in Toronto" },
-  { label: "Audience", value: "100-120 attendees per event" },
+  { label: "Audience", value: "40-100 attendees per event" },
   { label: "Recording", value: "Published to TechTank's YouTube channel" },
 ];
 
@@ -58,7 +58,7 @@ const whatYouGet = [
   "Promotion across TechTank channels",
   "A welcoming, supportive audience",
   "Speaker coaching if needed",
-  "Networking with 100+ Toronto tech professionals",
+  "Networking with Toronto tech professionals",
   "The gratitude of an entire tech community",
 ];
 

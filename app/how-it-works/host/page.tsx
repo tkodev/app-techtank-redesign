@@ -33,7 +33,7 @@ const whyHost = [
 ];
 
 const logistics = [
-  { label: "Capacity", value: "100-120 attendees", icon: Users },
+  { label: "Capacity", value: "40-100 attendees", icon: Users },
   { label: "Timing", value: "6:00pm - 8:30pm weeknight", icon: Clock },
   { label: "Location", value: "TTC accessible (subway or streetcar)", icon: MapPin },
   { label: "AV", value: "Projector + screen required; microphone nice-to-have", icon: Building },

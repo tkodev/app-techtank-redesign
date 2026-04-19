@@ -183,7 +183,7 @@ export function getRecentEvents(count: number = 3): Event[] {
 export function getEventStats() {
   return {
     totalEvents: events.length,
-    avgAttendance: "40-120",
+    avgAttendance: "40-100",
     cadence: "Monthly",
     since: 2022,
   };

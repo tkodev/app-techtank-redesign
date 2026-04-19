@@ -90,7 +90,7 @@ export const roleCardsData: RoleCardProps[] = [
     description:
       "Bring the Toronto tech community to your office. Great for recruiting and brand visibility.",
     benefits: [
-      "100-120 attendees",
+      "40-100 attendees",
       "6:00-8:30pm weeknight",
       "Logo on event marketing",
     ],
