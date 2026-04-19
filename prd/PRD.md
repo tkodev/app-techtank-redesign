@@ -11,8 +11,8 @@
 
 ## 1. Product Overview
 
-TechTank TO (TechTank) is a volunteer-run, Toronto-based tech community
-founded in 2022. The redesign moves the site away from a flat "link-tree"
+TechTank TO (TechTank) is a volunteer-run, Toronto-based **Canadian** tech
+community founded in 2023. The redesign moves the site away from a flat "link-tree"
 layout toward a **conversion-oriented onboarding hub** that turns curious
 visitors into active contributors — attendees, speakers, hosts, sponsors,
 and volunteers.
@@ -50,7 +50,10 @@ levels can explore, create, and thrive in technology.
 - **Panels** — Multi-speaker discussions on industry topics
 - **Workshops** — Hands-on learning sessions (planned)
 
-### 1.4 Product goals
+Note: Most events are free, but some (workshops, special activities) may
+have associated costs. Do not advertise all events as "free".
+
+### 1.5 Product goals
 
 1. Build social trust via **social proof** — testimonials, event
    photography, sponsor/host logo cloud.
@@ -60,7 +63,25 @@ levels can explore, create, and thrive in technology.
 4. Provide a professional, one-stop resource for press and sponsors.
 5. Centralize legal / compliance docs cleanly.
 
-### 1.5 Success metrics
+### 1.5 Canadian context
+
+TechTank TO is a **Canadian** tech community based in Toronto, Ontario.
+All external links to sponsor/partner companies should use Canadian
+variants where available (e.g., `.ca` domains, `/en-ca` paths). The
+community serves the Greater Toronto Area tech ecosystem and operates
+under Ontario/Canadian jurisdiction.
+
+**Current sponsors and hosts:**
+- 7shifts (Canadian HQ)
+- Rakuten Canada
+- Cohere (Canadian-founded)
+- Vena Solutions (Canadian HQ)
+- Points / Plusgrade (Canadian HQ)
+- Intuit Canada
+- Microsoft Canada
+- Prema Coffee (Toronto local)
+
+### 1.6 Success metrics
 
 - Intake form submissions per role (speaker / host / sponsor / volunteer)
 - RSVP click-throughs to Meetup / Luma
@@ -96,7 +117,7 @@ levels can explore, create, and thrive in technology.
 | `/about` | About | Values & community manifesto (the four pillars) |
 | `/how-it-works` | Get Involved | Onboarding hub; routes visitors to a role |
 | `/how-it-works/speaker` | Speak | Speaker logistics + intake form |
-| `/how-it-works/host` | Host | Venue logistics (100–120 cap, 6–8:30pm) + intake |
+| `/how-it-works/host` | Host | Venue logistics (40–100 cap, 6–8:30pm) + intake |
 | `/how-it-works/sponsor` | Sponsor | Corporate partner pitch + intake |
 | `/how-it-works/volunteer` | Volunteer | Crew onboarding + intake |
 | `/events` | Events | Upcoming events via Luma calendar |
@@ -116,19 +137,19 @@ levels can explore, create, and thrive in technology.
 
 ### 2.3 Global navigation
 
-- **Primary nav:** About, How it Works, Events, Press Kit
+- **Primary nav:** About, How it Works, Events, Code of Conduct
 - **Header CTA:** "Join our Slack" (secondary: "RSVP on Luma")
 - **Footer:**
   - Column 1 — Community: Meetup, Luma, Slack, LinkedIn, Instagram, GitHub, YouTube
   - Column 2 — Get Involved: Speak, Host, Sponsor, Volunteer
   - Column 3 — Resources: Press Kit, Events
   - Column 4 — Legal: Terms of Service, Privacy Policy, Code of Conduct
-  - Contact: `techtankto@gmail.com`
+  - Contact: `techtankto@gmail.com` + Slack community link
 
 ### 2.4 External destinations
 
 - Meetup: https://www.meetup.com/techtank-to/
-- Luma: TechTank calendar
+- Luma: https://luma.com/techtank
 - Slack: invite link (Google Form or direct)
 - LinkedIn: https://ca.linkedin.com/company/techtank-to
 - Instagram: https://www.instagram.com/techtankto/
@@ -204,8 +225,8 @@ CTAs are fine; tertiary links belong in the footer.
   quotes—let the genuine reactions speak for themselves.
   - LinkedIn: https://www.linkedin.com/company/techtank-to/
   - Instagram: https://www.instagram.com/techtankto/
-- Numeric facts: attendance range, talks delivered, events hosted,
-  companies that have hosted
+- Numeric facts: 40-100 attendees per event, 45+ events hosted (25+ main
+  events + 20+ CodeDiversity events), monthly cadence since 2023
 - Sponsor / host logo cloud
 - Linked previews of recent Google Photos albums and Instagram posts
 - YouTube links to recent Guppy Talks / talks
