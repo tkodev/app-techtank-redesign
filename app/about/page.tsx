@@ -92,7 +92,7 @@ export default function AboutPage() {
               TechTank TO is a volunteer-run, Toronto-based tech community
               founded in 2022. We host monthly in-person events where
               developers, designers, PMs, and tech-curious people gather to
-              learn, share, and connect. No gatekeeping. No ego. Just people
+              learn, share, and connect. No gatekeeping—just people
               helping people grow in tech.
             </p>
           </div>
