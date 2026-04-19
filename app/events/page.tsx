@@ -1,12 +1,12 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calendar, ExternalLink, Camera, Play, MapPin, Clock, Users } from "lucide-react";
+import { Calendar, ExternalLink, Clock, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { EventCard } from "@/components/ui/event-card";
 import { DualCTA } from "@/components/ui/dual-cta";
 import { ContactCard } from "@/components/ui/contact-card";
-import { getUpcomingEvents, getPastEvents, events } from "@/lib/data/events";
+import { getUpcomingEvents, getRecentEvents, events } from "@/lib/data/events";
 
 export const metadata: Metadata = {
   title: "Events",
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
 
 export default function EventsPage() {
   const upcomingEvents = getUpcomingEvents();
-  const pastEvents = getPastEvents();
+  const allRecentEvents = getRecentEvents(50); // Get all events
   const nextEvent = upcomingEvents[0];
 
   return (
@@ -217,113 +217,27 @@ export default function EventsPage() {
         </div>
       </Section>
 
-      {/* Past Events */}
+      {/* All Events */}
       <Section>
         <SectionHeader
-          overline="Past events"
+          overline="All events"
           title="Event archive"
-          description="Explore recaps from previous TechTank meetups."
+          description="Explore all TechTank meetups — most recent first."
           className="mb-12"
         />
 
-        <div className="space-y-6">
-          {pastEvents.map((event) => {
-            const hasRecap = event.photosUrl || event.youtubeUrl;
-            const formattedDate = new Date(event.date).toLocaleDateString(
-              "en-CA",
-              {
-                month: "short",
-                day: "numeric",
-                year: "numeric",
-              }
-            );
+        {/* Featured events - first 2 */}
+        <div className="grid gap-4 lg:grid-cols-2 mb-4">
+          {allRecentEvents.slice(0, 2).map((event) => (
+            <EventCard key={event.id} event={event} variant="featured" />
+          ))}
+        </div>
 
-            return (
-              <div
-                key={event.id}
-                className="bg-white rounded-xl border border-border p-6 lg:p-8"
-              >
-                <div className="flex flex-col lg:flex-row lg:items-start gap-6">
-                  {/* Event info */}
-                  <div className="flex-1">
-                    <div className="flex items-center gap-4 mb-3">
-                      <span
-                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-muted/10 text-muted"
-                      >
-                        Past
-                      </span>
-                      <span className="text-sm text-muted">
-                        Event {event.eventNumber} · {formattedDate}
-                      </span>
-                    </div>
-
-                    <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-                      {event.title}
-                    </h3>
-                    <p className="text-muted mb-4">{event.pitch}</p>
-
-                    {/* Details */}
-                    <div className="flex flex-wrap gap-4 text-sm text-muted mb-4">
-                      <span className="flex items-center gap-1">
-                        <MapPin className="h-3.5 w-3.5" />
-                        {event.venue}
-                      </span>
-                      {event.host && (
-                        <span>
-                          Hosted by{" "}
-                          <span className="text-foreground font-medium">
-                            {event.host.name}
-                          </span>
-                        </span>
-                      )}
-                    </div>
-
-                    {/* Tags */}
-                    <div className="flex flex-wrap gap-2">
-                      {event.tags.map((tag) => (
-                        <span
-                          key={tag}
-                          className="inline-flex items-center px-2.5 py-0.5 rounded-full bg-background text-xs text-muted"
-                        >
-                          {tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-
-                  {/* Recap CTAs */}
-                  {hasRecap && (
-                    <div className="flex flex-wrap gap-3 shrink-0">
-                      {event.photosUrl && (
-                        <Button variant="outline" size="sm" asChild>
-                          <a
-                            href={event.photosUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Camera className="mr-2 h-4 w-4" />
-                            Photos
-                          </a>
-                        </Button>
-                      )}
-                      {event.youtubeUrl && (
-                        <Button variant="outline" size="sm" asChild>
-                          <a
-                            href={event.youtubeUrl}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            <Play className="mr-2 h-4 w-4" />
-                            Watch Talk
-                          </a>
-                        </Button>
-                      )}
-                    </div>
-                  )}
-                </div>
-              </div>
-            );
-          })}
+        {/* Remaining events - smaller cards */}
+        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
+          {allRecentEvents.slice(2).map((event) => (
+            <EventCard key={event.id} event={event} variant="compact" />
+          ))}
         </div>
       </Section>
 
