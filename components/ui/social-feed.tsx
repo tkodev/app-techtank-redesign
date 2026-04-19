@@ -45,6 +45,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
               loop
               muted
               playsInline
+              preload="auto"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             />
           ) : cover ? (
