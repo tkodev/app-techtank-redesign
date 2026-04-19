@@ -273,14 +273,14 @@ export default function AboutPage() {
 
       {/* Closing CTA */}
       <Section className="gradient-brand-soft">
-        <div className="text-center max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
             Join us
           </span>
-          <h2 className="font-display text-3xl lg:text-4xl font-semibold text-foreground mb-6">
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Ready to be part of TechTank?
           </h2>
-          <p className="text-lg text-muted mb-8">
+          <p className="text-muted mb-8">
             Whether you want to attend, speak, host, or volunteer — there&apos;s
             a place for you here.
           </p>
