@@ -68,6 +68,13 @@ export const sponsors: Sponsor[] = [
     type: "sponsor",
     scale: 0.75,
   },
+  {
+    id: "brainstation",
+    name: "BrainStation",
+    logo: "/images/sponsors/brainstation.svg",
+    url: "https://brainstation.io",
+    type: "sponsor",
+  },
 ];
 
 export function getAllSponsors(): Sponsor[] {
