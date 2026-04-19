@@ -240,13 +240,9 @@ export default function EventsPage() {
                   <div className="flex-1">
                     <div className="flex items-center gap-4 mb-3">
                       <span
-                        className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider ${
-                          hasRecap
-                            ? "bg-amber/10 text-amber"
-                            : "bg-muted/10 text-muted"
-                        }`}
+                        className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-semibold uppercase tracking-wider bg-muted/10 text-muted"
                       >
-                        {hasRecap ? "Recap available" : "Past"}
+                        Past
                       </span>
                       <span className="text-sm text-muted">
                         Event {event.eventNumber} · {formattedDate}

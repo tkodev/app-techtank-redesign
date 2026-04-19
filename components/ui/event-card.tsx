@@ -49,7 +49,7 @@ export function EventCard({ event, variant = "poster" }: EventCardProps) {
                   : "bg-white/90 text-teal-dark"
               }`}
             >
-              {isUpcoming ? "Upcoming" : hasRecap ? "Recap Available" : "Past"}
+              {isUpcoming ? "Upcoming" : "Past"}
             </span>
           </div>
           
@@ -113,7 +113,7 @@ export function EventCard({ event, variant = "poster" }: EventCardProps) {
             <span
               className={`tag ${isUpcoming ? "bg-coral" : "bg-teal-dark"}`}
             >
-              {isUpcoming ? "Upcoming" : "Recap Available"}
+              {isUpcoming ? "Upcoming" : "Past"}
             </span>
             <span className="text-sm font-medium text-muted">
               Event {event.eventNumber}
@@ -242,7 +242,7 @@ export function EventCard({ event, variant = "poster" }: EventCardProps) {
               : "bg-muted/10 text-muted"
           }`}
         >
-          {isUpcoming ? "Upcoming" : hasRecap ? "Recap" : "Past"}
+          {isUpcoming ? "Upcoming" : "Past"}
         </span>
         <span className="text-xs font-medium text-muted">
           {formattedDate}
