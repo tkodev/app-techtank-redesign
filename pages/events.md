@@ -1,102 +1,73 @@
-# Events — `/events` (and `/events/:slug`)
+# Events — `/events`
 
 **URL:** https://www.techtankto.com/events
-**Page title:** Upcoming Events — TechTank
-**Role:** Canonical listing of upcoming (and recent) TechTank events, each
-linking to a detail page and/or external RSVP.
+**Page title:** Events — TechTank TO
+**Role:** Single source of truth for upcoming TechTank events, powered
+by the TechTank Luma calendar.
 
 ---
 
 ## 1. Purpose
 
-Let a visitor see what's happening soon, understand whether an event is
-relevant to them, and RSVP — ideally in two clicks.
+Make it effortless for a visitor to see what's coming up and RSVP. The
+page is primarily a **calendar embed**, not a bespoke events system.
 
 ## 2. Primary audience
 
-- Members / returning visitors looking for "what's next"
-- Newcomers converted from the home page
-- Prospective speakers / mentors / sponsors evaluating activity level
+- Returning members checking what's next
+- Newcomers deciding whether to attend
+- Sponsors / speakers verifying the cadence is real
 
 ## 3. Key messages
 
-- TechTank runs a mix of **in-person meetups** (usually monthly) and
-  **virtual events** (Guppy Talks, Study Tank, Code Diversity).
-- Most events are **free** and RSVPs happen on Meetup or Luma.
+- "Stay up to date with everything happening at TechTank."
+- Browse and RSVP directly from the Luma calendar.
+- Monthly in-person events; occasional socials and virtual talks.
 
 ## 4. Content sections
 
-1. **Hero / intro**
-   - "Upcoming Events" headline.
-   - One-line description of the cadence and variety of events.
+1. **Hero**
+   - Headline: "Our Upcoming Events".
+   - Sub-headline: "Stay up to date with everything happening at
+     TechTank."
+   - One line: "Don't miss our next event. Browse and RSVP directly
+     through our Luma calendar below."
 
-2. **Filters / segmentation (optional)**
-   - In-person vs virtual
-   - Program (Guppy Talks, Study Tank, Socials, Code Diversity, Educators)
+2. **Luma calendar embed**
+   - Full-width Luma calendar for `techtankto` (or equivalent handle).
+   - Fallback: if the embed fails, render a server-fetched list of the
+     next 5 events with date, title, venue, and RSVP button.
 
-3. **Event list**
-   For each event, show:
-   - Title
-   - Date, time, timezone
-   - Format (in-person / virtual) and venue (for in-person)
-   - Short description (1–2 sentences)
-   - Tag(s) (program name)
-   - Primary CTA: RSVP on Meetup / Luma
-   - Secondary CTA: "Learn more" → `/events/:slug`
+3. **Subscribe**
+   - Buttons: "Subscribe on Luma", "Add to Google Calendar (.ics)",
+     "Follow on Meetup".
 
-4. **Past / archive (optional)**
-   - Collapsed list of recent past events, linking to recordings on YouTube
-     or writeups.
+4. **Past events (optional)**
+   - Small grid linking to past event albums (Google Photos) and
+     recorded talks (YouTube).
+   - Serves as additional social proof.
 
-5. **Subscribe**
-   - Follow on Meetup / LinkedIn / Luma to get notified of new events.
+5. **"Can't make it?" block**
+   - Link to Slack ("stay in the loop") and YouTube ("watch past talks").
 
-### Example upcoming events referenced on the site
+## 5. Calls to action (priority order)
 
-These are real event examples found on techtankto.com — use them as seed
-content or to validate the schema:
+1. RSVP to the next event (Luma)
+2. Subscribe on Luma / Meetup
+3. Watch past talks on YouTube
 
-- **From Junior to Mid-Level & Beyond: Strategies for Career Advancement**
-  (VIRTUAL) — `/events/junior-to-mid-level`
-- **Code Diversity: Women & Non-Binary Coffee Social**
-  — `/events/code-diversity-women-non-binary-coffee-social`
-- **Guppy Talks (in-person)** — Roof Garden event space, Toronto
-- **AI Prompting with Nhi Nguyen** — practical prompt-writing session
+## 6. Functional requirements
 
-## 5. Event detail page (`/events/:slug`)
+- Luma embed loaded lazily; page must render above-the-fold content
+  before the embed resolves.
+- `.ics` / Google Calendar subscription link functional.
+- `schema.org/Event` structured data on each surfaced event (when the
+  fallback list is active).
+- Embed must not break keyboard navigation or screen-reader access.
 
-Required content:
-- Event title and hero image / banner
-- Date, start/end time, timezone
-- Format: in-person / virtual
-- Venue name + address + map embed (in-person) OR platform (virtual)
-- Description (long form)
-- Agenda / schedule
-- Speaker(s) with bio + photo + links
-- Host / sponsor logo + link (if in-person)
-- RSVP CTA → external (Meetup / Luma)
-- Calendar (.ics) download (nice-to-have)
-- Social share buttons with Open Graph image
-- Related events / program link
+## 7. Acceptance criteria
 
-## 6. Calls to action (priority order)
-
-1. RSVP (external).
-2. View event detail.
-3. Follow Meetup / LinkedIn for future events.
-
-## 7. Functional requirements
-
-- Events are sortable by date (ascending for upcoming).
-- Past events automatically move to an archive view.
-- Structured data: schema.org `Event` for SEO.
-- Each event has a unique, slugged URL for social sharing.
-- Editable via CMS or markdown front matter.
-
-## 8. Acceptance criteria
-
-- A user can find and RSVP to the next event within two clicks from this
-  page.
-- Event cards clearly distinguish in-person vs virtual at a glance.
-- If no events are scheduled, the page shows a helpful empty state (e.g.,
-  "Subscribe to be notified of the next one").
+- A visitor can RSVP to the next event in under three taps from this
+  page on mobile.
+- If Luma's embed is down, the page still communicates the next event
+  and offers an RSVP path (Meetup fallback).

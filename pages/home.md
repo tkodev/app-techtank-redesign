@@ -1,97 +1,107 @@
 # Home — `/`
 
 **URL:** https://www.techtankto.com/
-**Page title:** TechTank TO
-**Role:** Primary entry point; introduces TechTank and routes visitors to the
-most important actions (attend an event, get involved, donate).
+**Page title:** TechTank TO — Toronto's tech community
+**Role:** Primary entry point. Builds social trust through the "Power of
+the Crowd" — testimonials, real event photography, and logo clouds — and
+routes visitors to a role or the next event.
 
 ---
 
 ## 1. Purpose
 
-Give a first-time visitor, within 10 seconds, a clear answer to:
+Within 10 seconds, answer:
 
 1. What is TechTank?
-2. Why should I care (what's in it for me)?
+2. Is this community legit / active / for people like me?
 3. What do I do next?
 
-Encourage attendance at upcoming events and funnel qualified visitors to the
-Speak, Mentor, Host, and Donate pages.
+The redesign leans on **social proof** as the primary persuasion lever,
+not product copy.
 
 ## 2. Primary audience
 
-- Toronto-based tech enthusiasts (junior devs first, all levels welcome)
-- Designers, PMs, other tech-adjacent roles
-- Potential sponsors / speakers / mentors looking to evaluate the community
+- First-time visitors evaluating the community
+- Toronto-based junior / early-career developers
+- Potential speakers, hosts, sponsors, volunteers sizing us up
 
 ## 3. Key messages
 
-- "A lively and inclusive tech community that welcomes tech enthusiasts from
-  all walks of life."
-- Beginner-friendly but open to seasoned professionals.
+- A lively, inclusive tech community that welcomes all walks of life.
 - Volunteer-run, Toronto-based, founded 2022.
-- Multiple ways to plug in: events, mentorship, Guppy Talks, Study Tank,
-  Code Diversity, socials.
+- Monthly in-person events: technical talks + networking.
+- Built by and for the Toronto tech community.
 
-## 4. Content sections
+## 4. Content sections (top to bottom)
 
 1. **Hero**
-   - Brand lockup (TechTank logo + tagline).
-   - One-sentence mission statement.
-   - Primary CTA: "See upcoming events" → `/events`.
-   - Secondary CTA: "Learn more" → `/about`.
+   - Brand lockup + one-sentence mission.
+   - Primary CTA: **"RSVP on Luma"** → `/events`.
+   - Secondary CTA: "Join our Slack".
+   - Hero visual: a curated collage of real event photos (retain the
+     collage motif from the current site, treated more elegantly).
 
-2. **What is TechTank**
-   - Short paragraph echoing the About page.
-   - Inline link to `/about`.
+2. **Trust strip / fast facts**
+   - "100–120 attendees per event", "50+ talks", "X companies hosted",
+     "Monthly since 2022" (confirm numbers with organizers).
+   - Renders as a thin band of large numerals under the hero.
 
-3. **How to get involved (program cards)**
-   Cards for each activity, each linking to `/activities` or the relevant
-   sub-section:
-   - Tech Tank Socials
-   - Guppy Talks (virtual panel series / podcast)
-   - Mentorship Program → `/mentors`
-   - Study Tank
-   - Code Diversity Coffee Chat
-   - Community Educators
+3. **Testimonials**
+   - 3–6 quotes from attendees, speakers, and hosts with name, role,
+     company, and a small photo.
+   - Each quote links to the person's LinkedIn where available.
 
-4. **Upcoming events preview**
-   - 2–3 next events pulled from `/events`.
-   - CTA: "View all events" → `/events`.
+4. **Sponsor / host logo cloud**
+   - Grayscale logos of companies that have hosted or sponsored.
+   - Caption: "Companies that have supported TechTank".
 
-5. **For companies / organizers**
-   - "Host us" teaser → `/host`
-   - "Speak at TechTank" teaser → `/speak`
+5. **How to get involved**
+   - Four role cards linking into the onboarding hub:
+     - **Speak** → `/how-it-works/speaker`
+     - **Host** → `/how-it-works/host`
+     - **Sponsor** → `/how-it-works/sponsor`
+     - **Volunteer** → `/how-it-works/volunteer`
+   - Overline: "Become part of it" / Caption under: "Every TechTank event
+     runs on the time of community members like you."
 
-6. **Support the community**
-   - Short pitch → `/donate`.
+6. **Upcoming events preview**
+   - Next 2–3 events pulled from Luma.
+   - CTA: "See all events" → `/events`.
 
-7. **Social / channels**
-   - Icons + links: Meetup, LinkedIn, Instagram, YouTube, GitHub, Linktree.
+7. **From the community (social previews)**
+   - Preview tiles linking to:
+     - Recent Google Photos album(s)
+     - Instagram grid (last 6 posts)
+     - YouTube: latest Guppy Talks / recorded talks
+   - Goal: prove the community is alive and active.
 
-8. **Footer** (global)
-   - Nav, socials, `techtankto@gmail.com`, Terms & Conditions link.
+8. **Values teaser**
+   - Four-pillar strip (Community, Innovation, Teamwork, Respect) with a
+     link to `/about`.
+
+9. **Footer** (global)
 
 ## 5. Calls to action (priority order)
 
-1. RSVP to the next event (→ Meetup / Luma via `/events`).
-2. Explore activities (`/activities`).
-3. Become a mentor / speaker / host.
-4. Donate (`/donate`).
+1. RSVP to the next event (Luma)
+2. Join our Slack
+3. Pick a role → `/how-it-works`
+4. View Press Kit (for press/partners)
 
 ## 6. Functional requirements
 
-- Upcoming events block must update automatically (or be easy for organizers
-  to edit).
+- Upcoming-events module refreshes from Luma (API or scheduled build).
+- Testimonials and logos live in structured content (MDX / JSON), not
+  hard-coded in components.
+- Google Photos and Instagram previews degrade gracefully if embeds fail.
 - All external links open in a new tab with `rel="noopener noreferrer"`.
-- Mobile-first responsive layout.
-- Open Graph + Twitter card metadata with TechTank branding.
+- Mobile-first layout; hero collage remains legible at 375px.
+- Open Graph / Twitter card metadata with TechTank branding.
 
 ## 7. Acceptance criteria
 
-- A visitor unfamiliar with TechTank can describe in one sentence what it is
-  after reading the hero and first section.
-- Every primary program has a clear entry point visible without scrolling
-  past a second screen on mobile.
-- At least one event CTA is above the fold on desktop and reachable within
-  one scroll on mobile.
+- A visitor can, within one scroll on desktop, see: who TechTank is,
+  proof it is active, the next event, and where to join.
+- Every "role" card is reachable within one tap from the hero on mobile.
+- Social-proof section (testimonials + logos) is visible before the
+  visitor reaches the footer on mobile.

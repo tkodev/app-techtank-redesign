@@ -1,130 +1,207 @@
 # Product Requirements Document (PRD)
 
-## TechTank TO — Website
+## TechTank TO — Website Redesign
 
-**Source:** https://www.techtankto.com/
+**Source of truth:** https://www.techtankto.com/
 **Document date:** 2026-04-18
-**Status:** Discovery / redesign baseline
+**Status:** Redesign — approved IA, pending visual design
+**Stack target:** Next.js (App Router) with shared layouts
 
 ---
 
 ## 1. Product Overview
 
 TechTank TO (TechTank) is a volunteer-run, Toronto-based tech community
-organization founded in 2022. The `techtankto.com` website is the public-facing
-hub that explains who TechTank is, what it does, and how community members,
-speakers, sponsors, and donors can participate.
+founded in 2022. The redesign moves the site away from a flat "link-tree"
+layout toward a **conversion-oriented onboarding hub** that turns curious
+visitors into active contributors — attendees, speakers, hosts, sponsors,
+and volunteers.
 
-The site is a content-driven marketing and community-engagement website. It
-does not host a user account system or host ticketing itself; it funnels
-visitors to external platforms (Meetup, Luma, LinkedIn, Slack, GitHub, YouTube,
-Instagram) for RSVPs, communications, and event operations, and to payment
-processors (Stripe, Interac E-Transfer) for donations.
+The site remains content-driven marketing: it does not own accounts or
+ticketing. It funnels visitors to external platforms (Meetup, Luma, Slack,
+LinkedIn, GitHub, YouTube, Instagram) and captures intake via Google Forms.
 
 ### 1.1 Mission
 
-Foster a supportive and inclusive environment where individuals of all skill
-levels can explore, create, and thrive in technology, aiming to make tech
-accessible, engaging, and empowering through collaboration and diversity.
+Foster a supportive and inclusive environment where people of all skill
+levels can explore, create, and thrive in technology.
 
-### 1.2 Audience
+### 1.2 Core pillars (brand/values)
+
+- **Community** — belonging, safety, inclusivity
+- **Innovation** — curiosity, learning in public, experimentation
+- **Teamwork** — collaboration over competition
+- **Respect** — enforced via the Code of Conduct
+
+### 1.3 Audience
 
 - Junior / early-career software developers (primary)
-- Designers, PMs, and other tech-adjacent roles
+- Designers, PMs, tech-adjacent roles
 - Experienced professionals open to mentoring or speaking
-- Companies that want to sponsor/host events or recruit
-- Donors who want to support the community
+- Companies wanting to host, sponsor, or recruit
+- Media, partners, and sponsors looking for brand assets
 
-### 1.3 Goals (product)
+### 1.4 Product goals
 
-1. Explain what TechTank is and build trust with newcomers.
-2. Convert visitors into event attendees (via Meetup / Luma).
-3. Convert qualified visitors into speakers, mentors, or venue hosts.
-4. Collect donations to fund event operations.
-5. Centralize links to all external community channels.
+1. Build social trust via **social proof** — testimonials, event
+   photography, sponsor/host logo cloud.
+2. Convert visitors into specific roles through a dedicated onboarding
+   funnel (`/how-it-works/*`).
+3. Keep event discovery effortless (embedded Luma calendar).
+4. Provide a professional, one-stop resource for press and sponsors.
+5. Centralize legal / compliance docs cleanly.
 
-### 1.4 Success metrics (suggested)
+### 1.5 Success metrics
 
+- Intake form submissions per role (speaker / host / sponsor / volunteer)
 - RSVP click-throughs to Meetup / Luma
-- Host / Speak / Mentor form submissions
-- Donation conversions (Stripe + Interac)
-- Returning visitors (engagement with Activities/Events)
-- Newsletter / LinkedIn follow click-through
+- Press Kit downloads
+- Scroll depth and CTA click-through rate on `/` and `/about`
+- Returning visitors and newsletter / Slack joins
 
 ---
 
 ## 2. Information Architecture
 
-Top-level pages (all reachable from the primary nav and/or footer):
+```
+/
+├── about
+├── how-it-works                 (onboarding hub — shared layout)
+│   ├── speaker
+│   ├── host
+│   ├── sponsor
+│   └── volunteer
+├── events                       (Luma calendar embed)
+├── press-kit
+└── legal                        (shared layout)
+    ├── terms-of-service
+    ├── privacy-policy
+    └── code-of-conduct
+```
+
+### 2.1 Route map
 
 | Path | Title | Purpose |
 |---|---|---|
-| `/` | Home | Entry point, overview, primary CTAs |
-| `/about` | About | Mission, story, values |
-| `/activities` | Activities | Programs (Guppy Talks, Study Tank, Code Diversity, Socials, Mentorship) |
-| `/events` | Upcoming Events | Listing of current and upcoming events |
-| `/events/:slug` | Event detail | Individual event description, date/time, RSVP |
-| `/mentors` | Mentors | Pitch for becoming a mentor + signup |
-| `/speak` | Speak | Pitch for becoming a speaker + signup |
-| `/host` | Host Us | Pitch for companies to sponsor / host events |
-| `/donate` | Donate | Donation methods (Stripe, Interac) |
-| `/terms-conditions` | Donation Terms & Conditions | Legal terms for donations |
+| `/` | Home | Social-proof-driven overview and primary CTAs |
+| `/about` | About | Values & community manifesto (the four pillars) |
+| `/how-it-works` | Get Involved | Onboarding hub; routes visitors to a role |
+| `/how-it-works/speaker` | Speak | Speaker logistics + intake form |
+| `/how-it-works/host` | Host | Venue logistics (100–120 cap, 6–8:30pm) + intake |
+| `/how-it-works/sponsor` | Sponsor | Corporate partner pitch + intake |
+| `/how-it-works/volunteer` | Volunteer | Crew onboarding + intake |
+| `/events` | Events | Upcoming events via Luma calendar |
+| `/press-kit` | Press Kit | Brand guidelines, logos, fast facts |
+| `/legal/terms-of-service` | Terms of Service | — |
+| `/legal/privacy-policy` | Privacy Policy | — |
+| `/legal/code-of-conduct` | Code of Conduct | — |
 
-### 2.1 Global navigation
+### 2.2 Shared layouts (Next.js)
 
-- Primary nav: About, Activities, Events, Mentors, Speak, Host Us, Donate
-- Footer: same nav + social links (LinkedIn, Instagram, YouTube, GitHub,
-  Meetup, Linktree), contact email `techtankto@gmail.com`, link to
-  Donation Terms & Conditions.
+- **Root layout** — global header, footer, theme, SEO defaults.
+- **`/how-it-works` layout** — sticky sub-nav (Speaker / Host / Sponsor /
+  Volunteer), persistent "Join our Slack" CTA, shared "Why get involved"
+  strip, consistent intake-form styling.
+- **`/legal` layout** — document-style narrow column, table of contents
+  sidebar, last-updated stamp.
 
-### 2.2 External destinations referenced across the site
+### 2.3 Global navigation
+
+- **Primary nav:** About, How it Works, Events, Press Kit
+- **Header CTA:** "Join our Slack" (secondary: "RSVP on Luma")
+- **Footer:**
+  - Column 1 — Community: Meetup, Luma, Slack, LinkedIn, Instagram, GitHub, YouTube
+  - Column 2 — Get Involved: Speak, Host, Sponsor, Volunteer
+  - Column 3 — Resources: Press Kit, Events
+  - Column 4 — Legal: Terms of Service, Privacy Policy, Code of Conduct
+  - Contact: `techtankto@gmail.com`
+
+### 2.4 External destinations
 
 - Meetup: https://www.meetup.com/techtank-to/
-- Luma (event RSVPs)
+- Luma: TechTank calendar
+- Slack: invite link (Google Form or direct)
 - LinkedIn: https://ca.linkedin.com/company/techtank-to
 - Instagram: https://www.instagram.com/techtankto/
 - YouTube: https://www.youtube.com/@TechTankTo
 - GitHub: https://github.com/tech-tankorg
-- Linktree: https://linktr.ee/techtankto
-- Guppy Talks podcast (external listing)
+- Google Photos albums (per-event)
+- Google Forms (one per intake role)
 
 ---
 
 ## 3. Key User Journeys
 
-1. **Newcomer discovers TechTank** → lands on Home → reads About → clicks
-   Events → RSVPs on Meetup/Luma.
-2. **Aspiring speaker** → Home → Speak → submits speaker form.
-3. **Potential mentor** → Home → Mentors → submits mentor form.
-4. **Company sponsor** → Home → Host Us → contacts TechTank about venue.
-5. **Supporter** → Home → Donate → reviews Terms → pays via Stripe or Interac.
-6. **Returning member** → directly to Events or Activities to see what's new.
+1. **Curious newcomer** → `/` (sees event photos, testimonials, logo
+   cloud) → `/about` (values) → `/events` (RSVPs on Luma) → joins Slack.
+2. **Aspiring speaker** → `/` → `/how-it-works/speaker` → submits Google
+   Form.
+3. **Company host** → `/` or `/how-it-works` → `/how-it-works/host` →
+   submits intake → receives sponsorship package via email.
+4. **Corporate sponsor** → `/press-kit` or `/how-it-works/sponsor` →
+   downloads brand assets → submits sponsor intake.
+5. **Volunteer** → Slack invite or `/` → `/how-it-works/volunteer` →
+   submits intake.
+6. **Journalist / partner** → `/press-kit` → downloads logos + fast-facts
+   → emails `techtankto@gmail.com`.
+7. **Returning member** → `/events` or Slack.
 
 ---
 
 ## 4. Page-Level Requirements (Index)
 
-Detailed requirements for each page live in the `pages/` directory:
+Detailed requirements live in `pages/`:
 
 - [pages/home.md](pages/home.md)
 - [pages/about.md](pages/about.md)
-- [pages/activities.md](pages/activities.md)
 - [pages/events.md](pages/events.md)
-- [pages/mentors.md](pages/mentors.md)
-- [pages/speak.md](pages/speak.md)
-- [pages/host.md](pages/host.md)
-- [pages/donate.md](pages/donate.md)
-- [pages/terms-conditions.md](pages/terms-conditions.md)
+- [pages/how-it-works/index.md](pages/how-it-works/index.md)
+- [pages/how-it-works/speaker.md](pages/how-it-works/speaker.md)
+- [pages/how-it-works/host.md](pages/how-it-works/host.md)
+- [pages/how-it-works/sponsor.md](pages/how-it-works/sponsor.md)
+- [pages/how-it-works/volunteer.md](pages/how-it-works/volunteer.md)
+- [pages/press-kit.md](pages/press-kit.md)
+- [pages/legal/terms-of-service.md](pages/legal/terms-of-service.md)
+- [pages/legal/privacy-policy.md](pages/legal/privacy-policy.md)
+- [pages/legal/code-of-conduct.md](pages/legal/code-of-conduct.md)
 
 ---
 
-## 5. Content, Brand & Tone
+## 5. Design Direction
 
-- Brand voice: friendly, welcoming, beginner-safe, Toronto-local, inclusive.
-- Visual motifs: aquatic / fish metaphors ("Guppy Talks", "Tank", 🐟🐠🐟).
-- Emphasis on accessibility for non-experts and underrepresented folks in tech
-  (Code Diversity program for women & non-binary).
-- Community-run, non-commercial tone; transparent about being volunteer-led.
+### 5.1 Visual tone
+
+- **Professional and elegant**, not corporate. Confident use of whitespace,
+  a refined type scale, and editorial-style layouts.
+- Keep the aquatic motif (fish logo, "Tank" vocabulary) but treat it as a
+  subtle mark rather than the dominant motif.
+- Prefer **real event photography** over stock illustration.
+
+### 5.2 Conversion orientation
+
+Every page must have exactly **one dominant CTA** that moves the visitor
+toward interacting (Join Slack / RSVP / Submit intake form). Secondary
+CTAs are fine; tertiary links belong in the footer.
+
+### 5.3 Social proof patterns (required on `/` and relevant `/how-it-works/*`)
+
+- Real photos and quotes from attendees and speakers
+- Numeric facts: attendance range, talks delivered, events hosted,
+  companies that have hosted
+- Sponsor / host logo cloud
+- Linked previews of recent Google Photos albums and Instagram posts
+- YouTube links to recent Guppy Talks / talks
+
+### 5.4 Accessibility
+
+- WCAG 2.1 AA: color contrast, visible focus, alt text on all photos,
+  semantic headings, keyboard-reachable forms, reduced-motion support.
+
+### 5.5 Responsiveness
+
+- Mobile-first. Break at 640 / 1024 / 1280. The sticky sub-nav on
+  `/how-it-works` must collapse into a single-line segmented control on
+  mobile.
 
 ---
 
@@ -132,59 +209,90 @@ Detailed requirements for each page live in the `pages/` directory:
 
 ### 6.1 Must-have
 
-- Responsive static/marketing site (mobile-first).
-- Navigation + footer present on every page.
-- Event listings with individual detail pages.
-- Contact / intake forms for Speak, Mentors, Host Us (or clear mailto/fallback).
-- Donate page with Stripe checkout + Interac E-Transfer instructions.
-- Social share / Open Graph metadata on all pages, especially event pages.
-- Links out to Meetup / Luma / LinkedIn / GitHub / YouTube / Instagram.
-- Accessible: WCAG 2.1 AA (color contrast, alt text, keyboard nav, semantic
-  headings, focus states).
+- Next.js App Router with shared layouts for `/how-it-works` and `/legal`.
+- Global header + footer on every route.
+- `/events` renders an embedded Luma calendar (or API-backed list).
+- Google Form embedded (or linked) on each `/how-it-works/*` page.
+- Press Kit exposes a downloadable ZIP of logos + a brand-guidelines PDF.
+- Social share / Open Graph metadata on every page.
+- Privacy-respecting analytics (Plausible or equivalent).
+- SEO: sitemap, robots.txt, canonical URLs, per-page metadata.
 
 ### 6.2 Should-have
 
-- Content-editable event data (CMS or structured markdown).
-- Automatic sorting of events by date, with a "past events" archive.
-- Embedded newsletter / mailing-list signup.
-- SEO-friendly slugs, sitemap, robots.txt.
-- Analytics (privacy-respecting — e.g., Plausible).
+- Event `schema.org/Event` structured data (when eventing server-side).
+- Newsletter / Slack invite capture block in footer.
+- Google Photos album preview cards (Home and event detail).
+- Branded slide deck template (Google Slides / PPTX) linked from
+  `/how-it-works/speaker` and `/press-kit`.
+- Speaker run-of-show and host checklist (linked PDFs).
 
 ### 6.3 Nice-to-have
 
-- Embedded Guppy Talks podcast player.
-- Mentor/speaker directory (public profiles, opt-in).
-- Calendar (.ics) download for events.
+- `.ics` calendar export for events.
+- Embedded Instagram feed (light, cached, non-blocking).
+- Testimonial carousel with per-quote link to the speaker's or host's
+  LinkedIn / site.
 - Dark mode.
+- i18n scaffold (EN default; FR optional).
 
 ---
 
 ## 7. Non-Functional Requirements
 
-- **Performance:** Core Web Vitals "Good" on mobile; LCP < 2.5s.
-- **SEO:** Proper titles, meta descriptions, structured data for `Event`
-  schema.org on event pages.
-- **Reliability:** Static hosting with CDN preferred.
-- **Privacy:** Minimal PII collected. Donation data is handled by Stripe /
-  Interac — nothing stored externally by TechTank (per existing terms).
+- **Performance:** LCP < 2.5s on 4G mobile; Core Web Vitals "Good".
+- **SEO:** Per-page metadata, structured data, sitemap, clean slugs.
+- **Reliability:** Static or ISR hosting with CDN (Vercel / Cloudflare).
+- **Privacy:** No PII collected beyond intake forms (handled by Google
+  Forms); cookie banner only if analytics or embeds require one.
 - **Jurisdiction:** Governed by the laws of Ontario, Canada.
+- **Security:** External links use `rel="noopener noreferrer"`; third-party
+  embeds sandboxed where possible.
 
 ---
 
-## 8. Out of Scope
+## 8. Content & Brand
 
-- Member account system / login
-- Paid ticketing (RSVPs are free and handled via Meetup/Luma)
-- E-commerce / merchandise store
+- **Voice:** warm, welcoming, beginner-safe, Toronto-local, confident.
+- **Typography:** one editorial serif for display, one humanist sans for
+  body (final pairing per visual design).
+- **Color:** current gradient (pink → blue → teal) retained as a signature
+  accent; grounded by a neutral base (off-white / ink) for professionalism.
+- **Imagery:** real event photography first; diverse, candid, well-lit.
+
+---
+
+## 9. Event Support (Organizer Tooling)
+
+Not user-facing pages, but assets produced and surfaced via `/press-kit`
+and `/how-it-works/speaker`:
+
+- Branded Google Slides / Keynote / PPTX templates (speaker + title card)
+- Host checklist PDF (AV, food, timing)
+- Speaker run-of-show PDF (intro / talk / Q&A timing)
+- Social post templates (LinkedIn, Instagram)
+- Email templates for sponsor outreach
+
+---
+
+## 10. Out of Scope
+
+- Member accounts / login
+- Paid ticketing (RSVPs remain on Meetup / Luma)
+- Merchandise store
 - Native mobile app
+- On-site donation processing (individual donations de-prioritized;
+  corporate support happens via `/how-it-works/sponsor`)
 
 ---
 
-## 9. Open Questions
+## 11. Open Questions
 
-- Do we want a first-party event RSVP flow, or stay on Meetup/Luma?
-- Should mentor / speaker / host intake be forms on-site or external
-  (Typeform, Google Forms)?
-- Should there be a blog or is the Guppy Talks podcast the primary content
-  channel?
-- Do we want a public team page listing admins / organizers?
+- Do we keep a first-party blog, or continue relying on YouTube / Guppy
+  Talks for long-form content?
+- Should `/how-it-works/volunteer` gate behind Slack membership, or stay
+  open?
+- Is individual donation still a funded path, or fully replaced by
+  corporate sponsorship?
+- Do we want a public organizers / team page (possibly under `/about`)?
+- Newsletter platform of choice (Substack vs. Buttondown vs. nothing)?

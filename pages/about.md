@@ -1,89 +1,84 @@
 # About — `/about`
 
 **URL:** https://www.techtankto.com/about
-**Page title:** TechTank TO — About
-**Role:** Tell the TechTank story, state the mission, and build credibility.
+**Page title:** About — TechTank TO
+**Role:** Values and community manifesto. Establishes *why* TechTank
+exists and *what* it stands for, through the four core pillars.
 
 ---
 
 ## 1. Purpose
 
-Give visitors the full context on who TechTank is, why it exists, and the
-values it operates on. Convert empathetic visitors into event attendees,
-mentors, speakers, or donors.
+Move past a bio-style "About" and into a **community manifesto** — a
+page a potential speaker, host, sponsor, or member can point to and say
+"yes, I want to be part of this".
 
 ## 2. Primary audience
 
-- Visitors evaluating whether TechTank is a fit for them
-- Potential mentors, speakers, sponsors, and donors doing due diligence
-- Journalists / partners looking for a canonical description
+- Prospective members weighing whether TechTank is for them
+- Prospective hosts / sponsors evaluating alignment with their brand
+- Journalists and partners looking for a values statement
 
 ## 3. Key messages
 
-- TechTank is a **lively and inclusive tech community** based in Toronto.
-- Welcomes tech enthusiasts from all walks of life — from curious beginners
-  to seasoned developers.
-- **Founded in 2022** by early-career software engineers.
-- **Volunteer-run, nonprofit-style** organization.
-- **Mission:** foster a supportive and inclusive environment where
-  individuals of all skill levels can explore, create, and thrive in
-  technology; make tech accessible, engaging, and empowering through
-  collaboration and diversity.
-- Strong focus on **nurturing junior software developers** with community
-  and resources.
+- TechTank is volunteer-run, Toronto-based, founded 2022.
+- The community rests on four pillars: **Community, Innovation,
+  Teamwork, Respect**.
+- We are beginner-safe, explicitly inclusive, and explicitly non-commercial.
 
 ## 4. Content sections
 
-1. **Hero / intro**
-   - "About TechTank" headline.
-   - Short mission statement.
+1. **Manifesto hero**
+   - Editorial headline, e.g. "We build the community we wanted to find."
+   - One-paragraph manifesto expanding the mission.
+   - Soft-toned background photo from a real event.
 
-2. **Our story**
-   - Founded in 2022 by early-career software engineers in Toronto.
-   - How it grew into a broader community.
+2. **The four pillars**
+   - **Community** — a place to belong, for all levels.
+   - **Innovation** — curiosity, learning in public, experimentation.
+   - **Teamwork** — collaboration over competition.
+   - **Respect** — inclusive by default, enforced by the Code of Conduct.
+   - Each pillar: icon + short heading + 2–3 sentence statement.
 
-3. **What we do**
-   - Monthly in-person meetups with technical talks + networking.
-   - Virtual initiatives (Guppy Talks, Study Tank).
-   - Mentorship program.
-   - Diversity-focused programming (Code Diversity).
-   - Community educators.
+3. **Origin story**
+   - One or two paragraphs: founded in 2022 in Toronto; grown to monthly
+     events with 100–120 attendees; entirely volunteer-run.
 
-4. **Who it's for**
-   - Developers, designers, PMs, and tech-adjacent roles.
-   - All skill levels, with special emphasis on junior devs and
-     underrepresented folks.
+4. **What we do**
+   - Monthly in-person events (technical talk + networking).
+   - Recorded talks on YouTube.
+   - Slack community for ongoing discussion.
+   - Optional programs (Guppy Talks, Study Tank, Code Diversity) — keep
+     a short list with links; avoid sprawling content here.
 
-5. **Values**
-   - Inclusion, accessibility, collaboration, diversity, community-run.
+5. **How we fund it**
+   - Companies provide venue + food; TechTank does the rest. Link to
+     `/how-it-works/sponsor` and `/how-it-works/host`.
 
-6. **How it's funded**
-   - Volunteer-run, sponsor venues, community donations.
-   - CTA → `/donate`.
+6. **Code of Conduct teaser**
+   - Short callout linking to `/legal/code-of-conduct`.
 
-7. **Get involved**
-   - Cards or CTAs to `/events`, `/mentors`, `/speak`, `/host`, `/donate`.
+7. **Team / organizers (optional, per open question)**
+   - Grid of organizers with name, role, and LinkedIn.
 
-8. **Connect with us**
-   - All social / community channels (Meetup, LinkedIn, Instagram, YouTube,
-     GitHub, Linktree).
-   - Contact email: `techtankto@gmail.com`.
+8. **Closing CTA**
+   - "Join us" — Slack + next event.
 
-## 5. Calls to action
+## 5. Calls to action (priority order)
 
-- Attend an event (`/events`).
-- Get involved (`/mentors`, `/speak`, `/host`).
-- Donate (`/donate`).
+1. Join our Slack
+2. RSVP on Luma
+3. Read the Code of Conduct
 
 ## 6. Functional requirements
 
-- Static content page, editable via CMS or markdown.
-- Scannable layout with clear section headings.
-- Must include all external community links.
+- Pillars and organizers defined in structured content.
+- Manifesto copy ships with editable source (MDX).
+- Code of Conduct link is prominent (not just in the footer).
 
 ## 7. Acceptance criteria
 
-- A reader can state TechTank's mission, founding year, and primary audience
-  after a single read.
-- Every claim on the page ("volunteer-run", "founded 2022", etc.) is
-  consistent with all other pages of the site.
+- A reader can name the four pillars after one scroll.
+- The page reads as a statement of values, not a product description.
+- Every pillar has a concrete behavior or program attached to it (not
+  just a buzzword).
