@@ -1,12 +1,37 @@
 "use client";
 
-import { Calendar, MapPin } from "lucide-react";
+import { Calendar, MapPin, Play } from "lucide-react";
 import type { Event } from "@/constants/events";
 import { getAllSponsors } from "@/constants/sponsors";
 
 interface EventCardProps {
   event: Event;
   variant?: "featured" | "compact";
+}
+
+function RecapPill({
+  href,
+  size = "md",
+}: {
+  href: string;
+  size?: "sm" | "md";
+}) {
+  const base =
+    "inline-flex items-center gap-1 rounded-full bg-[#FF0000]/10 text-[#CC0000] font-semibold uppercase tracking-wider hover:bg-[#FF0000]/20 transition-colors";
+  const sizeClass =
+    size === "sm" ? "px-2 py-0.5 text-[10px]" : "px-2.5 py-1 text-xs";
+  return (
+    <a
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+      className={`${base} ${sizeClass}`}
+      aria-label="Watch recap on YouTube"
+    >
+      <Play className={size === "sm" ? "h-2.5 w-2.5 fill-current" : "h-3 w-3 fill-current"} />
+      Recap Available
+    </a>
+  );
 }
 
 export function EventCard({ event, variant = "compact" }: EventCardProps) {
@@ -52,8 +77,8 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
     return (
       <div className="group relative overflow-hidden rounded-2xl glass">
         <div className="p-6">
-          {/* Header: Status badge + Tag */}
-          <div className="flex items-center justify-between mb-3">
+          {/* Header: Status badge + Tag + Recap */}
+          <div className="flex flex-wrap items-center gap-2 mb-3">
             <span
               className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${
                 isUpcoming
@@ -63,8 +88,9 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
             >
               {isUpcoming ? "Upcoming" : "Past"}
             </span>
+            {event.youtubeUrl && <RecapPill href={event.youtubeUrl} />}
             {primaryTag && (
-              <span className="text-xs text-muted">{primaryTag}</span>
+              <span className="ml-auto text-xs text-muted">{primaryTag}</span>
             )}
           </div>
 
@@ -104,8 +130,8 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
   // Compact variant - smaller card
   return (
     <div className="group relative flex flex-col glass rounded-xl p-4 transition-all duration-300">
-      {/* Header: Status badge + Tag */}
-      <div className="flex items-center justify-between mb-2">
+      {/* Header: Status badge + Tag + Recap */}
+      <div className="flex flex-wrap items-center gap-1.5 mb-2">
         <span
           className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider ${
             isUpcoming ? "bg-coral/10 text-coral" : "bg-muted/10 text-muted"
@@ -113,8 +139,9 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
         >
           {isUpcoming ? "Upcoming" : "Past"}
         </span>
+        {event.youtubeUrl && <RecapPill href={event.youtubeUrl} size="sm" />}
         {primaryTag && (
-          <span className="text-[10px] text-muted">{primaryTag}</span>
+          <span className="ml-auto text-[10px] text-muted">{primaryTag}</span>
         )}
       </div>
 
