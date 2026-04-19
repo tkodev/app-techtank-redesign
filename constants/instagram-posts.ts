@@ -1,4 +1,19 @@
-const instagramPosts = {
+export interface InstagramPostMedia {
+  type: "image" | "video";
+  path: string;
+}
+
+export interface InstagramPost {
+  caption: string;
+  date?: string;
+  shortcode?: string;
+  pk?: number;
+  createdAtRaw?: number;
+  featured?: boolean;
+  media: InstagramPostMedia[];
+}
+
+export const instagramPosts: Record<string, InstagramPost> = {
   "2024-05-14-C69JJhR2qP": {
     caption: "🌟 Dive into the world of AI Prompting with us at #StudyTank! 🚀\nJoin our StudyTank session tonight at 7:00 p.m. as we explore the art of crafting well-written prompts to elicit desired behaviors from AI models.\nDon’t miss out on practical tips from our guest teacher, Nhi Nguyen!\nRSVP now at the link in our bio on the app Meetup\nhttps://www.meetup.com/techtank-to/events/300782288\n#AI #TechTalks #StudyTank #TechTank #TechTankTo #FollowUs #TechCommunity #followforfollowback #follow4followback #onlineevent #onlineevents #aiprompts #techenthusiast #techenthusiasts #coder #programmer #dev #developer #designer\n#techtanktoronto #swimwithus #iykyk #foryou #technology #aiprompt #artificialintellegence #toolsandtips #lifehack #quicktips\n#careergrowth",
     date: "2024-05-14",
@@ -999,6 +1014,7 @@ const instagramPosts = {
     shortcode: "DGjOLKRNswM",
     pk: 18304750219224352,
     createdAtRaw: 1740610320,
+    featured: true,
     media: [
       { type: "image", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764798978118741.png" },
       { type: "video", path: "/media/instagram/2025-02-26-DGjOLKRNswM/techtankto_DGjOLKRNswM_3576764799414295229.mp4" },
@@ -1101,6 +1117,7 @@ const instagramPosts = {
     shortcode: "DI1cmTyu5kg",
     pk: 18099395080535304,
     createdAtRaw: 1745510130,
+    featured: true,
     media: [
       { type: "video", path: "/media/instagram/2025-04-24-DI1cmTyu5kg/techtankto_3617221525380926586.mp4" },
       { type: "image", path: "/media/instagram/2025-04-24-DI1cmTyu5kg/techtankto_DI1cmTyu5kg_3617923646778680573.jpg" },
@@ -1133,6 +1150,7 @@ const instagramPosts = {
     shortcode: "DLz4I7KOww6",
     pk: 18071767186979833,
     createdAtRaw: 1751900083,
+    featured: true,
     media: [
       { type: "video", path: "/media/instagram/2025-07-07-DLz4I7KOww6/techtankto_3671525025119931450.mp4" },
       { type: "image", path: "/media/instagram/2025-07-07-DLz4I7KOww6/techtankto_DLz4I7KOww6_3671525025119931450.jpg" }
@@ -1144,6 +1162,7 @@ const instagramPosts = {
     shortcode: "DNRVwWtPwky",
     pk: 18337280413163939,
     createdAtRaw: 1755036344,
+    featured: true,
     media: [
       { type: "video", path: "/media/instagram/2025-08-12-DNRVwWtPwky/dj.see.a_3697832450940930354.mp4" },
       { type: "image", path: "/media/instagram/2025-08-12-DNRVwWtPwky/techtankto_DNRVwWtPwky_3697832450940930354.jpg" }
@@ -1155,6 +1174,7 @@ const instagramPosts = {
     shortcode: "DNmHtVwNshY",
     pk: 18078892546765610,
     createdAtRaw: 1755733466,
+    featured: true,
     media: [
       { type: "video", path: "/media/instagram/2025-08-20-DNmHtVwNshY/techtankto_3703681645618317400.mp4" },
       { type: "image", path: "/media/instagram/2025-08-20-DNmHtVwNshY/techtankto_DNmHtVwNshY_3703681645618317400.jpg" }
@@ -1176,9 +1196,32 @@ const instagramPosts = {
     shortcode: "DW9-vcgiPHx",
     pk: 18107726435506054,
     createdAtRaw: 1775861509,
+    featured: true,
     media: [
       { type: "video", path: "/media/instagram/2026-04-10-DW9vcgiPHx/techtankto_3872527193918206449.mp4" },
       { type: "image", path: "/media/instagram/2026-04-10-DW9vcgiPHx/techtankto_DW9-vcgiPHx_3872527193918206449.jpg" }
     ]
   },
 };
+
+export interface InstagramPostWithId extends InstagramPost {
+  id: string;
+}
+
+export function getInstagramPosts(): InstagramPostWithId[] {
+  return Object.entries(instagramPosts)
+    .map(([id, post]) => ({ id, ...post }))
+    .sort((a, b) => (b.createdAtRaw ?? 0) - (a.createdAtRaw ?? 0));
+}
+
+export function getFeaturedInstagramPosts(limit?: number): InstagramPostWithId[] {
+  const sorted = getInstagramPosts();
+  const featured = sorted.filter((post) => post.featured);
+  const rest = sorted.filter((post) => !post.featured);
+  const ordered = [...featured, ...rest];
+  return typeof limit === "number" ? ordered.slice(0, limit) : ordered;
+}
+
+export function getCoverImage(post: InstagramPost): string | undefined {
+  return post.media.find((m) => m.type === "image")?.path;
+}

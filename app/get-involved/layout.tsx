@@ -25,7 +25,7 @@ export default function GetInvolvedLayout({
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
           <div className="flex items-center justify-center py-3">
             {/* Sub-navigation */}
-            <div className="flex items-center justify-center gap-1 overflow-x-auto -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
+            <div className="flex flex-wrap items-center justify-center gap-1">
               {subNav.map((item) => {
                 const isActive =
                   item.href === "/get-involved"
@@ -36,7 +36,7 @@ export default function GetInvolvedLayout({
                   <Link
                     key={item.name}
                     href={item.href}
-                    className={`shrink-0 px-4 py-2 text-sm font-medium rounded-full transition-colors ${
+                    className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
                       isActive
                         ? "bg-teal text-white"
                         : "text-muted hover:text-foreground hover:bg-muted/10"

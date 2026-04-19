@@ -1,8 +1,13 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Users, Lightbulb, Handshake, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
+import {
+  getCoverImage,
+  getFeaturedInstagramPosts,
+} from "@/constants/instagram-posts";
 
 export const metadata: Metadata = {
   title: "About",
@@ -75,6 +80,10 @@ const timeline = [
 ];
 
 export default function AboutPage() {
+  const featuredPost = getFeaturedInstagramPosts(1)[0];
+  const featuredVideo = featuredPost?.media.find((m) => m.type === "video");
+  const featuredImage = featuredPost ? getCoverImage(featuredPost) : undefined;
+
   return (
     <>
       {/* Hero / Manifesto */}
@@ -193,10 +202,32 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-peach via-lavender to-aqua flex items-center justify-center">
-              <p className="text-center text-foreground/60 px-8">
-                Event photography placeholder
-              </p>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-peach via-lavender to-aqua">
+              {featuredVideo ? (
+                <video
+                  src={featuredVideo.path}
+                  poster={featuredImage}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              ) : featuredImage ? (
+                <Image
+                  src={featuredImage}
+                  alt="TechTank community moment"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <p className="text-center text-foreground/60 px-8">
+                    Event photography placeholder
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>

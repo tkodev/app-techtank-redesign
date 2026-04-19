@@ -9,34 +9,29 @@ import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { SocialFeed } from "@/components/ui/social-feed";
 import { getRecentEvents } from "@/constants/events";
+import {
+  getCoverImage,
+  getFeaturedInstagramPosts,
+} from "@/constants/instagram-posts";
 
-const posterImages = [
-  {
-    src: "/images/events/triple-speaker-poster.png",
-    alt: "Lightning Talks at Vena Solutions",
-  },
-  {
-    src: "/images/events/codediversity-meetup-1.png",
-    alt: "CodeDiversity Coffee Chat",
-  },
-  {
-    src: "/images/events/mentorship-poster.png",
-    alt: "Mentorship Meetup",
-  },
-  {
-    src: "/images/events/brainstation-meetup.png",
-    alt: "BrainStation Meetup",
-  },
-  {
-    src: "/images/events/codediversity-meetup-2.png",
-    alt: "CodeDiversity Clay Workshop",
-  },
-];
+function captionToAlt(caption: string): string {
+  const firstLine = caption.split("\n")[0] ?? "";
+  const stripped = firstLine.replace(/#[^\s]+/g, "").trim();
+  return stripped.length > 0 ? stripped : "TechTank Instagram post";
+}
 
 export default function HomePage() {
   const allRecentEvents = getRecentEvents(8);
   const featuredEvents = allRecentEvents.slice(0, 2);
   const smallerEvents = allRecentEvents.slice(2, 6);
+
+  const heroPosts = getFeaturedInstagramPosts()
+    .map((post) => {
+      const cover = getCoverImage(post);
+      return cover ? { id: post.id, src: cover, alt: captionToAlt(post.caption) } : null;
+    })
+    .filter((p): p is { id: string; src: string; alt: string } => p !== null)
+    .slice(0, 5);
 
   return (
     <>
@@ -68,9 +63,9 @@ export default function HomePage() {
             {/* Right: Masonry photo grid */}
             <div className="hidden md:block">
               <div className="columns-2 gap-3 lg:gap-4">
-                {posterImages.slice(0, 5).map((poster, i) => (
+                {heroPosts.slice(0, 5).map((poster) => (
                   <div
-                    key={i}
+                    key={poster.id}
                     className="mb-3 lg:mb-4 break-inside-avoid photo-frame hover:scale-[1.02] transition-transform duration-300"
                   >
                     <Image
@@ -89,8 +84,8 @@ export default function HomePage() {
             {/* Mobile: Horizontal scroll of posters */}
             <div className="md:hidden -mx-4 px-4">
               <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar">
-                {posterImages.slice(0, 4).map((poster, i) => (
-                  <div key={i} className="flex-shrink-0 w-56 snap-center photo-frame">
+                {heroPosts.slice(0, 4).map((poster) => (
+                  <div key={poster.id} className="flex-shrink-0 w-56 snap-center photo-frame">
                     <Image
                       src={poster.src}
                       alt={poster.alt}
