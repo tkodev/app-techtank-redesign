@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Check, Clock, Users, Video, Mic, FileText, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { ContactCard } from "@/components/ui/contact-card";
-import { getTestimonialsByType } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = {
   title: "Speak at TechTank",
@@ -65,8 +63,6 @@ const whatYouGet = [
 ];
 
 export default function SpeakerPage() {
-  const speakerTestimonials = getTestimonialsByType("speaker");
-
   return (
     <>
       {/* Hero */}
@@ -250,22 +246,6 @@ export default function SpeakerPage() {
           </a>
         </div>
       </Section>
-
-      {/* Testimonials */}
-      {speakerTestimonials.length > 0 && (
-        <Section className="bg-white border-y border-border">
-          <SectionHeader
-            overline="From our speakers"
-            title="What past speakers say"
-            className="mb-12"
-          />
-          <div className="grid gap-6 lg:grid-cols-2">
-            {speakerTestimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-            ))}
-          </div>
-        </Section>
-      )}
 
       {/* Intake Form CTA */}
       <Section className="gradient-brand-soft">

@@ -190,7 +190,11 @@ CTAs are fine; tertiary links belong in the footer.
 
 ### 5.3 Social proof patterns (required on `/` and relevant `/how-it-works/*`)
 
-- Real photos and quotes from attendees and speakers
+- **Social feed over testimonials:** Embedded LinkedIn and Instagram posts
+  from organizers showing real, organic community moments. No curated
+  quotes—let the genuine reactions speak for themselves.
+  - LinkedIn: https://www.linkedin.com/company/techtank-to/
+  - Instagram: https://www.instagram.com/techtankto/
 - Numeric facts: attendance range, talks delivered, events hosted,
   companies that have hosted
 - Sponsor / host logo cloud
@@ -293,8 +297,7 @@ and is explicitly out of scope for the initial launch.
 
 - `.ics` calendar export for events.
 - Embedded Instagram feed (light, cached, non-blocking).
-- Testimonial carousel with per-quote link to the speaker's or host's
-  LinkedIn / site.
+- Embedded LinkedIn posts from the company page.
 - Dark mode.
 - i18n scaffold (EN default; FR optional).
 
@@ -315,7 +318,9 @@ and is explicitly out of scope for the initial launch.
 
 ## 8. Content & Brand
 
-- **Voice:** warm, welcoming, beginner-safe, Toronto-local, confident.
+- **Voice:** organic, welcoming, genuine—inspired by the warmth of events
+  like the Code Diversity meetup. Professional yet approachable, never
+  corporate or childish. Toronto-local, beginner-safe, confident.
 - **Typography:** a strong, neutral display typeface (geometric or
   grotesque sans preferred — avoid decorative serifs or script faces);
   a legible humanist sans for body. The pairing should read as

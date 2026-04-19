@@ -3,9 +3,7 @@ import { Check, Clock, Users, Building, MapPin, FileText, ExternalLink } from "l
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { LogoCloud } from "@/components/ui/logo-cloud";
-import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { ContactCard } from "@/components/ui/contact-card";
-import { getTestimonialsByType } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = {
   title: "Host a TechTank Event",
@@ -76,8 +74,6 @@ const process = [
 ];
 
 export default function HostPage() {
-  const hostTestimonials = getTestimonialsByType("host");
-
   return (
     <>
       {/* Hero */}
@@ -245,22 +241,6 @@ export default function HostPage() {
         />
         <LogoCloud title="" />
       </Section>
-
-      {/* Testimonials */}
-      {hostTestimonials.length > 0 && (
-        <Section>
-          <SectionHeader
-            overline="From our hosts"
-            title="What past hosts say"
-            className="mb-12"
-          />
-          <div className="grid gap-6 lg:grid-cols-2">
-            {hostTestimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-            ))}
-          </div>
-        </Section>
-      )}
 
       {/* Host Resources */}
       <Section className="bg-background">

@@ -3,17 +3,15 @@ import { ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { StatsStrip } from "@/components/ui/stats-strip";
-import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { LogoCloud } from "@/components/ui/logo-cloud";
 import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { DualCTA } from "@/components/ui/dual-cta";
-import { testimonials } from "@/lib/data/testimonials";
+import { SocialFeed } from "@/components/ui/social-feed";
 import { getRecentEvents } from "@/lib/data/events";
 
 export default function HomePage() {
   const recentEvents = getRecentEvents(3);
-  const featuredTestimonials = testimonials.slice(0, 4);
 
   return (
     <>
@@ -32,35 +30,31 @@ export default function HomePage() {
 
             {/* Headline */}
             <h1 className="font-display text-4xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
-              Toronto&apos;s inclusive tech community
+              Where Toronto tech actually hangs out
             </h1>
 
             {/* Subheadline */}
             <p className="text-xl text-muted leading-relaxed mb-8 max-w-2xl">
-              Foster a supportive and inclusive environment where people of all
-              skill levels can explore, create, and thrive in technology.
+              Real conversations, genuine connections, zero pretense. Join us for panels, 
+              firesides, and workshops where everyone&apos;s welcome to pull up a chair.
             </p>
 
             {/* CTAs */}
             <div className="flex flex-wrap gap-4">
               <Button variant="primary" size="lg" asChild>
                 <a
-                  href="https://lu.ma/techtank"
+                  href="https://lu.ma/techtankto"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  RSVP on Luma
+                  See what&apos;s next
                   <ExternalLink className="ml-2 h-5 w-5" />
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a
-                  href="https://forms.gle/slack-invite"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Join our Slack
-                </a>
+                <Link href="/how-it-works">
+                  Get involved
+                </Link>
               </Button>
             </div>
           </div>
@@ -70,19 +64,15 @@ export default function HomePage() {
       {/* Trust Strip / Stats */}
       <StatsStrip />
 
-      {/* Testimonials Section */}
+      {/* Social Feed Section - Replaces Testimonials */}
       <Section>
         <SectionHeader
-          overline="What people are saying"
-          title="Hear from our community"
-          description="From first-time attendees to seasoned speakers, here's what makes TechTank special."
+          overline="From the community"
+          title="See what&apos;s happening"
+          description="Real moments from our events. No curated highlights, just genuine vibes from the community."
           className="mb-12"
         />
-        <div className="grid gap-6 lg:grid-cols-2">
-          {featuredTestimonials.map((testimonial) => (
-            <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-          ))}
-        </div>
+        <SocialFeed />
       </Section>
 
       {/* Logo Cloud */}
@@ -90,28 +80,13 @@ export default function HomePage() {
         <LogoCloud />
       </Section>
 
-      {/* Ways to Get Involved */}
-      <Section>
-        <SectionHeader
-          overline="Ways to get involved"
-          title="Become part of it"
-          description="Every TechTank event runs on the time of community members like you. Here's how you can contribute."
-          className="mb-12"
-        />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {roleCardsData.map((role) => (
-            <RoleCard key={role.role} {...role} />
-          ))}
-        </div>
-      </Section>
-
       {/* Recent Events */}
       <Section className="bg-background">
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12">
           <SectionHeader
-            overline="Recent events"
-            title="What's happening"
-            description="Join the next event or explore recaps from previous meetups."
+            overline="Coming up"
+            title="Don&apos;t miss these"
+            description="Grab a spot at our next event or catch up on what you missed."
           />
           <Link
             href="/events"
@@ -128,21 +103,36 @@ export default function HomePage() {
         </div>
       </Section>
 
+      {/* Ways to Get Involved */}
+      <Section>
+        <SectionHeader
+          overline="There&apos;s a spot for you"
+          title="Jump in"
+          description="TechTank runs on people who show up. Here&apos;s how you can be part of it."
+          className="mb-12"
+        />
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          {roleCardsData.map((role) => (
+            <RoleCard key={role.role} {...role} />
+          ))}
+        </div>
+      </Section>
+
       {/* Values Teaser */}
       <Section className="gradient-brand-soft">
         <div className="text-center max-w-3xl mx-auto">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-            Our values
+            What we&apos;re about
           </span>
           <h2 className="font-display text-3xl lg:text-4xl font-semibold text-foreground mb-6">
-            Community. Innovation. Teamwork. Respect.
+            Community first. Always.
           </h2>
           <p className="text-lg text-muted mb-8">
-            These four pillars guide everything we do at TechTank. Learn more
-            about what drives us and how we build an inclusive community.
+            We believe tech is better when it&apos;s inclusive. No gatekeeping, no cliques—just 
+            people who genuinely want to learn, share, and lift each other up.
           </p>
           <Button variant="outline" asChild>
-            <Link href="/about">Learn about our values</Link>
+            <Link href="/about">More about us</Link>
           </Button>
         </div>
       </Section>

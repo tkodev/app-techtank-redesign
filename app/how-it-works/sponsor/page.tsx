@@ -4,9 +4,7 @@ import { Check, Heart, Users, Megaphone, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { LogoCloud } from "@/components/ui/logo-cloud";
-import { TestimonialCard } from "@/components/ui/testimonial-card";
 import { ContactCard } from "@/components/ui/contact-card";
-import { getTestimonialsByType } from "@/lib/data/testimonials";
 
 export const metadata: Metadata = {
   title: "Sponsor TechTank",
@@ -70,8 +68,6 @@ const basePackage = [
 ];
 
 export default function SponsorPage() {
-  const sponsorTestimonials = getTestimonialsByType("sponsor");
-
   return (
     <>
       {/* Hero */}
@@ -228,22 +224,6 @@ export default function SponsorPage() {
         />
         <LogoCloud title="" />
       </Section>
-
-      {/* Testimonials */}
-      {sponsorTestimonials.length > 0 && (
-        <Section>
-          <SectionHeader
-            overline="From our sponsors"
-            title="What sponsors say"
-            className="mb-12"
-          />
-          <div className="grid gap-6 lg:grid-cols-2">
-            {sponsorTestimonials.map((testimonial) => (
-              <TestimonialCard key={testimonial.id} testimonial={testimonial} />
-            ))}
-          </div>
-        </Section>
-      )}
 
       {/* Hosting vs Sponsoring */}
       <Section className="bg-background">
