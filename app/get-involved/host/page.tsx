@@ -78,12 +78,12 @@ export default function HostPage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
-        <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
               Bring us to your space
             </span>
-            <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Host a TechTank event
             </h1>
             <p className="text-xl text-muted leading-relaxed mb-8">

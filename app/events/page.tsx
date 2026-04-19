@@ -23,13 +23,13 @@ export default function EventsPage() {
     <>
       {/* Hero */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
-        <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6">
             <div className="max-w-2xl">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
                 TechTank TO
               </span>
-              <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-4">
+              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-4">
                 All Events
               </h1>
               <p className="text-xl text-muted">

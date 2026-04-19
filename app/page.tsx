@@ -9,53 +9,51 @@ import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
 import { SocialFeed } from "@/components/ui/social-feed";
 import { getRecentEvents } from "@/constants/events";
+import {
+  getCoverImage,
+  getCoverVideo,
+  getInstagramPostsByIds,
+} from "@/constants/instagram-posts";
 
-const posterImages = [
-  {
-    src: "/images/events/triple-speaker-poster.png",
-    alt: "Lightning Talks at Vena Solutions",
-  },
-  {
-    src: "/images/events/codediversity-meetup-1.png",
-    alt: "CodeDiversity Coffee Chat",
-  },
-  {
-    src: "/images/events/mentorship-poster.png",
-    alt: "Mentorship Meetup",
-  },
-  {
-    src: "/images/events/brainstation-meetup.png",
-    alt: "BrainStation Meetup",
-  },
-  {
-    src: "/images/events/codediversity-meetup-2.png",
-    alt: "CodeDiversity Clay Workshop",
-  },
-];
+function captionToAlt(caption: string): string {
+  const firstLine = caption.split("\n")[0] ?? "";
+  const stripped = firstLine.replace(/#[^\s]+/g, "").trim();
+  return stripped.length > 0 ? stripped : "TechTank Instagram post";
+}
 
 export default function HomePage() {
   const allRecentEvents = getRecentEvents(8);
   const featuredEvents = allRecentEvents.slice(0, 2);
   const smallerEvents = allRecentEvents.slice(2, 6);
 
+  const heroPosts = getInstagramPostsByIds([
+    "2025-07-07-DLz4I7KOww6", // BBQ season
+    "2026-04-10-DW9vcgiPHx",  // Code diversity (Apr 2026)
+  ]).map((post) => ({
+    id: post.id,
+    imageSrc: getCoverImage(post),
+    videoSrc: getCoverVideo(post),
+    alt: captionToAlt(post.caption),
+  }));
+
   return (
     <>
       {/* Hero Section - Left aligned text, stacked overlapping photos right */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
-        <div className="relative mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center">
+        <div className="relative mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center justify-center lg:justify-start text-center lg:text-left">
             {/* Left: Text content */}
-            <div className="max-w-xl py-8 lg:py-12">
+            <div className="lg:max-w-xl py-8 lg:py-12">
               <span className="tag mb-4">
                 Toronto &middot; Monthly &middot; Inclusive
               </span>
-              <h1 className="font-display text-4xl font-bold text-teal-dark lg:text-6xl text-balance mb-4 leading-[1.1]">
+              <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
                 Toronto&apos;s home for tech community
               </h1>
-              <p className="text-lg text-muted leading-relaxed mb-6 max-w-md">
+              <p className="text-lg text-muted leading-relaxed mb-6 lg:max-w-md">
                 Tech talks, panels, socials, sports, and more—hosted at companies across the city.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
                 <Button variant="primary" size="lg" asChild>
                   <Link href="/events">See events</Link>
                 </Button>
@@ -65,43 +63,54 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Masonry photo grid */}
-            <div className="hidden md:block">
-              <div className="columns-2 gap-3 lg:gap-4">
-                {posterImages.slice(0, 5).map((poster, i) => (
-                  <div
-                    key={i}
-                    className="mb-3 lg:mb-4 break-inside-avoid photo-frame hover:scale-[1.02] transition-transform duration-300"
-                  >
-                    <Image
-                      src={poster.src}
-                      alt={poster.alt}
-                      width={300}
-                      height={188}
-                      className="w-full h-auto"
-                      style={{ width: "100%", height: "auto" }}
+            {/* Staggered overlapping portrait cards (inline, transform-based) */}
+            <div className="flex items-start justify-center pb-8">
+              {/* First card — tilted CCW, nudged down */}
+              {heroPosts[0] && (
+                <div className="relative w-[45%] lg:w-[55%] aspect-[4/5] photo-frame overflow-hidden shadow-xl transition-transform duration-300 -rotate-2 translate-y-6 hover:scale-[1.02]">
+                  {heroPosts[0].videoSrc ? (
+                    <video
+                      src={heroPosts[0].videoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Mobile: Horizontal scroll of posters */}
-            <div className="md:hidden -mx-4 px-4">
-              <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar">
-                {posterImages.slice(0, 4).map((poster, i) => (
-                  <div key={i} className="flex-shrink-0 w-56 snap-center photo-frame">
+                  ) : heroPosts[0].imageSrc ? (
                     <Image
-                      src={poster.src}
-                      alt={poster.alt}
-                      width={224}
-                      height={140}
-                      className="w-full h-auto"
-                      style={{ width: "100%", height: "auto" }}
+                      src={heroPosts[0].imageSrc}
+                      alt={heroPosts[0].alt}
+                      fill
+                      sizes="(min-width: 1024px) 28vw, (min-width: 640px) 44vw, 50vw"
+                      className="object-cover"
                     />
-                  </div>
-                ))}
-              </div>
+                  ) : null}
+                </div>
+              )}
+              {/* Second card — overlaps via negative margin, tilted CW */}
+              {heroPosts[1] && (
+                <div className="relative w-[45%] lg:w-[55%] aspect-[4/5] -ml-[10%] z-10 photo-frame overflow-hidden shadow-xl transition-transform duration-300 rotate-2 hover:scale-[1.02]">
+                  {heroPosts[1].videoSrc ? (
+                    <video
+                      src={heroPosts[1].videoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 h-full w-full object-cover"
+                    />
+                  ) : heroPosts[1].imageSrc ? (
+                    <Image
+                      src={heroPosts[1].imageSrc}
+                      alt={heroPosts[1].alt}
+                      fill
+                      sizes="(min-width: 1024px) 28vw, (min-width: 640px) 44vw, 50vw"
+                      className="object-cover"
+                    />
+                  ) : null}
+                </div>
+              )}
             </div>
           </div>
 

@@ -1,10 +1,16 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import { Check, Heart, Users, Megaphone } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { LogoCloud } from "@/components/ui/logo-cloud";
 import { ContactCard } from "@/components/ui/contact-card";
+import {
+  getCoverImage,
+  getCoverVideo,
+  getInstagramPostsByIds,
+} from "@/constants/instagram-posts";
 
 export const metadata: Metadata = {
   title: "Sponsor TechTank",
@@ -66,16 +72,20 @@ const basePackage = [
 ];
 
 export default function SponsorPage() {
+  const featuredPost = getInstagramPostsByIds(["2026-04-10-DW9vcgiPHx"])[0];
+  const featuredVideo = featuredPost ? getCoverVideo(featuredPost) : undefined;
+  const featuredImage = featuredPost ? getCoverImage(featuredPost) : undefined;
+
   return (
     <>
       {/* Hero */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
-        <div className="relative mx-auto max-w-7xl px-4 py-16 lg:px-8 lg:py-24">
+        <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
               Support the community
             </span>
-            <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Sponsor the Toronto tech community
             </h1>
             <p className="text-xl text-muted leading-relaxed mb-8">
@@ -136,10 +146,32 @@ export default function SponsorPage() {
             </ul>
           </div>
           <div className="relative">
-            <div className="aspect-[4/3] rounded-2xl bg-gradient-to-br from-peach via-lavender to-aqua flex items-center justify-center">
-              <p className="text-center text-foreground/60 px-8">
-                Community event photography
-              </p>
+            <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-peach via-lavender to-aqua">
+              {featuredVideo ? (
+                <video
+                  src={featuredVideo}
+                  poster={featuredImage}
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="absolute inset-0 h-full w-full object-cover"
+                />
+              ) : featuredImage ? (
+                <Image
+                  src={featuredImage}
+                  alt="TechTank community moment"
+                  fill
+                  sizes="(min-width: 1024px) 50vw, 100vw"
+                  className="object-cover"
+                />
+              ) : (
+                <div className="absolute inset-0 flex items-center justify-center">
+                  <p className="text-center text-foreground/60 px-8">
+                    Community event photography
+                  </p>
+                </div>
+              )}
             </div>
           </div>
         </div>
