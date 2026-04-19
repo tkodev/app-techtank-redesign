@@ -39,7 +39,7 @@ export const sponsors: Sponsor[] = [
     id: "points",
     name: "Points",
     logo: "/images/sponsors/points.svg",
-    url: "https://www.plusgrade.com",
+    url: "https://www.points.com",
     type: "host",
   },
   {
