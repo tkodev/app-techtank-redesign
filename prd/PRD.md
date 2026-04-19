@@ -35,11 +35,20 @@ levels can explore, create, and thrive in technology.
 
 ### 1.3 Audience
 
-- Junior / early-career software developers (primary)
+- Software developers at all career levels (junior to senior)
 - Designers, PMs, tech-adjacent roles
 - Experienced professionals open to mentoring or speaking
 - Companies wanting to host, sponsor, or recruit
 - Media, partners, and sponsors looking for brand assets
+
+### 1.4 Event types
+
+- **Tech talks** — Lightning talks, deep dives, and technical presentations
+- **Socials / Meetups** — Casual networking and community building
+- **Sports** — Active events like volleyball
+- **Code Diversity** — Inclusive events for underrepresented groups in tech
+- **Panels** — Multi-speaker discussions on industry topics
+- **Workshops** — Hands-on learning sessions (planned)
 
 ### 1.4 Product goals
 

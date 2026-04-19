@@ -50,10 +50,10 @@ export default function HomePage() {
                 Toronto &middot; Monthly &middot; Free
               </span>
               <h1 className="font-display text-4xl font-bold text-teal-dark lg:text-6xl text-balance mb-4 leading-[1.1]">
-                Toronto&apos;s home for early-career tech
+                Toronto&apos;s home for tech community
               </h1>
               <p className="text-lg text-muted leading-relaxed mb-6 max-w-md">
-                Panels, firesides, and workshops that help you grow—hosted at the companies building the future.
+                Tech talks, panels, socials, sports, and more—hosted at companies across the city.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button variant="primary" size="lg" asChild>

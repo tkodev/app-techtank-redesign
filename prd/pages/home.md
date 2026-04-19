@@ -24,7 +24,7 @@ professional and credible.
 ## 2. Primary audience
 
 - First-time visitors evaluating the community
-- Toronto-based junior / early-career developers
+- Toronto-based tech professionals at all career levels
 - Potential speakers, hosts, sponsors, volunteers sizing us up
 
 ## 3. Key messages
