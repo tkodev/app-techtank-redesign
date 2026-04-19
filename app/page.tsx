@@ -135,32 +135,33 @@ export default function HomePage() {
             overline="Events"
             title="Recent happenings"
           />
-          <div className="flex items-center gap-4">
-            <a
-              href="https://luma.com/techtank?period=past"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-sm font-semibold text-coral hover:text-coral/80 transition-colors"
-            >
-              Luma
-              <ExternalLink className="ml-1 h-3.5 w-3.5" />
-            </a>
-            <a
-              href="https://www.meetup.com/techtank-to/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center text-sm font-semibold text-coral hover:text-coral/80 transition-colors"
-            >
-              Meetup
-              <ExternalLink className="ml-1 h-3.5 w-3.5" />
-            </a>
-            <Link
-              href="/events"
-              className="inline-flex items-center text-sm font-semibold text-muted hover:text-foreground transition-colors"
-            >
-              View all
-              <ArrowRight className="ml-1 h-4 w-4" />
-            </Link>
+          <div className="flex flex-wrap items-center gap-2">
+            <Button variant="outline" size="sm" asChild>
+              <a
+                href="https://luma.com/techtank?period=past"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Luma
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
+              <a
+                href="https://www.meetup.com/techtank-to/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Meetup
+                <ExternalLink className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
+              <Link href="/events">
+                View all
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
           </div>
         </div>
 
