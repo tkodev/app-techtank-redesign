@@ -1,9 +1,12 @@
+import Link from "next/link";
 import { Calendar, Users, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { getAllSocialLinks } from "@/lib/data/social-links";
+import { getEventLinks, getSocialLinks, getContributeLinks } from "@/lib/data/social-links";
 
 export function DualCTA() {
-  const socialLinks = getAllSocialLinks();
+  const eventLinks = getEventLinks();
+  const socialLinks = getSocialLinks();
+  const contributeLinks = getContributeLinks();
 
   return (
     <div className="grid gap-4 lg:grid-cols-2">
@@ -18,9 +21,26 @@ export function DualCTA() {
             Never miss an event
           </h3>
           <p className="text-sm text-muted mb-4 max-w-sm">
-            Subscribe to our calendar and follow us on socials to stay updated.
+            Subscribe to our Luma calendar and follow us on socials.
           </p>
           <div className="flex flex-wrap gap-2">
+            {eventLinks.map((link) => (
+              <Button
+                key={link.id}
+                variant="primary"
+                size="sm"
+                asChild
+              >
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.name}
+                  <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                </a>
+              </Button>
+            ))}
             {socialLinks.map((link) => (
               <Button
                 key={link.id}
@@ -55,9 +75,28 @@ export function DualCTA() {
           <p className="text-sm text-muted mb-4 max-w-sm">
             Speak, host, sponsor, or volunteer.
           </p>
-          <Button variant="outline" size="sm" asChild>
-            <a href="/how-it-works">Get involved</a>
-          </Button>
+          <div className="flex flex-wrap gap-2">
+            <Button variant="primary" size="sm" asChild>
+              <Link href="/how-it-works">Get involved</Link>
+            </Button>
+            {contributeLinks.map((link) => (
+              <Button
+                key={link.id}
+                variant="outline"
+                size="sm"
+                asChild
+              >
+                <a
+                  href={link.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {link.name}
+                  <ExternalLink className="ml-2 h-3.5 w-3.5" />
+                </a>
+              </Button>
+            ))}
+          </div>
         </div>
       </div>
     </div>

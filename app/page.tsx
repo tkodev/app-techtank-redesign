@@ -138,21 +138,11 @@ export default function HomePage() {
           <div className="flex flex-wrap items-center gap-2">
             <Button variant="primary" size="sm" asChild>
               <a
-                href="https://luma.com/techtank?period=past"
+                href="https://luma.com/techtank"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 Luma
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" size="sm" asChild>
-              <a
-                href="https://www.meetup.com/techtank-to/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Meetup
                 <ExternalLink className="ml-2 h-4 w-4" />
               </a>
             </Button>

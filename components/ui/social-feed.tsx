@@ -140,7 +140,7 @@ export function SocialFeed() {
       {/* Community CTAs */}
       <div className="flex flex-wrap items-center justify-center gap-3 pt-6">
         {getAllSocialLinks()
-          .filter((link) => ["slack", "linkedin", "instagram", "github"].includes(link.id))
+          .filter((link) => ["slack", "linkedin", "instagram"].includes(link.id))
           .map((link) => (
             <Button
               key={link.id}

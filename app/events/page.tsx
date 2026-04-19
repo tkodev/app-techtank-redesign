@@ -190,30 +190,18 @@ export default function EventsPage() {
             Never miss an event
           </h3>
           <p className="text-muted mb-6 max-w-md mx-auto">
-            Subscribe on Luma or Meetup to get notified when new events are announced.
+            Subscribe on Luma to get notified when new events are announced.
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-3">
-            <Button variant="primary" asChild>
-              <a
-                href="https://luma.com/techtank"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Luma
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" asChild>
-              <a
-                href="https://www.meetup.com/techtank-to/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Meetup
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-          </div>
+          <Button variant="primary" asChild>
+            <a
+              href="https://luma.com/techtank"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Follow on Luma
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
         </div>
       </Section>
 
