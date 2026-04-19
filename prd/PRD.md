@@ -45,7 +45,7 @@ levels can explore, create, and thrive in technology.
 
 - **Tech talks** — Lightning talks, deep dives, and technical presentations
 - **Socials / Meetups** — Casual networking and community building
-- **Sports** — Active events like volleyball
+- **Sports** — Active events like volleyball and softball
 - **Code Diversity** — Inclusive events for underrepresented groups in tech
 - **Panels** — Multi-speaker discussions on industry topics
 - **Workshops** — Hands-on learning sessions (planned)
