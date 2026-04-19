@@ -88,7 +88,7 @@ export default function AboutPage() {
     <>
       {/* Hero / Manifesto */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
-        <div className="relative mx-auto max-w-7xl px-4 py-20 lg:px-8 lg:py-32">
+        <div className="relative mx-auto max-w-7xl px-6 py-20 lg:px-8 lg:py-32">
           <div className="max-w-3xl">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
               About TechTank

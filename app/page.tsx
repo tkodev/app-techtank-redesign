@@ -40,7 +40,7 @@ export default function HomePage() {
     <>
       {/* Hero Section - Left aligned text, stacked overlapping photos right */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
-        <div className="relative mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
+        <div className="relative mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center">
             {/* Left: Text content */}
             <div className="max-w-xl py-8 lg:py-12">
@@ -63,8 +63,8 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: staggered overlapping portrait cards */}
-            <div className="hidden md:block relative h-[460px] lg:h-[500px]">
+            {/* Staggered overlapping portrait cards */}
+            <div className="relative h-[380px] sm:h-[440px] lg:h-[500px]">
               {/* First card — left, nudged down, rotated CCW */}
               {heroPosts[0] && (
                 <div className="absolute left-0 top-6 w-[55%] aspect-[4/5] photo-frame overflow-hidden -rotate-2 shadow-xl z-0 hover:z-10 hover:scale-[1.02] transition-all duration-300">
@@ -82,7 +82,7 @@ export default function HomePage() {
                       src={heroPosts[0].imageSrc}
                       alt={heroPosts[0].alt}
                       fill
-                      sizes="(min-width: 1024px) 28vw, 44vw"
+                      sizes="(min-width: 1024px) 28vw, (min-width: 640px) 44vw, 50vw"
                       className="object-cover"
                     />
                   ) : null}
@@ -105,40 +105,12 @@ export default function HomePage() {
                       src={heroPosts[1].imageSrc}
                       alt={heroPosts[1].alt}
                       fill
-                      sizes="(min-width: 1024px) 28vw, 44vw"
+                      sizes="(min-width: 1024px) 28vw, (min-width: 640px) 44vw, 50vw"
                       className="object-cover"
                     />
                   ) : null}
                 </div>
               )}
-            </div>
-
-            {/* Mobile: Horizontal scroll */}
-            <div className="md:hidden -mx-4 px-4">
-              <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar">
-                {heroPosts.map((post) => (
-                  <div key={post.id} className="relative flex-shrink-0 w-44 aspect-[4/5] snap-center photo-frame overflow-hidden">
-                    {post.videoSrc ? (
-                      <video
-                        src={post.videoSrc}
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                        className="absolute inset-0 h-full w-full object-cover"
-                      />
-                    ) : post.imageSrc ? (
-                      <Image
-                        src={post.imageSrc}
-                        alt={post.alt}
-                        fill
-                        sizes="44vw"
-                        className="object-cover"
-                      />
-                    ) : null}
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
 
