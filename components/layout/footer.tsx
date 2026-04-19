@@ -83,7 +83,7 @@ const socialLinks = [
 
 export function Footer() {
   return (
-    <footer className="bg-dark text-white">
+    <footer className="bg-teal-dark text-white">
       <div className="mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
         {/* Top section */}
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
@@ -106,7 +106,7 @@ export function Footer() {
                   href={item.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-white/60 hover:text-teal transition-colors"
+                  className="text-white/60 hover:text-seafoam transition-colors"
                   aria-label={item.name}
                 >
                   <item.Icon className="h-5 w-5" />

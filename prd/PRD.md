@@ -326,20 +326,23 @@ and is explicitly out of scope for the initial launch.
   a legible humanist sans for body. The pairing should read as
   industry-conference-grade, not startup-blog or community-newsletter.
   Final pairing per visual design.
-- **Color palette (extracted from current site):**
-  - **Gradient:** warm peach/coral → soft lavender → aqua teal. This
-    three-stop gradient is the site's primary background motif (hero,
-    section banding). It is *not* pink — the warm stop is a
-    desaturated salmon/peach (`≈ #F5C4A8`), the mid is a muted
-    lavender (`≈ #D8CEED`), and the cool stop is a pale aqua
-    (`≈ #B5E0D9`).
-  - **Logo teal:** saturated cyan-teal (`≈ #3DC4C0`) — the fish mark
-    and primary brand colour.
-  - **Logo amber:** warm golden yellow (`≈ #F0AA00`) — the lightning
-    bolt in the logomark; used sparingly as a highlight.
-  - **CTA / surface dark:** near-black for pill buttons and the footer
-    (`≈ #141926`).
-  - **Body text:** near-black on light backgrounds.
+- **Color palette (refined from event posters):**
+  - **Teal dark (primary):** deep navy-teal for headlines, buttons,
+    and footer (`#1B4B5A`). This is the primary brand colour.
+  - **Teal mid:** secondary text and headings (`#2A6B7C`).
+  - **Seafoam:** light aqua for soft backgrounds and accents (`#A8D5D8`).
+  - **Mint:** green accent for speaker circles and icons (`#5B9A8B`).
+  - **Peach:** warm gradient tone (`#F5D4C1`).
+  - **Coral (accent):** vibrant orange for CTAs and highlights (`#E87C4E`),
+    inspired by CodeDiversity event branding.
+  - **Blush:** soft pink accent (`#EABFBF`).
+  - **Sand:** warm off-white background (`#F7EDE2`).
+  - **Gradient:** seafoam → sand → peach (textured, organic feel matching
+    event posters). Backgrounds use subtle grain texture overlay.
+  - **Glassmorphism:** frosted-glass cards with `backdrop-blur`, rounded
+    corners (`1.25rem+`), and soft shadows. Used for cards and overlays.
+  - **Photo-forward:** event poster images are hero content; design
+    prioritizes real photography over empty white space.
   - Do *not* introduce hot pink, true blue, or colours outside this
     family without explicit organizer sign-off.
 - **Imagery:** real event photography first; diverse, candid, well-lit.

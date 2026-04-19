@@ -7,8 +7,6 @@ import { Button } from "@/components/ui/button";
 const LINKEDIN_URL = "https://www.linkedin.com/company/techtank-to/";
 const INSTAGRAM_URL = "https://www.instagram.com/techtankto/";
 
-// Social posts data - these would ideally come from an API
-// For now, we showcase the organic community vibe with placeholder content
 export interface SocialPost {
   id: string;
   platform: "linkedin" | "instagram";
@@ -57,11 +55,13 @@ function SocialPostCard({ post }: { post: SocialPost }) {
   );
 
   return (
-    <article className="group relative rounded-2xl border border-border bg-surface p-6 transition-all hover:border-teal/30 hover:shadow-lg">
+    <article className="group relative glass rounded-2xl p-6 transition-all hover:shadow-soft-lg">
       {/* Platform badge */}
       <div className="flex items-center gap-2 mb-4">
-        <span className="text-muted">{platformIcon}</span>
-        <span className="text-xs text-muted uppercase tracking-wide">
+        <span className={post.platform === "linkedin" ? "text-[#0077B5]" : "text-[#E4405F]"}>
+          {platformIcon}
+        </span>
+        <span className="text-xs text-muted uppercase tracking-wide font-medium">
           {post.platform}
         </span>
         <span className="text-xs text-muted/50">·</span>
@@ -78,7 +78,7 @@ function SocialPostCard({ post }: { post: SocialPost }) {
         href={post.platform === "linkedin" ? LINKEDIN_URL : INSTAGRAM_URL}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center text-sm text-teal hover:text-teal/80 transition-colors"
+        className="inline-flex items-center text-sm text-coral font-medium hover:text-coral/80 transition-colors"
       >
         View on {post.platform === "linkedin" ? "LinkedIn" : "Instagram"}
         <ExternalLink className="ml-1 h-3 w-3" />
@@ -102,8 +102,8 @@ export function SocialFeed() {
           onClick={() => setActiveFilter("all")}
           className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
             activeFilter === "all"
-              ? "bg-teal text-dark"
-              : "text-muted hover:text-foreground hover:bg-surface"
+              ? "bg-teal-dark text-white"
+              : "text-muted hover:text-foreground glass"
           }`}
         >
           All
@@ -112,8 +112,8 @@ export function SocialFeed() {
           onClick={() => setActiveFilter("linkedin")}
           className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
             activeFilter === "linkedin"
-              ? "bg-teal text-dark"
-              : "text-muted hover:text-foreground hover:bg-surface"
+              ? "bg-teal-dark text-white"
+              : "text-muted hover:text-foreground glass"
           }`}
         >
           LinkedIn
@@ -122,8 +122,8 @@ export function SocialFeed() {
           onClick={() => setActiveFilter("instagram")}
           className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
             activeFilter === "instagram"
-              ? "bg-teal text-dark"
-              : "text-muted hover:text-foreground hover:bg-surface"
+              ? "bg-teal-dark text-white"
+              : "text-muted hover:text-foreground glass"
           }`}
         >
           Instagram

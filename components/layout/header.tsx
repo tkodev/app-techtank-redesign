@@ -17,12 +17,12 @@ export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+    <header className="sticky top-0 z-50 w-full glass-subtle">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
           <Logo className="h-8 w-auto" />
-          <span className="font-display text-xl font-semibold text-foreground">
+          <span className="font-display text-xl font-bold text-teal-dark">
             TechTank TO
           </span>
         </Link>
@@ -33,7 +33,7 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-muted hover:text-foreground transition-colors"
+              className="text-sm font-medium text-teal-dark/70 hover:text-teal-dark transition-colors"
             >
               {item.name}
             </Link>
@@ -79,13 +79,13 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-border bg-background">
+        <div className="lg:hidden border-t border-border/30 glass">
           <div className="px-4 py-4 space-y-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-base font-medium text-foreground hover:text-teal transition-colors"
+                className="block text-base font-medium text-teal-dark hover:text-coral transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

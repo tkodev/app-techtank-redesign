@@ -31,19 +31,19 @@ export function RoleCard({
   const Icon = icons[role];
 
   return (
-    <div className="group relative flex flex-col bg-white rounded-2xl border border-border p-6 lg:p-8 hover:border-teal/50 hover:shadow-lg transition-all duration-300">
+    <div className="group relative flex flex-col glass rounded-2xl p-6 lg:p-8 hover:shadow-soft-lg transition-all duration-300">
       {/* Icon */}
-      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal/10 text-teal">
+      <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-seafoam text-teal-dark">
         <Icon className="h-6 w-6" />
       </div>
 
       {/* Overline */}
-      <span className="text-xs font-semibold uppercase tracking-widest text-teal mb-2">
+      <span className="text-xs font-semibold uppercase tracking-widest text-coral mb-2">
         {overline}
       </span>
 
       {/* Title */}
-      <h3 className="font-display text-xl font-semibold text-foreground mb-3">
+      <h3 className="font-display text-xl font-bold text-teal-dark mb-3">
         {title}
       </h3>
 
@@ -54,7 +54,7 @@ export function RoleCard({
       <ul className="space-y-2 mb-6 flex-1">
         {benefits.map((benefit, index) => (
           <li key={index} className="flex items-start gap-2 text-sm text-foreground">
-            <Check className="h-4 w-4 text-teal mt-0.5 shrink-0" />
+            <Check className="h-4 w-4 text-mint mt-0.5 shrink-0" />
             <span>{benefit}</span>
           </li>
         ))}

@@ -11,15 +11,15 @@ export function StatsStrip() {
   ];
 
   return (
-    <div className="border-y border-border bg-background">
-      <div className="mx-auto max-w-7xl px-4 py-8 lg:px-8 lg:py-12">
+    <div className="relative bg-teal-dark text-white">
+      <div className="mx-auto max-w-7xl px-4 py-10 lg:px-8 lg:py-14">
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-4">
           {items.map((item, index) => (
             <div key={index} className="text-center">
-              <p className="font-display text-3xl lg:text-4xl font-semibold text-foreground">
+              <p className="font-display text-3xl lg:text-5xl font-bold text-white">
                 {item.value}
               </p>
-              <p className="mt-1 text-sm text-muted">{item.label}</p>
+              <p className="mt-2 text-sm text-seafoam">{item.label}</p>
             </div>
           ))}
         </div>
