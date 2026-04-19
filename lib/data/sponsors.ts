@@ -52,14 +52,14 @@ export const sponsors: Sponsor[] = [
   {
     id: "7shifts",
     name: "7shifts",
-    logo: "",
+    logo: "/images/sponsors/7shifts.svg",
     url: "https://www.7shifts.com",
     type: "host",
   },
   {
     id: "cohere",
     name: "Cohere",
-    logo: "",
+    logo: "/images/sponsors/cohere.svg",
     url: "https://cohere.com",
     type: "host",
   },
