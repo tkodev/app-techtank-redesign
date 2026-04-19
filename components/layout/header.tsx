@@ -19,20 +19,22 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 w-full bg-white/70 backdrop-blur-xl border-b border-white/20">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 lg:px-8">
-        {/* Logo */}
-        <Link href="/" className="flex items-center">
-          <Image
-            src="/images/techtank-logo.svg"
-            alt="TechTank TO"
-            width={128}
-            height={56}
-            className="h-10 w-auto"
-            priority
-          />
-        </Link>
+        {/* Logo - fixed width container for balance */}
+        <div className="w-40 flex-shrink-0">
+          <Link href="/" className="flex items-center">
+            <Image
+              src="/images/techtank-logo.svg"
+              alt="TechTank TO"
+              width={128}
+              height={56}
+              className="h-10 w-auto"
+              priority
+            />
+          </Link>
+        </div>
 
-        {/* Desktop Navigation */}
-        <div className="hidden lg:flex lg:items-center lg:gap-8">
+        {/* Desktop Navigation - centered */}
+        <div className="hidden lg:flex lg:items-center lg:justify-center lg:gap-8 flex-1">
           {navigation.map((item) => (
             <Link
               key={item.name}
@@ -44,8 +46,8 @@ export function Header() {
           ))}
         </div>
 
-        {/* Desktop CTA */}
-        <div className="hidden lg:flex lg:items-center">
+        {/* Desktop CTA - fixed width container for balance */}
+        <div className="hidden lg:flex lg:items-center lg:justify-end w-40 flex-shrink-0">
           <Button variant="primary" size="sm" asChild>
             <Link href="/#community">
               Join the community
