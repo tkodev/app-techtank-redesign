@@ -43,9 +43,9 @@ export default function HomePage() {
       {/* Hero Section - Left aligned text, stacked overlapping photos right */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-start">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-center">
             {/* Left: Text content */}
-            <div className="max-w-xl">
+            <div className="max-w-xl py-8 lg:py-12">
               <span className="tag mb-4">
                 Toronto &middot; Monthly &middot; Free
               </span>
