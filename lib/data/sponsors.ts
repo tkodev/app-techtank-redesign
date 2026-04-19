@@ -13,14 +13,14 @@ export const sponsors: Sponsor[] = [
     name: "Intuit",
     logo: "/images/sponsors/intuit.svg",
     url: "https://www.intuit.com/ca",
-    type: "host",
+    type: "sponsor",
   },
   {
     id: "kobo",
     name: "Kobo",
     logo: "/images/sponsors/kobo.png",
     url: "https://www.kobo.com",
-    type: "host",
+    type: "sponsor",
   },
   {
     id: "microsoft",
@@ -34,7 +34,7 @@ export const sponsors: Sponsor[] = [
     name: "Points",
     logo: "/images/sponsors/points.png",
     url: "https://www.points.com",
-    type: "host",
+    type: "sponsor",
     scale: 1.5,
   },
   {
@@ -50,7 +50,7 @@ export const sponsors: Sponsor[] = [
     name: "Vena",
     logo: "/images/sponsors/vena.svg",
     url: "https://venasolutions.com",
-    type: "host",
+    type: "sponsor",
   },
   {
     id: "7shifts",
@@ -65,7 +65,7 @@ export const sponsors: Sponsor[] = [
     name: "Cohere",
     logo: "/images/sponsors/cohere.svg",
     url: "https://cohere.com",
-    type: "host",
+    type: "sponsor",
     scale: 0.75,
   },
 ];
