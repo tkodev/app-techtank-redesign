@@ -6,7 +6,8 @@ import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import {
   getCoverImage,
-  getFeaturedInstagramPosts,
+  getCoverVideo,
+  getInstagramPostsByIds,
 } from "@/constants/instagram-posts";
 
 export const metadata: Metadata = {
@@ -80,8 +81,8 @@ const timeline = [
 ];
 
 export default function AboutPage() {
-  const featuredPost = getFeaturedInstagramPosts(1)[0];
-  const featuredVideo = featuredPost?.media.find((m) => m.type === "video");
+  const featuredPost = getInstagramPostsByIds(["2025-07-07-DLz4I7KOww6"])[0];
+  const featuredVideo = featuredPost ? getCoverVideo(featuredPost) : undefined;
   const featuredImage = featuredPost ? getCoverImage(featuredPost) : undefined;
 
   return (
@@ -93,7 +94,7 @@ export default function AboutPage() {
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
               About TechTank
             </span>
-            <h1 className="font-display text-4xl font-semibold text-foreground lg:text-5xl text-balance mb-6">
+            <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               We build the community we wanted to find
             </h1>
             <p className="text-xl text-muted leading-relaxed mb-8">
@@ -205,7 +206,7 @@ export default function AboutPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-peach via-lavender to-aqua">
               {featuredVideo ? (
                 <video
-                  src={featuredVideo.path}
+                  src={featuredVideo}
                   poster={featuredImage}
                   autoPlay
                   loop
