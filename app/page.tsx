@@ -35,7 +35,7 @@ const posterImages = [
 ];
 
 export default function HomePage() {
-  const allRecentEvents = getRecentEvents(6);
+  const allRecentEvents = getRecentEvents(8);
   const featuredEvents = allRecentEvents.slice(0, 2);
   const smallerEvents = allRecentEvents.slice(2, 6);
 
