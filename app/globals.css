@@ -1,0 +1,86 @@
+@import "tailwindcss";
+
+@theme {
+  /* TechTank TO Brand Colors */
+  --color-peach: #F5C4A8;
+  --color-lavender: #D8CEED;
+  --color-aqua: #B5E0D9;
+  --color-teal: #3DC4C0;
+  --color-amber: #F0AA00;
+  --color-dark: #141926;
+  
+  /* Semantic Colors */
+  --color-background: #FDFCFB;
+  --color-foreground: #141926;
+  --color-muted: #6B7280;
+  --color-muted-foreground: #9CA3AF;
+  --color-border: #E5E7EB;
+  
+  --color-primary: #3DC4C0;
+  --color-primary-foreground: #FFFFFF;
+  
+  --color-secondary: #141926;
+  --color-secondary-foreground: #FFFFFF;
+  
+  --color-accent: #F0AA00;
+  --color-accent-foreground: #141926;
+  
+  /* Font families */
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  
+  /* Spacing */
+  --radius: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+}
+
+/* Base styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.025em;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid var(--color-teal);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Custom utilities */
+.gradient-brand {
+  background: linear-gradient(135deg, var(--color-peach) 0%, var(--color-lavender) 50%, var(--color-aqua) 100%);
+}
+
+.gradient-brand-soft {
+  background: linear-gradient(135deg, 
+    color-mix(in srgb, var(--color-peach) 30%, white) 0%, 
+    color-mix(in srgb, var(--color-lavender) 30%, white) 50%, 
+    color-mix(in srgb, var(--color-aqua) 30%, white) 100%
+  );
+}
