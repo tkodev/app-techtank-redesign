@@ -44,17 +44,17 @@ export default function HomePage() {
       {/* Hero Section - Left aligned text, stacked overlapping photos right */}
       <section className="relative overflow-hidden gradient-hero texture-grain">
         <div className="relative mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-4 items-center min-h-[70vh]">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-6 items-start">
             {/* Left: Text content */}
             <div className="max-w-xl">
               <span className="tag mb-4">
-                Toronto &middot; Monthly &middot; Since 2022
+                Toronto &middot; Monthly &middot; Free
               </span>
               <h1 className="font-display text-4xl font-bold text-teal-dark lg:text-6xl text-balance mb-4 leading-[1.1]">
-                Where Toronto tech actually hangs out
+                Toronto&apos;s home for early-career tech
               </h1>
               <p className="text-lg text-muted leading-relaxed mb-6 max-w-md">
-                Real conversations, genuine connections, zero pretense. Pull up a chair.
+                Panels, firesides, and workshops that help you grow—hosted at the companies building the future.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button variant="primary" size="lg" asChild>
@@ -73,51 +73,24 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Stacked overlapping photo collage */}
-            <div className="relative h-[420px] lg:h-[520px] hidden md:block">
-              {/* Back layer - largest */}
-              <div className="absolute top-0 right-0 w-72 lg:w-80 photo-frame rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10">
-                <Image
-                  src={posterImages[0].src}
-                  alt={posterImages[0].alt}
-                  width={320}
-                  height={200}
-                  className="w-full h-auto"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-              {/* Middle layer - offset left */}
-              <div className="absolute top-16 right-20 lg:right-28 w-64 lg:w-72 photo-frame -rotate-4 hover:rotate-0 hover:scale-105 transition-all duration-500 z-20">
-                <Image
-                  src={posterImages[1].src}
-                  alt={posterImages[1].alt}
-                  width={288}
-                  height={180}
-                  className="w-full h-auto"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-              {/* Front layer - smallest, bottom */}
-              <div className="absolute bottom-4 right-4 lg:right-8 w-56 lg:w-64 photo-frame rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-500 z-30">
-                <Image
-                  src={posterImages[2].src}
-                  alt={posterImages[2].alt}
-                  width={256}
-                  height={160}
-                  className="w-full h-auto"
-                  style={{ width: "100%", height: "auto" }}
-                />
-              </div>
-              {/* Extra accent - peeking from back */}
-              <div className="absolute top-28 right-52 lg:right-64 w-48 lg:w-52 photo-frame -rotate-6 opacity-80 z-0">
-                <Image
-                  src={posterImages[3].src}
-                  alt={posterImages[3].alt}
-                  width={208}
-                  height={130}
-                  className="w-full h-auto"
-                  style={{ width: "100%", height: "auto" }}
-                />
+            {/* Right: Masonry photo grid */}
+            <div className="hidden md:block">
+              <div className="columns-2 gap-3 lg:gap-4">
+                {posterImages.slice(0, 5).map((poster, i) => (
+                  <div
+                    key={i}
+                    className="mb-3 lg:mb-4 break-inside-avoid photo-frame hover:scale-[1.02] transition-transform duration-300"
+                  >
+                    <Image
+                      src={poster.src}
+                      alt={poster.alt}
+                      width={300}
+                      height={188}
+                      className="w-full h-auto"
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                  </div>
+                ))}
               </div>
             </div>
 
@@ -177,7 +150,7 @@ export default function HomePage() {
         </div>
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {recentEvents.map((event) => (
-            <EventCard key={event.id} event={event} variant="poster" />
+            <EventCard key={event.id} event={event} variant="compact" />
           ))}
         </div>
       </Section>
