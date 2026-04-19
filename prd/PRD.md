@@ -204,6 +204,54 @@ CTAs are fine; tertiary links belong in the footer.
   `/how-it-works` must collapse into a single-line segmented control on
   mobile.
 
+### 5.6 Event archive & recap pattern
+
+`/events` and the home page treat each event as a recurring entry in
+an ongoing series, not just a flat Luma embed. Every event record
+carries:
+
+- Event number and/or date badge (e.g. "Event 14 · April 2026")
+- Title and one-line pitch
+- Venue + time chips
+- Tag chips (topic, track, "beginner-friendly", capacity note)
+- Host / sponsor attribution (**Supported by** + logo)
+- Status:
+  - **Upcoming** — shows "Next Up" treatment and an **RSVP on Luma**
+    CTA
+  - **Past** — shows a **View Recap** CTA linking to the event's
+    Google Photos album and YouTube recording
+- A past-events timeline lives directly below the upcoming event,
+  so visitors can scroll the full history as additional social proof.
+
+For v1, a "recap" is a linked bundle (Google Photos URL + YouTube URL
++ host/sponsor thanks surfaced inline). A dedicated `/events/<slug>`
+detail route is a v2 option only if organizers want editorial recaps
+and is explicitly out of scope for the initial launch.
+
+### 5.7 Recurring UI patterns
+
+- **Overline kicker.** Every major section opens with a short,
+  all-caps kicker (e.g. `WAYS TO GET INVOLVED`, `NEXT UP`, `RECENT
+  EVENTS`, `LATEST HIGHLIGHTS`, `GET IN TOUCH`) above the headline.
+  Establishes a clear scanning rhythm.
+- **Role cards with checkmarks.** The four `/how-it-works` role
+  teasers share one shape on `/` and `/how-it-works`: icon → overline
+  → headline → one-paragraph pitch → three bulleted checkmarks of
+  what the contributor gets. Reused verbatim so the four paths feel
+  like siblings.
+- **Supported-by strip.** A single-line host/sponsor acknowledgment
+  ("Supported by <logos>") appears above the footer on `/` and
+  `/events`, and on each past-event card. Distinct from, and
+  complementary to, the logo cloud higher up the page.
+- **Dual end-of-page CTA cards.** Long pages close with a two-up
+  card block: one "stay in the loop" card (Luma / Slack) and one
+  "collaborate with us" card (email / `/how-it-works`). Used on `/`
+  and `/events`.
+- **Direct-email contact card.** `techtankto@gmail.com` appears as a
+  prominent, copy-friendly contact card (not just a hyperlink) at the
+  end of `/how-it-works`, `/how-it-works/*`, and `/press-kit`. One
+  line of context explains what we respond to.
+
 ---
 
 ## 6. Functional Requirements
@@ -212,7 +260,13 @@ CTAs are fine; tertiary links belong in the footer.
 
 - Next.js App Router with shared layouts for `/how-it-works` and `/legal`.
 - Global header + footer on every route.
-- `/events` renders an embedded Luma calendar (or API-backed list).
+- `/events` renders an embedded Luma calendar (or API-backed list),
+  **and** a hand-curated "Next Up" + "Past Events" timeline driven by
+  structured event content (see below).
+- Events are modeled as structured content (MDX or JSON). Each record
+  carries: date, venue, title, tags, host/sponsor attribution, status
+  (`upcoming` | `past`), RSVP URL, Google Photos album URL, YouTube
+  recording URL. Powers both `/events` and the home-page preview.
 - Google Form embedded (or linked) on each `/how-it-works/*` page.
 - Press Kit exposes a downloadable ZIP of logos + a brand-guidelines PDF.
 - Social share / Open Graph metadata on every page.
@@ -227,6 +281,9 @@ CTAs are fine; tertiary links belong in the footer.
 - Branded slide deck template (Google Slides / PPTX) linked from
   `/how-it-works/speaker` and `/press-kit`.
 - Speaker run-of-show and host checklist (linked PDFs).
+- Per-event recap surface: Google Photos album + YouTube recording +
+  host/sponsor acknowledgment, reached via "View Recap" from the
+  past-events timeline.
 
 ### 6.3 Nice-to-have
 
