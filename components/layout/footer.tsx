@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Logo } from "@/components/ui/logo";
+import Image from "next/image";
 import { Mail } from "lucide-react";
 
 // Custom SVG social icons
@@ -89,11 +89,14 @@ export function Footer() {
         <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-1">
-            <Link href="/" className="flex items-center gap-2">
-              <Logo className="h-8 w-auto" variant="light" />
-              <span className="font-display text-lg font-semibold">
-                TechTank TO
-              </span>
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/images/techtank-logo.svg"
+                alt="TechTank TO"
+                width={128}
+                height={56}
+                className="h-10 w-auto brightness-0 invert"
+              />
             </Link>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
               Toronto&apos;s inclusive tech community. Monthly events since 2022.
