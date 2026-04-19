@@ -130,30 +130,11 @@ export default function HomePage() {
 
       {/* Events Section - Upcoming (large) + Past (small) */}
       <Section>
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-6">
-          <SectionHeader
-            overline="Events"
-            title="Recent happenings"
-          />
-          <div className="flex flex-wrap items-center gap-2">
-            <Button variant="primary" size="sm" asChild>
-              <a
-                href="https://luma.com/techtank"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Luma
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </a>
-            </Button>
-            <Button variant="outline" size="sm" asChild>
-              <Link href="/events">
-                View all
-                <ArrowRight className="ml-2 h-4 w-4" />
-              </Link>
-            </Button>
-          </div>
-        </div>
+        <SectionHeader
+          overline="Events"
+          title="Recent happenings"
+          className="mb-6"
+        />
 
         {/* Recent Events - Large featured + smaller cards */}
         <div className="grid gap-4 lg:grid-cols-2 mb-4">
@@ -161,10 +142,30 @@ export default function HomePage() {
             <EventCard key={event.id} event={event} variant="featured" />
           ))}
         </div>
-        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4 mb-6">
           {smallerEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="compact" />
           ))}
+        </div>
+
+        {/* CTAs */}
+        <div className="flex flex-wrap items-center justify-center gap-3">
+          <Button variant="primary" size="sm" asChild>
+            <a
+              href="https://luma.com/techtank"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Luma
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+          <Button variant="outline" size="sm" asChild>
+            <Link href="/events">
+              View all
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </Section>
 
