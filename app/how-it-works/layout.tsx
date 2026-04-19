@@ -23,9 +23,9 @@ export default function HowItWorksLayout({
       {/* Sticky Sub-Nav */}
       <nav className="sticky top-[73px] z-40 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="mx-auto max-w-7xl px-4 lg:px-8">
-          <div className="flex items-center justify-between py-3">
+          <div className="flex items-center justify-center py-3">
             {/* Sub-navigation */}
-            <div className="flex items-center gap-1 overflow-x-auto -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
+            <div className="flex items-center justify-center gap-1 overflow-x-auto -mx-4 px-4 lg:mx-0 lg:px-0 scrollbar-hide">
               {subNav.map((item) => {
                 const isActive =
                   item.href === "/how-it-works"
