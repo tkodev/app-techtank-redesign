@@ -4,9 +4,9 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const legalDocs = [
-  { name: "Terms of Service", href: "/legal/terms-of-service" },
-  { name: "Privacy Policy", href: "/legal/privacy-policy" },
   { name: "Code of Conduct", href: "/legal/code-of-conduct" },
+  { name: "Privacy Policy", href: "/legal/privacy-policy" },
+  { name: "Terms of Service", href: "/legal/terms-of-service" },
 ];
 
 export default function LegalLayout({
