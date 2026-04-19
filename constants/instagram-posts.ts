@@ -1157,7 +1157,7 @@ export const instagramPosts: Record<string, InstagramPost> = {
     ]
   },
   "2025-08-12-DNRVwWtPwky": {
-    caption: "YouTube 📹 LINK IN BIO EDM Party Mix Summer 2025 @techtankto\n. . . . . . . . . . #dj #edmdj #housedj #technodj #edm #housemusic #technomusic #canadiandj #koreandj #femaledj #nightlife #edmmix #hardstyle #hardstylemusic #ravemusic #technomix #clubmusic #partymusic",
+    caption: "YouTube 📹 LINK IN BIO EDM Party Mix Summer 2025 @techtankto\n#dj #edmdj #housedj #technodj #edm #housemusic #technomusic #canadiandj #koreandj #femaledj #nightlife #edmmix #hardstyle #hardstylemusic #ravemusic #technomix #clubmusic #partymusic",
     date: "2025-08-12",
     shortcode: "DNRVwWtPwky",
     pk: 18337280413163939,
@@ -1224,4 +1224,12 @@ export function getFeaturedInstagramPosts(limit?: number): InstagramPostWithId[]
 
 export function getCoverImage(post: InstagramPost): string | undefined {
   return post.media.find((m) => m.type === "image")?.path;
+}
+
+export function getCoverVideo(post: InstagramPost): string | undefined {
+  return post.media.find((m) => m.type === "video")?.path;
+}
+
+export function getInstagramPostsByIds(ids: string[]): InstagramPostWithId[] {
+  return getInstagramPosts().filter((p) => ids.includes(p.id));
 }

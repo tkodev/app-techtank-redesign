@@ -34,7 +34,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
   return (
     <article className="group relative glass rounded-2xl overflow-hidden transition-all flex flex-col">
       {cover && (
-        <div className="relative aspect-[4/3] w-full overflow-hidden bg-sand">
+        <div className="relative aspect-[5/4] w-full overflow-hidden bg-sand">
           <Image
             src={cover}
             alt=""
@@ -88,7 +88,7 @@ export function SocialFeed() {
 
   return (
     <div className="space-y-8">
-      <div className="grid gap-6 md:grid-cols-2">
+      <div className="grid gap-6 grid-cols-2 lg:grid-cols-4">
         {posts.map((post) => (
           <InstagramPostCard key={post.id} post={post} />
         ))}

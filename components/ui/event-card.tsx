@@ -17,7 +17,7 @@ function RecapPill({
   size?: "sm" | "md";
 }) {
   const base =
-    "inline-flex items-center gap-1 rounded-full bg-[#FF0000]/10 text-[#CC0000] font-semibold uppercase tracking-wider hover:bg-[#FF0000]/20 transition-colors";
+    "inline-flex items-center gap-1 rounded-full bg-green-600/10 text-green-600 font-semibold uppercase tracking-wider hover:bg-green-600/20 transition-colors";
   const sizeClass =
     size === "sm" ? "px-2 py-0.5 text-[10px]" : "px-2.5 py-1 text-xs";
   return (

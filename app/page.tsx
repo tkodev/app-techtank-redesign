@@ -11,7 +11,8 @@ import { SocialFeed } from "@/components/ui/social-feed";
 import { getRecentEvents } from "@/constants/events";
 import {
   getCoverImage,
-  getFeaturedInstagramPosts,
+  getCoverVideo,
+  getInstagramPostsByIds,
 } from "@/constants/instagram-posts";
 
 function captionToAlt(caption: string): string {
@@ -25,13 +26,15 @@ export default function HomePage() {
   const featuredEvents = allRecentEvents.slice(0, 2);
   const smallerEvents = allRecentEvents.slice(2, 6);
 
-  const heroPosts = getFeaturedInstagramPosts()
-    .map((post) => {
-      const cover = getCoverImage(post);
-      return cover ? { id: post.id, src: cover, alt: captionToAlt(post.caption) } : null;
-    })
-    .filter((p): p is { id: string; src: string; alt: string } => p !== null)
-    .slice(0, 5);
+  const heroPosts = getInstagramPostsByIds([
+    "2025-07-07-DLz4I7KOww6", // BBQ season
+    "2025-06-02-DKaPVrgPuE0",  // Code diversity
+  ]).map((post) => ({
+    id: post.id,
+    imageSrc: getCoverImage(post),
+    videoSrc: getCoverVideo(post),
+    alt: captionToAlt(post.caption),
+  }));
 
   return (
     <>
@@ -60,40 +63,58 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Masonry photo grid */}
-            <div className="hidden md:block">
-              <div className="columns-2 gap-3 lg:gap-4">
-                {heroPosts.slice(0, 5).map((poster) => (
-                  <div
-                    key={poster.id}
-                    className="mb-3 lg:mb-4 break-inside-avoid photo-frame hover:scale-[1.02] transition-transform duration-300"
-                  >
-                    <Image
-                      src={poster.src}
-                      alt={poster.alt}
-                      width={300}
-                      height={188}
-                      className="w-full h-auto"
-                      style={{ width: "100%", height: "auto" }}
+            {/* Right: 2-post grid */}
+            <div className="hidden md:grid grid-cols-2 gap-3 lg:gap-4">
+              {heroPosts.map((post) => (
+                <div
+                  key={post.id}
+                  className="relative aspect-[5/4] photo-frame overflow-hidden hover:scale-[1.02] transition-transform duration-300"
+                >
+                  {post.videoSrc ? (
+                    <video
+                      src={post.videoSrc}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      className="absolute inset-0 h-full w-full object-cover"
                     />
-                  </div>
-                ))}
-              </div>
+                  ) : post.imageSrc ? (
+                    <Image
+                      src={post.imageSrc}
+                      alt={post.alt}
+                      fill
+                      sizes="(min-width: 1024px) 25vw, 50vw"
+                      className="object-cover"
+                    />
+                  ) : null}
+                </div>
+              ))}
             </div>
 
-            {/* Mobile: Horizontal scroll of posters */}
+            {/* Mobile: Horizontal scroll */}
             <div className="md:hidden -mx-4 px-4">
               <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar">
-                {heroPosts.slice(0, 4).map((poster) => (
-                  <div key={poster.id} className="flex-shrink-0 w-56 snap-center photo-frame">
-                    <Image
-                      src={poster.src}
-                      alt={poster.alt}
-                      width={224}
-                      height={140}
-                      className="w-full h-auto"
-                      style={{ width: "100%", height: "auto" }}
-                    />
+                {heroPosts.map((post) => (
+                  <div key={post.id} className="relative flex-shrink-0 w-56 aspect-[5/4] snap-center photo-frame overflow-hidden">
+                    {post.videoSrc ? (
+                      <video
+                        src={post.videoSrc}
+                        autoPlay
+                        loop
+                        muted
+                        playsInline
+                        className="absolute inset-0 h-full w-full object-cover"
+                      />
+                    ) : post.imageSrc ? (
+                      <Image
+                        src={post.imageSrc}
+                        alt={post.alt}
+                        fill
+                        sizes="56vw"
+                        className="object-cover"
+                      />
+                    ) : null}
                   </div>
                 ))}
               </div>
