@@ -219,7 +219,7 @@ export default function SponsorPage() {
           align="center"
           className="mb-8"
         />
-        <LogoCloud title="" />
+        <LogoCloud />
       </Section>
 
       {/* Hosting vs Sponsoring */}

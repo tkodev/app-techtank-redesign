@@ -236,7 +236,7 @@ export default function HostPage() {
           align="center"
           className="mb-8"
         />
-        <LogoCloud title="" />
+        <LogoCloud />
       </Section>
 
       {/* Host Resources */}
