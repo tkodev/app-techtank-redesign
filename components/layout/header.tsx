@@ -10,7 +10,7 @@ const navigation = [
   { name: "About", href: "/about" },
   { name: "How It Works", href: "/how-it-works" },
   { name: "Events", href: "/events" },
-  { name: "Press Kit", href: "/press-kit" },
+  { name: "Code of Conduct", href: "/legal/code-of-conduct" },
 ];
 
 export function Header() {
