@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Calendar, ExternalLink, Clock, Users } from "lucide-react";
+import { Calendar, ExternalLink, Clock, Users, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { EventCard } from "@/components/ui/event-card";
@@ -57,9 +57,6 @@ export default function EventsPage() {
                   <div className="flex items-center gap-4 mb-4">
                     <span className="inline-flex items-center px-3 py-1 rounded-full bg-teal/10 text-teal text-xs font-semibold uppercase tracking-wider">
                       Upcoming
-                    </span>
-                    <span className="text-sm font-medium text-muted">
-                      Event {nextEvent.eventNumber}
                     </span>
                   </div>
 
