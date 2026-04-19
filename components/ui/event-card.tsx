@@ -106,7 +106,7 @@ export function EventCard({ event, variant = "poster" }: EventCardProps) {
 
   if (variant === "featured") {
     return (
-      <div className="relative overflow-hidden rounded-2xl glass shadow-soft">
+      <div className="relative overflow-hidden rounded-2xl glass">
         <div className="p-6 lg:p-8">
           {/* Status Badge */}
           <div className="flex items-center justify-between mb-4">
