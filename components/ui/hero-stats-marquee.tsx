@@ -25,7 +25,7 @@ export function HeroStatsMarquee() {
         {marqueeItems.map((item, index) => (
           <div
             key={index}
-            className="flex-shrink-0 px-6 lg:px-10"
+            className="flex-shrink-0 px-10 lg:px-16"
           >
             <div className="flex flex-col items-center text-center">
               <span className="font-display text-xl lg:text-2xl font-bold text-teal-dark">
