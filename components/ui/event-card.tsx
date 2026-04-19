@@ -62,9 +62,16 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
           </div>
 
           {/* Title */}
-          <h3 className="font-display text-xl font-bold text-teal-dark mb-3 line-clamp-2">
+          <h3 className="font-display text-xl font-bold text-teal-dark mb-2 line-clamp-2">
             {event.title}
           </h3>
+
+          {/* Description */}
+          {event.pitch && (
+            <p className="text-sm text-muted mb-3 line-clamp-2">
+              {event.pitch}
+            </p>
+          )}
 
           {/* Date */}
           <div className="flex items-center gap-2 text-sm text-muted mb-1.5">
