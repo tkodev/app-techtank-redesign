@@ -27,11 +27,11 @@ export function HeroStatsMarquee() {
             key={index}
             className="flex-shrink-0 px-6 lg:px-10"
           >
-            <div className="flex items-center gap-2">
+            <div className="flex flex-col items-center text-center">
               <span className="font-display text-xl lg:text-2xl font-bold text-teal-dark">
                 {item.value}
               </span>
-              <span className="text-sm text-teal-dark/60 whitespace-nowrap">
+              <span className="text-xs text-teal-dark/60 whitespace-nowrap">
                 {item.label}
               </span>
             </div>
