@@ -3,7 +3,7 @@ import Image from "next/image";
 import { ArrowRight, ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { StatsStrip } from "@/components/ui/stats-strip";
+import { HeroStatsMarquee } from "@/components/ui/hero-stats-marquee";
 import { LogoCloud } from "@/components/ui/logo-cloud";
 import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
@@ -112,11 +112,11 @@ export default function HomePage() {
               </div>
             </div>
           </div>
+
+          {/* Stats Marquee - Part of hero */}
+          <HeroStatsMarquee />
         </div>
       </section>
-
-      {/* Stats Strip - Compact */}
-      <StatsStrip />
 
       {/* Events Section - Upcoming (large) + Past (small) */}
       <Section>
