@@ -118,6 +118,16 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Social Feed */}
+      <Section id="community" className="bg-sand/50 texture-grain">
+        <SectionHeader
+          overline="From the community"
+          title="Real people, real moments"
+          className="mb-8"
+        />
+        <SocialFeed />
+      </Section>
+
       {/* Events Section - Upcoming (large) + Past (small) */}
       <Section>
         <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-6">
@@ -165,16 +175,6 @@ export default function HomePage() {
             <EventCard key={event.id} event={event} variant="compact" />
           ))}
         </div>
-      </Section>
-
-      {/* Social Feed */}
-      <Section id="community" className="bg-sand/50 texture-grain">
-        <SectionHeader
-          overline="From the community"
-          title="Real people, real moments"
-          className="mb-8"
-        />
-        <SocialFeed />
       </Section>
 
       {/* Logo Cloud - More compact */}
