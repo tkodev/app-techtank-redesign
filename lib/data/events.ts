@@ -40,9 +40,9 @@ export const events: Event[] = [
     pitch: "Celebrating three years of Toronto tech community",
     date: "2026-04-20",
     time: "6:00 PM - 10:00 PM",
+    venue: "Dina's Tavern",
     tags: ["Anniversary", "Social"],
-    status: "upcoming",
-    rsvpUrl: "https://luma.com/techtank",
+    status: "past",
   },
   {
     id: "ci-optimization-brainstation",
@@ -54,8 +54,7 @@ export const events: Event[] = [
     venueAddress: "460 King St W, Toronto",
     capacity: 100,
     tags: ["Tech Talk", "DevOps", "CI/CD"],
-    status: "upcoming",
-    rsvpUrl: "https://luma.com/techtank",
+    status: "past",
     posterImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brainstation%20-%20Meetup-biF1zd6uLklCH2G07z4bhHDaOaO5KE.png",
     sponsor: {
       name: "BrainStation",
