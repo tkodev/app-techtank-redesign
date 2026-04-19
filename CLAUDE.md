@@ -129,3 +129,7 @@ document styling).
 - Create new commits rather than amending. Use HEREDOC commit messages.
 - Never force-push or skip hooks without explicit permission.
 - Do not open a pull request unless explicitly asked.
+- Do not sign commits or PRs as Claude, and do not include
+  `claude.ai/code` session links, `Co-Authored-By: Claude` trailers,
+  or any other "Generated with Claude Code" markers in commit messages
+  or PR bodies.
