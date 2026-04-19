@@ -80,17 +80,4 @@ conventions, and per-page content requirements.
 2. When adding or renaming a route, update both the route table in
    `prd/PRD.md` §2.1 and the corresponding spec in `prd/pages/`.
 3. Keep one dominant CTA per page. Role pages under `/how-it-works/*` must end
-   in a Google Form intake.
-
-## Contact
-
-<techtankto@gmail.com>
-
-## External platforms
-
-- Meetup — <https://www.meetup.com/techtank-to/>
-- Luma — <https://luma.com/techtank>
-- LinkedIn — <https://ca.linkedin.com/company/techtank-to>
-- Instagram — <https://www.instagram.com/techtankto/>
-- YouTube — <https://www.youtube.com/@TechTankTo>
-- GitHub — <https://github.com/tech-tankorg>
+   in an intake action (email us).
