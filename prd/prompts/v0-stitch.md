@@ -24,8 +24,13 @@ accounts or ticketing.
 
 ## Brand & tone
 
-- **Voice:** warm, welcoming, beginner-safe, Toronto-local, confident.
-  Concrete, not aspirational.
+- **Voice:** welcoming and inclusive to everyone in the tech space —
+  students, career-changers, senior engineers, and corporate sponsors
+  alike. Concrete, not aspirational. Confident without being
+  exclusionary. Avoid anything that reads as playful, youthful, or
+  consumer-app-like; the tone should be credible enough that a
+  sponsor's marketing team feels comfortable associating their brand
+  here.
 - **Palette (use these exactly — do not invent colours):**
   - Gradient: three-stop background motif — warm peach/coral
     (`#F5C4A8`) → soft lavender (`#D8CEED`) → pale aqua teal
@@ -36,10 +41,12 @@ accounts or ticketing.
   - Body text: near-black on light surfaces.
   - Do not introduce hot pink, true blue, or colours outside this
     family.
-  - Professional and elegant, not corporate. Generous whitespace.
-    Editorial rhythm.
-- **Typography:** one editorial serif or distinctive display face for
-  headlines, one humanist sans for body.
+  - Professional and welcoming, not corporate. Generous whitespace.
+    Clean, structured rhythm.
+- **Typography:** a strong, neutral display typeface (geometric or
+  grotesque sans preferred — avoid decorative serifs, script faces, or
+  anything that reads as playful). A legible humanist sans for body.
+  The pairing should feel industry-conference-grade.
 - **Imagery:** real event photography first. No stock illustration.
 - **Motif:** fish/"Tank" mark is a subtle detail, not a dominant motif.
 

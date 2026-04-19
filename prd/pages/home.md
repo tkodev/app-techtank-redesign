@@ -40,7 +40,8 @@ not product copy.
    - Primary CTA: **"RSVP on Luma"** → `/events`.
    - Secondary CTA: "Join our Slack".
    - Hero visual: a curated collage of real event photos (retain the
-     collage motif from the current site, treated more elegantly).
+     collage motif from the current site, treated with more intentional
+     composition and whitespace).
 
 2. **Trust strip / fast facts**
    - Fast facts pulled from the structured events content — for

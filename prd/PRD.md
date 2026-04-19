@@ -172,8 +172,12 @@ relative to this file, `prd/PRD.md`):
 
 ### 5.1 Visual tone
 
-- **Professional and elegant**, not corporate. Confident use of whitespace,
-  a refined type scale, and editorial-style layouts.
+- **Professional and welcoming**, not corporate and not casual. The
+  visual tone should be credible enough that a sponsor's marketing team
+  feels comfortable associating their brand, while remaining open and
+  approachable to a first-time attendee from any background. Confident
+  use of whitespace and a clean type scale; avoid anything that reads
+  as playful, youthful, or consumer-app-like.
 - Keep the aquatic motif (fish logo, "Tank" vocabulary) but treat it as a
   subtle mark rather than the dominant motif.
 - Prefer **real event photography** over stock illustration.
@@ -312,8 +316,11 @@ and is explicitly out of scope for the initial launch.
 ## 8. Content & Brand
 
 - **Voice:** warm, welcoming, beginner-safe, Toronto-local, confident.
-- **Typography:** one editorial serif for display, one humanist sans for
-  body (final pairing per visual design).
+- **Typography:** a strong, neutral display typeface (geometric or
+  grotesque sans preferred — avoid decorative serifs or script faces);
+  a legible humanist sans for body. The pairing should read as
+  industry-conference-grade, not startup-blog or community-newsletter.
+  Final pairing per visual design.
 - **Color palette (extracted from current site):**
   - **Gradient:** warm peach/coral → soft lavender → aqua teal. This
     three-stop gradient is the site's primary background motif (hero,
