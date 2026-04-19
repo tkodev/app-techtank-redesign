@@ -3,36 +3,22 @@ export interface Sponsor {
   name: string;
   logo: string;
   url: string;
-  type: "host" | "sponsor";
+  type: "host" | "sponsor" | "partner";
 }
 
 export const sponsors: Sponsor[] = [
   {
-    id: "shopify",
-    name: "Shopify",
-    logo: "/images/sponsors/shopify.svg",
-    url: "https://shopify.com",
+    id: "7shifts",
+    name: "7shifts",
+    logo: "/images/sponsors/7shifts.svg",
+    url: "https://7shifts.com",
     type: "host",
   },
   {
-    id: "wealthsimple",
-    name: "Wealthsimple",
-    logo: "/images/sponsors/wealthsimple.svg",
-    url: "https://wealthsimple.com",
-    type: "host",
-  },
-  {
-    id: "figma",
-    name: "Figma",
-    logo: "/images/sponsors/figma.svg",
-    url: "https://figma.com",
-    type: "host",
-  },
-  {
-    id: "rbc",
-    name: "RBC",
-    logo: "/images/sponsors/rbc.svg",
-    url: "https://rbc.com",
+    id: "rakuten",
+    name: "Rakuten",
+    logo: "/images/sponsors/rakuten.svg",
+    url: "https://rakuten.com",
     type: "host",
   },
   {
@@ -40,28 +26,42 @@ export const sponsors: Sponsor[] = [
     name: "Cohere",
     logo: "/images/sponsors/cohere.svg",
     url: "https://cohere.com",
-    type: "sponsor",
-  },
-  {
-    id: "td",
-    name: "TD Bank",
-    logo: "/images/sponsors/td.svg",
-    url: "https://td.com",
     type: "host",
   },
   {
-    id: "clio",
-    name: "Clio",
-    logo: "/images/sponsors/clio.svg",
-    url: "https://clio.com",
+    id: "vena",
+    name: "Vena",
+    logo: "/images/sponsors/vena.svg",
+    url: "https://venasolutions.com",
     type: "host",
   },
   {
-    id: "1password",
-    name: "1Password",
-    logo: "/images/sponsors/1password.svg",
-    url: "https://1password.com",
+    id: "points",
+    name: "Points",
+    logo: "/images/sponsors/points.svg",
+    url: "https://points.com",
+    type: "host",
+  },
+  {
+    id: "intuit",
+    name: "Intuit",
+    logo: "/images/sponsors/intuit.svg",
+    url: "https://intuit.com",
+    type: "host",
+  },
+  {
+    id: "microsoft",
+    name: "Microsoft",
+    logo: "/images/sponsors/microsoft.svg",
+    url: "https://microsoft.com",
     type: "sponsor",
+  },
+  {
+    id: "prema-coffee",
+    name: "Prema Coffee",
+    logo: "/images/sponsors/prema.svg",
+    url: "https://premacoffee.ca",
+    type: "partner",
   },
 ];
 
@@ -75,4 +75,8 @@ export function getHosts(): Sponsor[] {
 
 export function getSponsorsOnly(): Sponsor[] {
   return sponsors.filter((s) => s.type === "sponsor");
+}
+
+export function getPartners(): Sponsor[] {
+  return sponsors.filter((s) => s.type === "partner");
 }

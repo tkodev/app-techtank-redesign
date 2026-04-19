@@ -11,6 +11,29 @@ import { DualCTA } from "@/components/ui/dual-cta";
 import { SocialFeed } from "@/components/ui/social-feed";
 import { getRecentEvents, getUpcomingEvents } from "@/lib/data/events";
 
+const posterImages = [
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Triple%20Speaker%20Poster-pO82lupTezdeLbnG8w0LSc1oubWhSE.png",
+    alt: "Lightning Talks at Vena Solutions",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CodeDiversity%20-%20Meetup%20%281%29-M8pGbZSyN18hxvThJEYVprUcgcB5xr.png",
+    alt: "CodeDiversity Coffee Chat",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mentorship%20Poster-dFmJatCn5QvqEOVDiIdlSRyBPFAFsq.png",
+    alt: "Mentorship Meetup",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brainstation%20-%20Meetup-biF1zd6uLklCH2G07z4bhHDaOaO5KE.png",
+    alt: "BrainStation Meetup",
+  },
+  {
+    src: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CodeDiversity%20-%20Meetup-0XO3CsPUKalKcJtMdlBSdcyJncN402.png",
+    alt: "CodeDiversity Clay Workshop",
+  },
+];
+
 export default function HomePage() {
   const recentEvents = getRecentEvents(4);
   const upcomingEvents = getUpcomingEvents();
@@ -18,107 +41,108 @@ export default function HomePage() {
 
   return (
     <>
-      {/* Hero Section - Photo-forward with texture */}
-      <section className="relative overflow-hidden min-h-[90vh] flex items-center">
-        {/* Gradient Background with texture */}
-        <div className="absolute inset-0 gradient-hero texture-grain" />
-        
-        {/* Decorative event poster collage */}
-        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-1/2 h-full hidden lg:block">
-          <div className="relative h-full w-full">
-            {/* Main poster */}
-            <div className="absolute right-12 top-1/2 -translate-y-1/2 w-80 photo-frame rotate-3 hover:rotate-0 transition-transform duration-500">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Triple%20Speaker%20Poster-pO82lupTezdeLbnG8w0LSc1oubWhSE.png"
-                alt="Lightning Talks at Vena Solutions"
-                width={400}
-                height={250}
-                className="w-full h-auto"
-              />
+      {/* Hero Section - Left aligned text, stacked overlapping photos right */}
+      <section className="relative overflow-hidden gradient-hero texture-grain">
+        <div className="relative mx-auto max-w-7xl px-4 py-12 lg:px-8 lg:py-16">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-4 items-center min-h-[70vh]">
+            {/* Left: Text content */}
+            <div className="max-w-xl">
+              <span className="tag mb-4">
+                Toronto &middot; Monthly &middot; Since 2022
+              </span>
+              <h1 className="font-display text-4xl font-bold text-teal-dark lg:text-6xl text-balance mb-4 leading-[1.1]">
+                Where Toronto tech actually hangs out
+              </h1>
+              <p className="text-lg text-muted leading-relaxed mb-6 max-w-md">
+                Real conversations, genuine connections, zero pretense. Pull up a chair.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <Button variant="primary" size="lg" asChild>
+                  <a
+                    href="https://lu.ma/techtankto"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    See what&apos;s next
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </a>
+                </Button>
+                <Button variant="outline" size="lg" asChild>
+                  <Link href="/how-it-works">Get involved</Link>
+                </Button>
+              </div>
             </div>
-            {/* Secondary poster */}
-            <div className="absolute right-48 top-16 w-64 photo-frame -rotate-6 hover:rotate-0 transition-transform duration-500 opacity-80">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/CodeDiversity%20-%20Meetup%20%281%29-M8pGbZSyN18hxvThJEYVprUcgcB5xr.png"
-                alt="CodeDiversity Coffee Chat"
-                width={320}
-                height={200}
-                className="w-full h-auto"
-              />
+
+            {/* Right: Stacked overlapping photo collage */}
+            <div className="relative h-[420px] lg:h-[520px] hidden md:block">
+              {/* Back layer - largest */}
+              <div className="absolute top-0 right-0 w-72 lg:w-80 photo-frame rotate-3 hover:rotate-0 hover:scale-105 transition-all duration-500 z-10">
+                <Image
+                  src={posterImages[0].src}
+                  alt={posterImages[0].alt}
+                  width={320}
+                  height={200}
+                  className="w-full h-auto"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              {/* Middle layer - offset left */}
+              <div className="absolute top-16 right-20 lg:right-28 w-64 lg:w-72 photo-frame -rotate-4 hover:rotate-0 hover:scale-105 transition-all duration-500 z-20">
+                <Image
+                  src={posterImages[1].src}
+                  alt={posterImages[1].alt}
+                  width={288}
+                  height={180}
+                  className="w-full h-auto"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              {/* Front layer - smallest, bottom */}
+              <div className="absolute bottom-4 right-4 lg:right-8 w-56 lg:w-64 photo-frame rotate-2 hover:rotate-0 hover:scale-105 transition-all duration-500 z-30">
+                <Image
+                  src={posterImages[2].src}
+                  alt={posterImages[2].alt}
+                  width={256}
+                  height={160}
+                  className="w-full h-auto"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
+              {/* Extra accent - peeking from back */}
+              <div className="absolute top-28 right-52 lg:right-64 w-48 lg:w-52 photo-frame -rotate-6 opacity-80 z-0">
+                <Image
+                  src={posterImages[3].src}
+                  alt={posterImages[3].alt}
+                  width={208}
+                  height={130}
+                  className="w-full h-auto"
+                  style={{ width: "100%", height: "auto" }}
+                />
+              </div>
             </div>
-            {/* Tertiary poster */}
-            <div className="absolute right-4 bottom-24 w-56 photo-frame rotate-6 hover:rotate-0 transition-transform duration-500 opacity-70">
-              <Image
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Mentorship%20Poster-dFmJatCn5QvqEOVDiIdlSRyBPFAFsq.png"
-                alt="Mentorship Meetup"
-                width={280}
-                height={175}
-                className="w-full h-auto"
-              />
+
+            {/* Mobile: Horizontal scroll of posters */}
+            <div className="md:hidden -mx-4 px-4">
+              <div className="flex gap-3 overflow-x-auto pb-4 snap-x snap-mandatory no-scrollbar">
+                {posterImages.slice(0, 4).map((poster, i) => (
+                  <div key={i} className="flex-shrink-0 w-56 snap-center photo-frame">
+                    <Image
+                      src={poster.src}
+                      alt={poster.alt}
+                      width={224}
+                      height={140}
+                      className="w-full h-auto"
+                      style={{ width: "100%", height: "auto" }}
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div className="relative mx-auto max-w-7xl px-4 py-20 lg:px-8 lg:py-32">
-          <div className="max-w-2xl">
-            {/* Tag pill */}
-            <span className="tag mb-6">
-              Toronto &middot; Monthly &middot; Since 2022
-            </span>
-
-            {/* Headline */}
-            <h1 className="font-display text-5xl font-bold text-teal-dark lg:text-7xl text-balance mb-6 leading-tight">
-              Where Toronto tech actually hangs out
-            </h1>
-
-            {/* Subheadline */}
-            <p className="text-xl text-muted leading-relaxed mb-8 max-w-xl">
-              Real conversations, genuine connections, zero pretense. Join us for panels, 
-              firesides, and workshops where everyone&apos;s welcome to pull up a chair.
-            </p>
-
-            {/* CTAs */}
-            <div className="flex flex-wrap gap-4">
-              <Button variant="primary" size="lg" asChild>
-                <a
-                  href="https://lu.ma/techtankto"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  See what&apos;s next
-                  <ExternalLink className="ml-2 h-5 w-5" />
-                </a>
-              </Button>
-              <Button variant="outline" size="lg" asChild>
-                <Link href="/how-it-works">
-                  Get involved
-                </Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-        
-        {/* Mobile poster preview */}
-        <div className="absolute bottom-0 left-0 right-0 lg:hidden">
-          <div className="flex gap-4 overflow-x-auto pb-8 px-4 snap-x snap-mandatory no-scrollbar">
-            {recentEvents.slice(0, 3).map((event) => (
-              event.posterImage && (
-                <div key={event.id} className="flex-shrink-0 w-64 snap-center photo-frame">
-                  <Image
-                    src={event.posterImage}
-                    alt={event.title}
-                    width={256}
-                    height={160}
-                    className="w-full h-auto"
-                  />
-                </div>
-              )
-            ))}
           </div>
         </div>
       </section>
 
-      {/* Trust Strip / Stats */}
+      {/* Stats Strip - Compact */}
       <StatsStrip />
 
       {/* Featured Upcoming Event */}
@@ -128,20 +152,20 @@ export default function HomePage() {
             <SectionHeader
               overline="Next up"
               title="Don&apos;t miss this one"
-              className="mb-8 text-center"
+              className="mb-6 text-center"
             />
             <EventCard event={featuredEvent} variant="featured" />
           </div>
         </Section>
       )}
 
-      {/* Recent Events Grid - Photo Forward */}
+      {/* Recent Events Grid */}
       <Section>
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-4 mb-12">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-3 mb-8">
           <SectionHeader
             overline="From the community"
             title="Recent happenings"
-            description="A peek at what we&apos;ve been up to. Real moments, real people."
+            description="A peek at what we&apos;ve been up to."
           />
           <Link
             href="/events"
@@ -151,27 +175,26 @@ export default function HomePage() {
             <ArrowRight className="ml-1 h-4 w-4" />
           </Link>
         </div>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
           {recentEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="poster" />
           ))}
         </div>
       </Section>
 
-      {/* Social Feed Section */}
+      {/* Social Feed */}
       <Section className="bg-sand/50 texture-grain">
         <SectionHeader
           overline="Follow along"
           title="See what&apos;s happening"
-          description="Real moments from our events. No curated highlights, just genuine vibes from the community."
-          className="mb-12"
+          className="mb-8"
         />
         <SocialFeed />
       </Section>
 
-      {/* Logo Cloud */}
-      <Section className="py-12 lg:py-16">
-        <p className="text-center text-sm text-muted mb-8 uppercase tracking-widest font-medium">
+      {/* Logo Cloud - More compact */}
+      <Section className="py-8 lg:py-10">
+        <p className="text-center text-xs text-muted mb-6 uppercase tracking-widest font-medium">
           Hosted and supported by
         </p>
         <LogoCloud />
@@ -182,28 +205,27 @@ export default function HomePage() {
         <SectionHeader
           overline="There&apos;s a spot for you"
           title="Jump in"
-          description="TechTank runs on people who show up. Here&apos;s how you can be part of it."
-          className="mb-12"
+          description="TechTank runs on people who show up."
+          className="mb-8"
         />
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {roleCardsData.map((role) => (
             <RoleCard key={role.role} {...role} />
           ))}
         </div>
       </Section>
 
-      {/* Values Teaser - Glass card */}
+      {/* Values Teaser */}
       <Section>
-        <div className="glass rounded-3xl p-8 lg:p-12 text-center max-w-3xl mx-auto shadow-soft-lg">
-          <span className="tag-outline mb-6 inline-block">
+        <div className="glass rounded-2xl p-6 lg:p-10 text-center max-w-2xl mx-auto shadow-soft-lg">
+          <span className="tag-outline mb-4 inline-block text-sm">
             What we&apos;re about
           </span>
-          <h2 className="font-display text-3xl lg:text-4xl font-bold text-teal-dark mb-6">
+          <h2 className="font-display text-2xl lg:text-3xl font-bold text-teal-dark mb-4">
             Community first. Always.
           </h2>
-          <p className="text-lg text-muted mb-8">
-            We believe tech is better when it&apos;s inclusive. No gatekeeping, no cliques—just 
-            people who genuinely want to learn, share, and lift each other up.
+          <p className="text-muted mb-6">
+            No gatekeeping, no cliques—just people who genuinely want to learn, share, and lift each other up.
           </p>
           <Button variant="primary" asChild>
             <Link href="/about">More about us</Link>
@@ -211,8 +233,8 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Dual End-of-Page CTA */}
-      <Section className="gradient-brand-vertical texture-grain">
+      {/* Dual CTA */}
+      <Section className="gradient-brand-vertical texture-grain py-8 lg:py-12">
         <DualCTA />
       </Section>
     </>

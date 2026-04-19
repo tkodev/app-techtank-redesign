@@ -4,49 +4,47 @@ import { Button } from "@/components/ui/button";
 
 export function DualCTA() {
   return (
-    <div className="grid gap-6 lg:grid-cols-2">
+    <div className="grid gap-4 lg:grid-cols-2">
       {/* Never miss an event */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-teal/5 to-teal/10 border border-teal/20 p-6 lg:p-8">
-        <Calendar className="absolute top-6 right-6 h-20 w-20 text-teal/10" />
+      <div className="relative overflow-hidden rounded-xl glass p-5 lg:p-6">
+        <Calendar className="absolute top-4 right-4 h-16 w-16 text-teal-dark/10" />
         <div className="relative">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-3">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
             Stay in the loop
           </span>
-          <h3 className="font-display text-xl lg:text-2xl font-semibold text-foreground mb-3">
+          <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
             Never miss an event
           </h3>
-          <p className="text-muted mb-6 max-w-md">
-            Subscribe to our Luma calendar to be notified when the next event
-            goes live.
+          <p className="text-sm text-muted mb-4 max-w-sm">
+            Subscribe to our Luma calendar to get notified.
           </p>
-          <Button variant="primary" asChild>
+          <Button variant="primary" size="sm" asChild>
             <a
               href="https://lu.ma/techtank"
               target="_blank"
               rel="noopener noreferrer"
             >
               Follow on Luma
-              <ExternalLink className="ml-2 h-4 w-4" />
+              <ExternalLink className="ml-2 h-3.5 w-3.5" />
             </a>
           </Button>
         </div>
       </div>
 
       {/* Want to contribute? */}
-      <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-amber/5 to-amber/10 border border-amber/20 p-6 lg:p-8">
-        <Users className="absolute top-6 right-6 h-20 w-20 text-amber/10" />
+      <div className="relative overflow-hidden rounded-xl glass p-5 lg:p-6">
+        <Users className="absolute top-4 right-4 h-16 w-16 text-coral/10" />
         <div className="relative">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber mb-3">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
             Get involved
           </span>
-          <h3 className="font-display text-xl lg:text-2xl font-semibold text-foreground mb-3">
+          <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
             Want to contribute?
           </h3>
-          <p className="text-muted mb-6 max-w-md">
-            Speak, host, sponsor, or volunteer for the next event. Multiple ways
-            to get involved.
+          <p className="text-sm text-muted mb-4 max-w-sm">
+            Speak, host, sponsor, or volunteer.
           </p>
-          <Button variant="secondary" asChild>
+          <Button variant="outline" size="sm" asChild>
             <Link href="/how-it-works">Get involved</Link>
           </Button>
         </div>

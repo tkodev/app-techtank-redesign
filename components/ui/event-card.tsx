@@ -14,10 +14,13 @@ export function EventCard({ event, variant = "poster" }: EventCardProps) {
   const hasRecap = event.photosUrl || event.youtubeUrl;
   const isUpcoming = event.status === "upcoming";
 
-  const formattedDate = new Date(event.date).toLocaleDateString("en-CA", {
+  // Format date consistently to avoid hydration mismatch
+  const dateObj = new Date(event.date + "T12:00:00");
+  const formattedDate = dateObj.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
+    timeZone: "America/Toronto",
   });
 
   // New poster variant - photo-forward design
