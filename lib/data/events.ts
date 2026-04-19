@@ -42,7 +42,7 @@ export const events: Event[] = [
     time: "6:00 PM - 10:00 PM",
     tags: ["Anniversary", "Social"],
     status: "upcoming",
-    rsvpUrl: "https://lu.ma/techtank",
+    rsvpUrl: "https://luma.com/techtank",
   },
   {
     id: "ci-optimization-brainstation",
@@ -55,7 +55,7 @@ export const events: Event[] = [
     capacity: 100,
     tags: ["Tech Talk", "DevOps", "CI/CD"],
     status: "upcoming",
-    rsvpUrl: "https://lu.ma/techtank",
+    rsvpUrl: "https://luma.com/techtank",
     posterImage: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Brainstation%20-%20Meetup-biF1zd6uLklCH2G07z4bhHDaOaO5KE.png",
     sponsor: {
       name: "BrainStation",

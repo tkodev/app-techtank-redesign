@@ -44,7 +44,7 @@ export function Header() {
         <div className="hidden lg:flex lg:items-center lg:gap-3">
           <Button variant="secondary" size="sm" asChild>
             <a
-              href="https://lu.ma/techtank"
+              href="https://luma.com/techtank"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -94,7 +94,7 @@ export function Header() {
             <div className="pt-4 space-y-3 border-t border-border">
               <Button variant="secondary" size="sm" className="w-full" asChild>
                 <a
-                  href="https://lu.ma/techtank"
+                  href="https://luma.com/techtank"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

@@ -58,7 +58,7 @@ export default function HomePage() {
               <div className="flex flex-wrap gap-3">
                 <Button variant="primary" size="lg" asChild>
                   <a
-                    href="https://lu.ma/techtankto"
+                    href="https://luma.com/techtank"
                     target="_blank"
                     rel="noopener noreferrer"
                   >

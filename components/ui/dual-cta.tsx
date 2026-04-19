@@ -20,7 +20,7 @@ export function DualCTA() {
           </p>
           <Button variant="primary" size="sm" asChild>
             <a
-              href="https://lu.ma/techtank"
+              href="https://luma.com/techtank"
               target="_blank"
               rel="noopener noreferrer"
             >

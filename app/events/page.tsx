@@ -198,7 +198,7 @@ export default function EventsPage() {
           </p>
           <Button variant="primary" asChild>
             <a
-              href="https://lu.ma/techtank"
+              href="https://luma.com/techtank"
               target="_blank"
               rel="noopener noreferrer"
             >

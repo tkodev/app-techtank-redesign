@@ -285,7 +285,7 @@ export default function AboutPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="primary" size="lg" asChild>
               <a
-                href="https://lu.ma/techtank"
+                href="https://luma.com/techtank"
                 target="_blank"
                 rel="noopener noreferrer"
               >

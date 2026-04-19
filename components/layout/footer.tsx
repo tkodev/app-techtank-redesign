@@ -40,7 +40,7 @@ const footerLinks = {
     title: "Community",
     links: [
       { name: "Meetup", href: "https://www.meetup.com/techtank-to/", external: true },
-      { name: "Luma", href: "https://lu.ma/techtank", external: true },
+      { name: "Luma", href: "https://luma.com/techtank", external: true },
       { name: "Slack", href: "https://forms.gle/slack-invite", external: true },
       { name: "LinkedIn", href: "https://ca.linkedin.com/company/techtank-to", external: true },
       { name: "Instagram", href: "https://www.instagram.com/techtankto/", external: true },
