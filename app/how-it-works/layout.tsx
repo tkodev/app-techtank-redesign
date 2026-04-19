@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { ExternalLink } from "lucide-react";
-import { Button } from "@/components/ui/button";
 
 const subNav = [
   { name: "Overview", href: "/how-it-works" },
@@ -50,19 +48,7 @@ export default function HowItWorksLayout({
               })}
             </div>
 
-            {/* Persistent CTA */}
-            <div className="hidden lg:block shrink-0 ml-6">
-              <Button variant="primary" size="sm" asChild>
-                <a
-                  href="https://forms.gle/slack-invite"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Join our Slack
-                  <ExternalLink className="ml-2 h-4 w-4" />
-                </a>
-              </Button>
-            </div>
+
           </div>
         </div>
       </nav>
