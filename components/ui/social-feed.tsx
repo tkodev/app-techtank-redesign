@@ -4,6 +4,10 @@ import { useState } from "react";
 import { ExternalLink } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
+const SLACK_URL = "https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA";
+const MEETUP_URL = "https://www.meetup.com/techtank-to/";
+const LUMA_URL = "https://luma.com/techtank?period=past";
+const GITHUB_URL = "https://github.com/tech-tankorg";
 const LINKEDIN_URL = "https://www.linkedin.com/company/techtank-to/";
 const INSTAGRAM_URL = "https://www.instagram.com/techtankto/";
 
@@ -137,17 +141,41 @@ export function SocialFeed() {
         ))}
       </div>
 
-      {/* Follow CTAs */}
-      <div className="flex flex-wrap items-center justify-center gap-4 pt-4">
+      {/* Community CTAs */}
+      <div id="community" className="flex flex-wrap items-center justify-center gap-3 pt-6">
+        <Button variant="primary" size="sm" asChild>
+          <a href={SLACK_URL} target="_blank" rel="noopener noreferrer">
+            Join Slack
+            <ExternalLink className="ml-2 h-4 w-4" />
+          </a>
+        </Button>
+        <Button variant="outline" size="sm" asChild>
+          <a href={MEETUP_URL} target="_blank" rel="noopener noreferrer">
+            Meetup
+            <ExternalLink className="ml-2 h-4 w-4" />
+          </a>
+        </Button>
+        <Button variant="outline" size="sm" asChild>
+          <a href={LUMA_URL} target="_blank" rel="noopener noreferrer">
+            Luma
+            <ExternalLink className="ml-2 h-4 w-4" />
+          </a>
+        </Button>
         <Button variant="outline" size="sm" asChild>
           <a href={LINKEDIN_URL} target="_blank" rel="noopener noreferrer">
-            Follow on LinkedIn
+            LinkedIn
             <ExternalLink className="ml-2 h-4 w-4" />
           </a>
         </Button>
         <Button variant="outline" size="sm" asChild>
           <a href={INSTAGRAM_URL} target="_blank" rel="noopener noreferrer">
-            Follow on Instagram
+            Instagram
+            <ExternalLink className="ml-2 h-4 w-4" />
+          </a>
+        </Button>
+        <Button variant="outline" size="sm" asChild>
+          <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer">
+            GitHub
             <ExternalLink className="ml-2 h-4 w-4" />
           </a>
         </Button>

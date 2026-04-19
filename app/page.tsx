@@ -125,13 +125,24 @@ export default function HomePage() {
             overline="Events"
             title="Recent happenings"
           />
-          <Link
-            href="/events"
-            className="inline-flex items-center text-sm font-semibold text-coral hover:text-coral/80 transition-colors"
-          >
-            View all events
-            <ArrowRight className="ml-1 h-4 w-4" />
-          </Link>
+          <div className="flex items-center gap-4">
+            <a
+              href="https://luma.com/techtank?period=past"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center text-sm font-semibold text-coral hover:text-coral/80 transition-colors"
+            >
+              RSVP on Luma
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </a>
+            <Link
+              href="/events"
+              className="inline-flex items-center text-sm font-semibold text-muted hover:text-foreground transition-colors"
+            >
+              View all
+              <ArrowRight className="ml-1 h-4 w-4" />
+            </Link>
+          </div>
         </div>
 
         {/* Recent Events - Large featured + smaller cards */}

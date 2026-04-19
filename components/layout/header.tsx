@@ -40,25 +40,12 @@ export function Header() {
           ))}
         </div>
 
-        {/* Desktop CTAs */}
-        <div className="hidden lg:flex lg:items-center lg:gap-3">
-          <Button variant="secondary" size="sm" asChild>
-            <a
-              href="https://luma.com/techtank"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              RSVP on Luma
-            </a>
-          </Button>
+        {/* Desktop CTA */}
+        <div className="hidden lg:flex lg:items-center">
           <Button variant="primary" size="sm" asChild>
-            <a
-              href="https://forms.gle/slack-invite"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Join our Slack
-            </a>
+            <Link href="/#community">
+              Join the community
+            </Link>
           </Button>
         </div>
 
@@ -91,24 +78,11 @@ export function Header() {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4 space-y-3 border-t border-border">
-              <Button variant="secondary" size="sm" className="w-full" asChild>
-                <a
-                  href="https://luma.com/techtank"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  RSVP on Luma
-                </a>
-              </Button>
+            <div className="pt-4 border-t border-border">
               <Button variant="primary" size="sm" className="w-full" asChild>
-                <a
-                  href="https://forms.gle/slack-invite"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Join our Slack
-                </a>
+                <Link href="/#community">
+                  Join the community
+                </Link>
               </Button>
             </div>
           </div>
