@@ -168,7 +168,7 @@ export default function HomePage() {
       </Section>
 
       {/* Social Feed */}
-      <Section className="bg-sand/50 texture-grain">
+      <Section id="community" className="bg-sand/50 texture-grain">
         <SectionHeader
           overline="From the community"
           title="Real people, real moments"

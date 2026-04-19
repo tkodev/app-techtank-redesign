@@ -142,7 +142,7 @@ export function SocialFeed() {
       </div>
 
       {/* Community CTAs */}
-      <div id="community" className="flex flex-wrap items-center justify-center gap-3 pt-6">
+      <div className="flex flex-wrap items-center justify-center gap-3 pt-6">
         <Button variant="primary" size="sm" asChild>
           <a href={SLACK_URL} target="_blank" rel="noopener noreferrer">
             Join Slack
