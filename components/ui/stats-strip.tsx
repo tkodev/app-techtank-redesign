@@ -4,8 +4,8 @@ export function StatsStrip() {
   const stats = getEventStats();
 
   const items = [
-    { value: `${stats.avgAttendance}`, label: "Attendees per event" },
-    { value: `${stats.totalEvents}+`, label: "Events hosted" },
+    { value: stats.totalEvents, label: "Events hosted" },
+    { value: stats.avgAttendance, label: "Attendees per event" },
     { value: stats.cadence, label: "Cadence" },
     { value: `Since ${stats.since}`, label: "Serving Toronto tech" },
   ];
