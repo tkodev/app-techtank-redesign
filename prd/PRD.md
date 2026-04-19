@@ -177,7 +177,7 @@ relative to this file, `prd/PRD.md`):
   feels comfortable associating their brand, while remaining open and
   approachable to a first-time attendee from any background. Confident
   use of whitespace and a clean type scale; avoid anything that reads
-  as playful, youthful, or consumer-app-like.
+  as playful or youthful.
 - Keep the aquatic motif (fish logo, "Tank" vocabulary) but treat it as a
   subtle mark rather than the dominant motif.
 - Prefer **real event photography** over stock illustration.

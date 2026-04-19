@@ -28,7 +28,7 @@ accounts or ticketing.
   students, career-changers, senior engineers, and corporate sponsors
   alike. Concrete, not aspirational. Confident without being
   exclusionary. Avoid anything that reads as playful, youthful, or
-  consumer-app-like; the tone should be credible enough that a
+  the tone should be credible enough that a
   sponsor's marketing team feels comfortable associating their brand
   here.
 - **Palette (use these exactly — do not invent colours):**
