@@ -35,6 +35,7 @@ export const sponsors: Sponsor[] = [
     logo: "/images/sponsors/points.png",
     url: "https://www.points.com",
     type: "host",
+    scale: 1.5,
   },
   {
     id: "prema-coffee",
@@ -42,7 +43,7 @@ export const sponsors: Sponsor[] = [
     logo: "/images/sponsors/prema.png",
     url: "https://www.prematoronto.ca",
     type: "partner",
-    scale: 1.8,
+    scale: 2.2,
   },
   {
     id: "vena",
@@ -57,6 +58,7 @@ export const sponsors: Sponsor[] = [
     logo: "/images/sponsors/7shifts.svg",
     url: "https://www.7shifts.com",
     type: "host",
+    scale: 0.75,
   },
   {
     id: "cohere",
@@ -64,6 +66,7 @@ export const sponsors: Sponsor[] = [
     logo: "/images/sponsors/cohere.svg",
     url: "https://cohere.com",
     type: "host",
+    scale: 0.75,
   },
 ];
 
