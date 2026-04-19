@@ -1,6 +1,6 @@
-# Speaker — `/how-it-works/speaker`
+# Speaker — `/get-involved/speaker`
 
-**URL:** https://www.techtankto.com/how-it-works/speaker
+**URL:** https://www.techtankto.com/get-involved/speaker
 **Page title:** Speak at TechTank — TechTank TO
 **Role:** Convince qualified technologists to speak at a TechTank event
 and capture their intake.
@@ -46,7 +46,7 @@ audience, format, logistics, what they get, and how to sign up.
 
 4. **What TechTank handles**
    - Venue and catering (via a host company).
-   - Marketing (Meetup, Slack, LinkedIn, Instagram).
+   - Marketing (Slack, LinkedIn, Instagram).
    - Run-of-show coordination and MCing.
    - Recording and post-production.
    - Optional: feedback / rehearsal sessions for first-time speakers.

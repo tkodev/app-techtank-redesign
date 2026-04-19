@@ -75,7 +75,7 @@ export default function PrivacyPolicyPage() {
           </p>
           <ul className="list-disc pl-6 space-y-2 text-muted">
             <li>
-              <strong>Meetup / Luma:</strong> Event RSVPs and attendee lists
+              <strong>Luma:</strong> Event RSVPs and attendee lists
             </li>
             <li>
               <strong>Google Forms:</strong> Intake submissions (speaker, host,

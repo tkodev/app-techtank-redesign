@@ -77,7 +77,7 @@ export function DualCTA() {
           </p>
           <div className="flex flex-wrap gap-2">
             <Button variant="primary" size="sm" asChild>
-              <Link href="/how-it-works">Get involved</Link>
+              <Link href="/get-involved">Get involved</Link>
             </Button>
             {contributeLinks.map((link) => (
               <Button

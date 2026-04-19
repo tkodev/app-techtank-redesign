@@ -1,13 +1,12 @@
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowRight, ExternalLink } from "lucide-react";
+import { ArrowRight, Calendar, ExternalLink, Heart, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { HeroStatsMarquee } from "@/components/ui/hero-stats-marquee";
 import { LogoCloud } from "@/components/ui/logo-cloud";
 import { RoleCard, roleCardsData } from "@/components/ui/role-card";
 import { EventCard } from "@/components/ui/event-card";
-import { DualCTA } from "@/components/ui/dual-cta";
 import { SocialFeed } from "@/components/ui/social-feed";
 import { getRecentEvents } from "@/constants/events";
 
@@ -58,17 +57,13 @@ export default function HomePage() {
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button variant="primary" size="lg" asChild>
-                  <a
-                    href="https://luma.com/techtank"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    See what&apos;s next
-                    <ExternalLink className="ml-2 h-4 w-4" />
-                  </a>
+                  <Link href="/events">See events</Link>
                 </Button>
                 <Button variant="outline" size="lg" asChild>
-                  <Link href="/#join-us">Join us</Link>
+                  <Link href="/get-involved">Get involved</Link>
+                </Button>
+                <Button variant="ghost" size="lg" asChild>
+                  <Link href="/about">About us</Link>
                 </Button>
               </div>
             </div>
@@ -210,9 +205,81 @@ export default function HomePage() {
         </div>
       </Section>
 
-      {/* Dual CTA */}
+      {/* Three-flow CTA */}
       <Section id="join-us" className="gradient-brand-vertical texture-grain py-8 lg:py-12">
-        <DualCTA />
+        <SectionHeader
+          overline="Take the next step"
+          title="Where to next?"
+          description="Three ways to plug in right now."
+          className="mb-8"
+        />
+        <div className="grid gap-4 md:grid-cols-3">
+          <Link
+            href="/about"
+            className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
+          >
+            <Heart className="absolute top-4 right-4 h-14 w-14 text-teal-dark/10" />
+            <div className="relative">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+                Know who we are
+              </span>
+              <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
+                About us
+              </h3>
+              <p className="text-sm text-muted mb-4">
+                Our values, our story, and the people behind TechTank.
+              </p>
+              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
+                Meet the community
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </span>
+            </div>
+          </Link>
+
+          <Link
+            href="/events"
+            className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
+          >
+            <Calendar className="absolute top-4 right-4 h-14 w-14 text-teal-dark/10" />
+            <div className="relative">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+                Show up
+              </span>
+              <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
+                Upcoming events
+              </h3>
+              <p className="text-sm text-muted mb-4">
+                See what&apos;s coming up and RSVP to the next meetup.
+              </p>
+              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
+                See events
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </span>
+            </div>
+          </Link>
+
+          <Link
+            href="/get-involved"
+            className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
+          >
+            <Users className="absolute top-4 right-4 h-14 w-14 text-coral/10" />
+            <div className="relative">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+                Contribute
+              </span>
+              <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
+                Get involved
+              </h3>
+              <p className="text-sm text-muted mb-4">
+                Speak, host, sponsor, or volunteer with the crew.
+              </p>
+              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
+                Pick your path
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </span>
+            </div>
+          </Link>
+        </div>
       </Section>
     </>
   );

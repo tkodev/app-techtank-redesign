@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Users, Lightbulb, Handshake, Heart, ExternalLink } from "lucide-react";
+import { Users, Lightbulb, Handshake, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
-import { DualCTA } from "@/components/ui/dual-cta";
 
 export const metadata: Metadata = {
   title: "About",
@@ -59,7 +58,7 @@ const timeline = [
     year: "2024",
     title: "Community programs launch",
     description:
-      "Guppy Talks for first-time speakers. Study Tank for learning groups. The volunteer crew expanded to support larger events.",
+      "Code Diversity for underrepresented voices. The volunteer crew expanded to support larger events.",
   },
   {
     year: "2025",
@@ -181,8 +180,7 @@ export default function AboutPage() {
               </p>
               <p>
                 <strong className="text-foreground">Community programs:</strong>{" "}
-                Guppy Talks for first-time speakers. Study Tank for learning
-                groups. Code Diversity for underrepresented voices.
+                Code Diversity for underrepresented voices in tech.
               </p>
             </div>
           </div>
@@ -211,10 +209,10 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="primary" asChild>
-              <Link href="/how-it-works/host">Host an event</Link>
+              <Link href="/get-involved/host">Host an event</Link>
             </Button>
             <Button variant="outline" asChild>
-              <Link href="/how-it-works/sponsor">Become a sponsor</Link>
+              <Link href="/get-involved/sponsor">Become a sponsor</Link>
             </Button>
           </div>
         </div>
@@ -280,25 +278,13 @@ export default function AboutPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="primary" size="lg" asChild>
-              <a
-                href="https://luma.com/techtank"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                RSVP to the next event
-                <ExternalLink className="ml-2 h-5 w-5" />
-              </a>
+              <Link href="/events">See upcoming events</Link>
             </Button>
             <Button variant="outline" size="lg" asChild>
-              <Link href="/how-it-works">Get involved</Link>
+              <Link href="/get-involved">Get involved</Link>
             </Button>
           </div>
         </div>
-      </Section>
-
-      {/* Dual CTA */}
-      <Section>
-        <DualCTA />
       </Section>
     </>
   );

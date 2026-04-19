@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Check, Clock, Users, Video, Mic, FileText } from "lucide-react";
+import Link from "next/link";
+import { Check, Clock, Users, Video, Mic, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
@@ -41,7 +42,7 @@ const logistics = [
 
 const techTankHandles = [
   "Venue and catering (via a host company)",
-  "Marketing (Meetup, Slack, LinkedIn, Instagram)",
+  "Marketing (Slack, LinkedIn, Instagram)",
   "Run-of-show coordination and MCing",
   "Recording and post-production",
   "Feedback and rehearsal sessions for first-time speakers",
@@ -194,48 +195,23 @@ export default function SpeakerPage() {
 
       {/* Speaker Resources */}
       <Section>
-        <SectionHeader
-          overline="Resources"
-          title="Speaker toolkit"
-          className="mb-12"
-        />
-        <div className="grid gap-6 lg:grid-cols-3">
-          <a
-            href="#"
-            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 transition-all"
-          >
-            <FileText className="h-8 w-8 text-teal mb-4" />
-            <h4 className="font-semibold text-foreground group-hover:text-teal transition-colors mb-2">
-              Slide deck template
-            </h4>
-            <p className="text-sm text-muted">
-              Branded Google Slides template to get you started.
-            </p>
-          </a>
-          <a
-            href="#"
-            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 transition-all"
-          >
-            <FileText className="h-8 w-8 text-teal mb-4" />
-            <h4 className="font-semibold text-foreground group-hover:text-teal transition-colors mb-2">
-              Run-of-show PDF
-            </h4>
-            <p className="text-sm text-muted">
-              What to expect on event night, minute by minute.
-            </p>
-          </a>
-          <a
-            href="#"
-            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 transition-all"
-          >
-            <FileText className="h-8 w-8 text-teal mb-4" />
-            <h4 className="font-semibold text-foreground group-hover:text-teal transition-colors mb-2">
-              First-time speaker tips
-            </h4>
-            <p className="text-sm text-muted">
-              Practical advice from speakers who started at TechTank.
-            </p>
-          </a>
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            Resources
+          </span>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
+            Speaker toolkit in the Press Kit
+          </h2>
+          <p className="text-muted mb-8">
+            Brand assets, slide templates, run-of-show guidance, and tips for
+            first-time speakers all live in our Press Kit.
+          </p>
+          <Button variant="outline" asChild>
+            <Link href="/press-kit">
+              Open the Press Kit
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </Section>
 

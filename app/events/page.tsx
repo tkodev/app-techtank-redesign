@@ -145,7 +145,7 @@ export default function EventsPage() {
                         Want to bring TechTank to your space?
                       </p>
                       <Button variant="outline" size="sm" asChild>
-                        <Link href="/how-it-works/host">Learn about hosting</Link>
+                        <Link href="/get-involved/host">Learn about hosting</Link>
                       </Button>
                     </div>
                   )}

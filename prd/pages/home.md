@@ -73,10 +73,10 @@ professional and credible.
    - Sub-headline: "Every TechTank event runs on the time of
      community members like you."
    - Four role cards sharing one shape (see PRD §5.7):
-     - **Speak** — `Share what you know` → `/how-it-works/speaker`
-     - **Host** — `Bring us to your space` → `/how-it-works/host`
-     - **Sponsor** — `Support the community` → `/how-it-works/sponsor`
-     - **Volunteer** — `Help run the crew` → `/how-it-works/volunteer`
+     - **Speak** — `Share what you know` → `/get-involved/speaker`
+     - **Host** — `Bring us to your space` → `/get-involved/host`
+     - **Sponsor** — `Support the community` → `/get-involved/sponsor`
+     - **Volunteer** — `Help run the crew` → `/get-involved/volunteer`
    - Each card: icon → overline → headline → one-paragraph pitch →
      three checkmark bullets of what the contributor gets.
 
@@ -110,7 +110,7 @@ professional and credible.
      - **Never miss an event.** Subscribe to the Luma calendar — CTA
        "Follow on Luma".
      - **Want to contribute?** Speak, host, sponsor, or volunteer —
-       CTA "Get involved" → `/how-it-works`.
+       CTA "Get involved" → `/get-involved`.
 
 10. **Supported-by strip**
     - Single-line "Supported by <host/sponsor logos>" acknowledgment
@@ -123,7 +123,7 @@ professional and credible.
 
 1. RSVP to the next event (Luma)
 2. Join our Slack
-3. Pick a role → `/how-it-works`
+3. Pick a role → `/get-involved`
 4. View Press Kit (for press/partners)
 
 ## 6. Functional requirements
@@ -138,7 +138,7 @@ professional and credible.
 - Mobile-first layout; hero collage remains legible at 375px.
 - Open Graph / Twitter card metadata with TechTank branding.
 - Role cards and event cards share their component with
-  `/how-it-works` and `/events` respectively — no bespoke variants.
+  `/get-involved` and `/events` respectively — no bespoke variants.
 
 ## 7. Acceptance criteria
 

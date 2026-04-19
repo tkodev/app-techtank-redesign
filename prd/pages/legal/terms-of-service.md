@@ -41,7 +41,7 @@ narrow column, table of contents sidebar, and a last-updated stamp.
      without attribution, impersonation, etc.).
 
 4. **External platforms**
-   - Meetup, Luma, Slack, GitHub, YouTube, Instagram are third parties
+   - Luma, Slack, GitHub, YouTube, Instagram are third parties
      with their own terms; attending / joining binds you to theirs as
      well.
 

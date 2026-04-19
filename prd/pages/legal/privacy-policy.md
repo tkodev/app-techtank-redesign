@@ -11,7 +11,7 @@ it's used, and who it's shared with.
 
 Be transparent about TechTank's minimal-PII stance. The community
 collects almost nothing directly; most data lives with external
-platforms (Luma, Meetup, Slack) or arrives via email to
+platforms (Luma, Slack) or arrives via email to
 `techtankto@gmail.com`.
 
 ## 2. Primary audience
@@ -45,7 +45,7 @@ a narrow column, table of contents sidebar, and a last-updated stamp.
 
 4. **Third-party platforms**
    - Explicit list of platforms and what they process:
-     - **Meetup / Luma** — RSVPs, attendee lists.
+     - **Luma** — RSVPs, attendee lists.
      - **Slack** — community messages.
      - **YouTube, Instagram, LinkedIn, GitHub** — embedded content.
    - Each platform has its own privacy policy; links included.

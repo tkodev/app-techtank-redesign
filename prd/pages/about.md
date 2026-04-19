@@ -48,12 +48,12 @@ page a potential speaker, host, sponsor, or member can point to and say
    - Monthly in-person events (technical talk + networking).
    - Recorded talks on YouTube.
    - Slack community for ongoing discussion.
-   - Optional programs (Guppy Talks, Study Tank, Code Diversity) — keep
-     a short list with links; avoid sprawling content here.
+   - Optional programs (Code Diversity) — keep a short list with links;
+     avoid sprawling content here.
 
 5. **How we fund it**
    - Companies provide venue + food; TechTank does the rest. Link to
-     `/how-it-works/sponsor` and `/how-it-works/host`.
+     `/get-involved/sponsor` and `/get-involved/host`.
 
 6. **Code of Conduct teaser**
    - Short callout linking to `/legal/code-of-conduct`.

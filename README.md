@@ -51,7 +51,7 @@ route, annotated with its purpose.
 │   ├── page.tsx                    # /                    Social-proof-driven home
 │   ├── about/                      # /about               Values & community manifesto
 │   ├── events/                     # /events              Upcoming (Luma) + past event timeline
-│   ├── how-it-works/               # /how-it-works        Onboarding hub (shared layout)
+│   ├── get-involved/               # /get-involved        Onboarding hub (shared layout)
 │   │   ├── speaker/                #   /speaker           Speaker intake
 │   │   ├── host/                   #   /host              Host intake
 │   │   ├── sponsor/                #   /sponsor           Sponsor intake
@@ -81,5 +81,5 @@ conventions, and per-page content requirements.
    structural changes — they define the IA, brand, and content conventions.
 2. When adding or renaming a route, update both the route table in
    `prd/PRD.md` §2.1 and the corresponding spec in `prd/pages/`.
-3. Keep one dominant CTA per page. Role pages under `/how-it-works/*` must end
+3. Keep one dominant CTA per page. Role pages under `/get-involved/*` must end
    in an intake action (email us).
