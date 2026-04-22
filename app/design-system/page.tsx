@@ -15,7 +15,7 @@ import {
 export const metadata: Metadata = {
   title: "Design System",
   description: "TechTank TO design system — colors, typography, components, and patterns.",
-  robots: { index: false, follow: false },
+  robots: { index: true, follow: true },
 };
 
 const brandColors = [
@@ -49,7 +49,7 @@ export default function DesignSystemPage() {
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-              Internal reference
+              Brand Guidelines
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
               Design System
