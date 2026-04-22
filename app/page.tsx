@@ -226,7 +226,7 @@ export default function HomePage() {
           >
             <Calendar className="absolute top-4 right-4 h-14 w-14 text-teal-dark/10" />
             <div className="relative">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
                 Show up
               </span>
               <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
@@ -235,7 +235,7 @@ export default function HomePage() {
               <p className="text-sm text-muted mb-4">
                 See what&apos;s coming up and RSVP to the next meetup.
               </p>
-              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
+              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-amber-dark transition-colors">
                 See events
                 <ArrowRight className="ml-2 h-4 w-4" />
               </span>
@@ -246,9 +246,9 @@ export default function HomePage() {
             href="/get-involved"
             className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
           >
-            <Users className="absolute top-4 right-4 h-14 w-14 text-coral/10" />
+            <Users className="absolute top-4 right-4 h-14 w-14 text-amber-dark/10" />
             <div className="relative">
-              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+              <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
                 Contribute
               </span>
               <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
@@ -257,7 +257,7 @@ export default function HomePage() {
               <p className="text-sm text-muted mb-4">
                 Speak, host, sponsor, or volunteer with the crew.
               </p>
-              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-coral transition-colors">
+              <span className="inline-flex items-center text-sm font-semibold text-teal-dark group-hover:text-amber-dark transition-colors">
                 Pick your path
                 <ArrowRight className="ml-2 h-4 w-4" />
               </span>

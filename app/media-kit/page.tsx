@@ -7,9 +7,9 @@ import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
 
 export const metadata: Metadata = {
-  title: "Press Kit",
+  title: "Media Kit",
   description:
-    "TechTank TO press kit — logos, brand guidelines, and fast facts for press, sponsors, and partners.",
+    "TechTank TO media kit — logos, brand guidelines, and fast facts for press, sponsors, and partners.",
 };
 
 const fastFacts = [
@@ -22,24 +22,29 @@ const fastFacts = [
 ];
 
 const brandColors = [
-  { name: "Logo Teal", hex: "#3DC4C0", usage: "Primary brand color" },
-  { name: "Logo Amber", hex: "#F0AA00", usage: "Lightning bolt accent" },
-  { name: "Peach", hex: "#F5C4A8", usage: "Gradient warm stop" },
-  { name: "Lavender", hex: "#D8CEED", usage: "Gradient mid stop" },
-  { name: "Aqua", hex: "#B5E0D9", usage: "Gradient cool stop" },
-  { name: "Dark", hex: "#141926", usage: "CTA buttons, footer" },
+  { name: "Teal", hex: "#2A6B7C", usage: "Secondary headings, accents" },
+  { name: "Teal Dark", hex: "#1B4B5A", usage: "Primary headings, footer, CTAs" },
+  { name: "Amber", hex: "#FFBC55", usage: "Brand amber" },
+  { name: "Amber Dark", hex: "#EFA020", usage: "Brand amber dark" },
+  { name: "Coral", hex: "#E87C4E", usage: "Orange accent" },
+  { name: "Mint", hex: "#5B9A8B", usage: "Accent green" },
+  { name: "Seafoam", hex: "#A8D5D8", usage: "Light backgrounds, accents" },
+  { name: "Sand", hex: "#F7EDE2", usage: "Warm off-white" },
+  { name: "Peach", hex: "#F5D4C1", usage: "Warm gradient base" },
+  { name: "Blush", hex: "#EABFBF", usage: "Pink accent" },
 ];
 
-const logoDownloads = [
-  { name: "Full Logo (Color)", format: "SVG + PNG", description: "Full color on light backgrounds" },
-  { name: "Full Logo (White)", format: "SVG + PNG", description: "For dark backgrounds" },
-];
+const logoDownload = {
+  name: "TechTank Logos",
+  href: "/downloads/techtank-logos.zip",
+  description: "SVG + PNG — light and dark variants",
+};
 
 const resources = [
-  { name: "Brand Guidelines PDF", description: "Colors, typography, usage rules" },
-  { name: "Speaker Slide Template", description: "Google Slides / PPTX template" },
-  { name: "Social Post Templates", description: "LinkedIn and Instagram formats" },
-  { name: "Host Checklist", description: "Event-day preparation guide" },
+  { name: "Brand Guidelines", href: "/design-system", description: "Colors, typography, usage rules", internal: true },
+  { name: "Speaker Slide Template", href: "/downloads/coming-soon.txt", description: "Google Slides / PPTX template", internal: false },
+  { name: "Speaker Checklist", href: "/downloads/coming-soon.txt", description: "Preparation guide for first-time speakers", internal: false },
+  { name: "Host Checklist", href: "/downloads/coming-soon.txt", description: "Event-day preparation guide", internal: false },
 ];
 
 export default function PressKitPage() {
@@ -50,17 +55,17 @@ export default function PressKitPage() {
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-              Press Kit
+              Media Kit
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
-              TechTank Press Kit
+              TechTank Media Kit
             </h1>
             <p className="text-xl text-muted leading-relaxed mb-8">
               Logos, guidelines, and fast facts for press, sponsors, and
               partners. All assets are free to use with attribution.
             </p>
             <Button variant="primary" size="lg" asChild>
-              <a href="#" download>
+              <a href="/downloads/techtank-logos.zip" download>
                 <Download className="mr-2 h-5 w-5" />
                 Download all assets (ZIP)
               </a>
@@ -139,47 +144,43 @@ export default function PressKitPage() {
         <div className="grid gap-6 lg:grid-cols-2 mb-12">
           <div className="bg-white rounded-xl border border-border p-8 flex items-center justify-center">
             <Image
-              src="/images/techtank-logo.svg"
-              alt="TechTank TO Logo"
+              src="/images/logos/light.svg"
+              alt="TechTank TO Logo (light)"
               width={240}
               height={80}
               className="h-16 w-auto"
               style={{ width: "auto" }}
             />
           </div>
-          <div className="bg-dark rounded-xl p-8 flex items-center justify-center">
+          <div className="glass-dark rounded-xl p-8 flex items-center justify-center">
             <Image
-              src="/images/techtank-logo.svg"
-              alt="TechTank TO Logo"
+              src="/images/logos/dark.svg"
+              alt="TechTank TO Logo (dark)"
               width={240}
               height={80}
-              className="h-16 w-auto brightness-0 invert"
+              className="h-16 w-auto"
               style={{ width: "auto" }}
             />
           </div>
         </div>
 
-        {/* Logo Downloads */}
-        <div className="grid gap-4 sm:grid-cols-2">
-          {logoDownloads.map((logo) => (
-            <a
-              key={logo.name}
-              href="#"
-              className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
-            >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-background">
-                <FileText className="h-6 w-6 text-teal" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
-                  {logo.name}
-                </p>
-                <p className="text-sm text-muted">{logo.description}</p>
-              </div>
-              <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
-            </a>
-          ))}
-        </div>
+        {/* Logo Download */}
+        <a
+          href={logoDownload.href}
+          download
+          className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
+        >
+          <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-background">
+            <FileText className="h-6 w-6 text-teal" />
+          </div>
+          <div className="flex-1 min-w-0">
+            <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
+              {logoDownload.name}
+            </p>
+            <p className="text-sm text-muted">{logoDownload.description}</p>
+          </div>
+          <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+        </a>
       </Section>
 
       {/* Brand Colors */}
@@ -250,24 +251,33 @@ export default function PressKitPage() {
           className="mb-12"
         />
         <div className="grid gap-4 sm:grid-cols-2">
-          {resources.map((resource) => (
-            <a
-              key={resource.name}
-              href="#"
-              className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
-            >
-              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-teal/10">
-                <FileText className="h-6 w-6 text-teal" />
-              </div>
-              <div className="flex-1 min-w-0">
-                <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
-                  {resource.name}
-                </p>
-                <p className="text-sm text-muted">{resource.description}</p>
-              </div>
-              <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
-            </a>
-          ))}
+          {resources.map((resource) => {
+            const Wrapper = resource.internal ? Link : "a";
+            const wrapperProps = resource.internal
+              ? { href: resource.href }
+              : { href: resource.href };
+            return (
+              <Wrapper
+                key={resource.name}
+                {...wrapperProps}
+                className="group flex items-center gap-4 bg-white rounded-xl border border-border p-5 hover:border-teal/50 transition-all"
+              >
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-teal/10">
+                  <FileText className="h-6 w-6 text-teal" />
+                </div>
+                <div className="flex-1 min-w-0">
+                  <p className="font-semibold text-foreground group-hover:text-teal transition-colors">
+                    {resource.name}
+                  </p>
+                  <p className="text-sm text-muted">{resource.description}</p>
+                </div>
+                {resource.internal
+                  ? <ExternalLink className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+                  : <Download className="h-5 w-5 text-muted group-hover:text-teal transition-colors shrink-0" />
+                }
+              </Wrapper>
+            );
+          })}
         </div>
       </Section>
 
@@ -340,7 +350,7 @@ export default function PressKitPage() {
               announcements, and sponsor materials with proper attribution.
             </p>
             <p className="text-foreground">
-              <strong>Not permitted:</strong> Modifying logo colors, proportions,
+              <strong>Not permitted:</strong>{' '}Modifying logo colors, proportions,
               or elements; using assets to imply endorsement without written
               permission; using assets in ways that could damage TechTank&apos;s
               reputation.
@@ -357,7 +367,7 @@ export default function PressKitPage() {
       <Section className="bg-background">
         <div className="max-w-2xl mx-auto text-center mb-8">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-            Press contact
+            Media contact
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Get in touch

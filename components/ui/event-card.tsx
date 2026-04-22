@@ -87,7 +87,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
             <span
               className={`inline-flex items-center px-2.5 py-1 rounded-full text-xs font-semibold uppercase tracking-wider ${
                 isUpcoming
-                  ? "bg-coral/10 text-coral"
+                  ? "bg-amber/10 text-amber-dark"
                   : "bg-muted/10 text-muted"
               }`}
             >
@@ -154,7 +154,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       <div className="flex flex-wrap items-center gap-1.5 mb-2">
         <span
           className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider ${
-            isUpcoming ? "bg-coral/10 text-coral" : "bg-muted/10 text-muted"
+            isUpcoming ? "bg-amber/10 text-amber-dark" : "bg-muted/10 text-muted"
           }`}
         >
           {isUpcoming ? "Upcoming" : "Past"}

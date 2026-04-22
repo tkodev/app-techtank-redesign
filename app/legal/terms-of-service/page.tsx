@@ -44,7 +44,7 @@ export default function TermsOfServicePage() {
             <li>Learn about TechTank events and programs</li>
             <li>Submit intake forms to speak, host, sponsor, or volunteer</li>
             <li>Access community resources and event information</li>
-            <li>Download brand assets from the Press Kit</li>
+            <li>Download brand assets from the Media Kit</li>
           </ul>
           <p className="text-muted mt-4">
             You may not use the site for harmful purposes, including scraping at
@@ -97,8 +97,8 @@ export default function TermsOfServicePage() {
           <p className="text-muted mb-4">
             TechTank branding, logos, and website content are property of
             TechTank TO. Usage is governed by the{" "}
-            <Link href="/press-kit" className="text-teal hover:underline">
-              Press Kit terms
+            <Link href="/media-kit" className="text-teal hover:underline">
+              Media Kit terms
             </Link>
             .
           </p>

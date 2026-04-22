@@ -140,7 +140,7 @@ export default function SpeakerPage() {
       {/* What TechTank Handles vs What You Provide */}
       <Section>
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="bg-teal/5 rounded-2xl border border-teal/20 p-6 lg:p-8">
+          <div className="bg-teal/8 rounded-2xl border border-teal/30 p-6 lg:p-8">
             <h3 className="font-display text-xl font-semibold text-foreground mb-6">
               What TechTank handles
             </h3>
@@ -154,7 +154,7 @@ export default function SpeakerPage() {
             </ul>
           </div>
 
-          <div className="bg-amber/5 rounded-2xl border border-amber/20 p-6 lg:p-8">
+          <div className="bg-amber/8 rounded-2xl border border-amber/30 p-6 lg:p-8">
             <h3 className="font-display text-xl font-semibold text-foreground mb-6">
               What you provide
             </h3>
@@ -200,15 +200,15 @@ export default function SpeakerPage() {
             Resources
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
-            Speaker toolkit in the Press Kit
+            Speaker toolkit in the Media Kit
           </h2>
           <p className="text-muted mb-8">
             Brand assets, slide templates, run-of-show guidance, and tips for
-            first-time speakers all live in our Press Kit.
+            first-time speakers all live in our Media Kit.
           </p>
           <Button variant="outline" asChild>
-            <Link href="/press-kit">
-              Open the Press Kit
+            <Link href="/media-kit">
+              Open the Media Kit
               <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
