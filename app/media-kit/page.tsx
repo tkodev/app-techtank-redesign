@@ -27,11 +27,11 @@ const brandColors = [
   { name: "Amber", hex: "#FFBC55", usage: "Brand amber" },
   { name: "Amber Dark", hex: "#EFA020", usage: "Brand amber dark" },
   { name: "Coral", hex: "#E87C4E", usage: "Orange accent" },
-  { name: "Seafoam", hex: "#A8D5D8", usage: "Light backgrounds, accents" },
   { name: "Mint", hex: "#5B9A8B", usage: "Accent green" },
+  { name: "Seafoam", hex: "#A8D5D8", usage: "Light backgrounds, accents" },
+  { name: "Sand", hex: "#F7EDE2", usage: "Warm off-white" },
   { name: "Peach", hex: "#F5D4C1", usage: "Warm gradient base" },
   { name: "Blush", hex: "#EABFBF", usage: "Pink accent" },
-  { name: "Sand", hex: "#F7EDE2", usage: "Warm off-white" },
 ];
 
 const logoDownloads = [
