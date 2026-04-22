@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Check, Clock, Users, Building, MapPin, FileText } from "lucide-react";
+import Link from "next/link";
+import { Check, Clock, Users, Building, MapPin, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { LogoCloud } from "@/components/ui/logo-cloud";
@@ -150,7 +151,7 @@ export default function HostPage() {
       {/* What TechTank Handles vs What You Provide */}
       <Section>
         <div className="grid gap-8 lg:grid-cols-2">
-          <div className="bg-teal/5 rounded-2xl border border-teal/20 p-6 lg:p-8">
+          <div className="bg-teal/8 rounded-2xl border border-teal/30 p-6 lg:p-8">
             <h3 className="font-display text-xl font-semibold text-foreground mb-6">
               What TechTank handles
             </h3>
@@ -164,7 +165,7 @@ export default function HostPage() {
             </ul>
           </div>
 
-          <div className="bg-amber/5 rounded-2xl border border-amber/20 p-6 lg:p-8">
+          <div className="bg-amber/8 rounded-2xl border border-amber/30 p-6 lg:p-8">
             <h3 className="font-display text-xl font-semibold text-foreground mb-6">
               What you provide
             </h3>
@@ -235,37 +236,23 @@ export default function HostPage() {
       </Section>
 
       {/* Host Resources */}
-      <Section className="bg-background">
-        <SectionHeader
-          overline="Resources"
-          title="Host toolkit"
-          className="mb-12"
-        />
-        <div className="grid gap-6 lg:grid-cols-2">
-          <a
-            href="#"
-            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 transition-all"
-          >
-            <FileText className="h-8 w-8 text-teal mb-4" />
-            <h4 className="font-semibold text-foreground group-hover:text-teal transition-colors mb-2">
-              Host checklist PDF
-            </h4>
-            <p className="text-sm text-muted">
-              Everything you need to prepare: AV, food, timing, setup.
-            </p>
-          </a>
-          <a
-            href="#"
-            className="group bg-white rounded-xl border border-border p-6 hover:border-teal/50 transition-all"
-          >
-            <FileText className="h-8 w-8 text-teal mb-4" />
-            <h4 className="font-semibold text-foreground group-hover:text-teal transition-colors mb-2">
-              Day-of run-of-show
-            </h4>
-            <p className="text-sm text-muted">
-              Minute-by-minute guide for event night.
-            </p>
-          </a>
+      <Section>
+        <div className="max-w-3xl mx-auto text-center">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
+            Resources
+          </span>
+          <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
+            Host toolkit in the Media Kit
+          </h2>
+          <p className="text-muted mb-8">
+            Run-of-show guides, host checklists, brand assets, and event templates all live in our Media Kit.
+          </p>
+          <Button variant="outline" asChild>
+            <Link href="/press-kit">
+              Open the Media Kit
+              <ArrowRight className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
         </div>
       </Section>
 

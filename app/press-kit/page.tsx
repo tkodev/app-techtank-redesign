@@ -7,9 +7,9 @@ import { Section, SectionHeader } from "@/components/ui/section";
 import { ContactCard } from "@/components/ui/contact-card";
 
 export const metadata: Metadata = {
-  title: "Press Kit",
+  title: "Media Kit",
   description:
-    "TechTank TO press kit — logos, brand guidelines, and fast facts for press, sponsors, and partners.",
+    "TechTank TO media kit — logos, brand guidelines, and fast facts for press, sponsors, and partners.",
 };
 
 const fastFacts = [
@@ -50,10 +50,10 @@ export default function PressKitPage() {
         <div className="relative mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
           <div className="max-w-3xl">
             <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-              Press Kit
+              Media Kit
             </span>
             <h1 className="font-display text-4xl md:text-5xl font-semibold text-foreground lg:text-6xl text-balance mb-6">
-              TechTank Press Kit
+              TechTank Media Kit
             </h1>
             <p className="text-xl text-muted leading-relaxed mb-8">
               Logos, guidelines, and fast facts for press, sponsors, and
@@ -357,7 +357,7 @@ export default function PressKitPage() {
       <Section className="bg-background">
         <div className="max-w-2xl mx-auto text-center mb-8">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-teal mb-4">
-            Press contact
+            Media contact
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Get in touch

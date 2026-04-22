@@ -14,7 +14,7 @@ export function DualCTA() {
       <div className="relative overflow-hidden rounded-xl glass p-5 lg:p-6">
         <Calendar className="absolute top-4 right-4 h-16 w-16 text-teal-dark/10" />
         <div className="relative">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
             Stay in the loop
           </span>
           <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">
@@ -64,9 +64,9 @@ export function DualCTA() {
 
       {/* Want to contribute? */}
       <div className="relative overflow-hidden rounded-xl glass p-5 lg:p-6">
-        <Users className="absolute top-4 right-4 h-16 w-16 text-coral/10" />
+        <Users className="absolute top-4 right-4 h-16 w-16 text-amber-dark/10" />
         <div className="relative">
-          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+          <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
             Get involved
           </span>
           <h3 className="font-display text-lg lg:text-xl font-bold text-teal-dark mb-2">

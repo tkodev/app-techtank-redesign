@@ -76,7 +76,7 @@ export function Header() {
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-base font-medium text-teal-dark hover:text-coral transition-colors"
+                className="block text-base font-medium text-teal-dark hover:text-amber-dark transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

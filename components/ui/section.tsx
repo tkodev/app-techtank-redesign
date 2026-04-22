@@ -32,7 +32,7 @@ export function SectionHeader({
   return (
     <div className={`max-w-3xl ${alignClasses} ${className}`}>
       {overline && (
-        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-coral mb-2">
+        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
           {overline}
         </span>
       )}

@@ -2,10 +2,12 @@
 
 @theme {
   /* TechTank TO Brand Colors - From actual event posters */
-  --color-teal-dark: #1B4B5A;      /* Primary headings, logo */
   --color-teal: #2A6B7C;           /* Secondary headings */
+  --color-teal-dark: #1B4B5A;      /* Primary headings, logo */
   --color-seafoam: #A8D5D8;        /* Light backgrounds, accents */
   --color-mint: #5B9A8B;           /* Accent green (speaker circles) */
+  --color-amber: #FFBC55;          /* Brand amber */
+  --color-amber-dark: #EFA020;     /* Brand amber dark */
   --color-peach: #F5D4C1;          /* Warm gradient base */
   --color-coral: #E87C4E;          /* Orange accent (CodeDiversity) */
   --color-blush: #EABFBF;          /* Pink accent */
@@ -104,12 +106,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .gradient-hero {
   background: linear-gradient(
-    160deg, 
-    #B5DFE0 0%, 
+    160deg,
+    #B5DFE0 0%,
     #D4E8E5 20%,
     #F0E6DC 50%,
     #F5D4C1 80%,
     #F5C9B0 100%
+  );
+}
+
+.gradient-brand-soft {
+  background: linear-gradient(
+    135deg,
+    #BEE0E2 0%,
+    #F0E9E0 50%,
+    #F5D4C1 100%
   );
 }
 
