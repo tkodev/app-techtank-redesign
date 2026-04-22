@@ -1,7 +1,7 @@
 # Design System
 
 **Route:** `/design-system`
-**Status:** Internal reference — not linked in global nav; `robots: noindex, nofollow`
+**Status:** Public — serves as the canonical brand guidelines page for the site
 
 ---
 
@@ -41,11 +41,10 @@ Contributors, designers, and Claude Code sessions working on this repository.
 
 ## CTAs
 
-None. This is an internal reference page.
+None. The page is informational; visitors arrive via the media-kit "Brand Guidelines" link.
 
 ## Functional requirements
 
-- `robots: { index: false, follow: false }` must remain set on this page's metadata.
 - All swatches, gradients, and component examples must render using real CSS classes and tokens
   (not mocked or hardcoded inline styles) so the page faithfully reflects production output.
 - When new tokens or components are introduced, this page must be updated in the same PR.
@@ -56,5 +55,4 @@ None. This is an internal reference page.
 - All brand and accent colour swatches show the correct hex and Tailwind class name.
 - All four gradient utilities render visibly distinct swatches.
 - All button variants and sizes render without visual regressions.
-- `robots` metadata prevents indexing.
-- Page is not linked from global header, footer, or any public-facing page.
+- Page is linked from the media-kit as "Brand Guidelines".

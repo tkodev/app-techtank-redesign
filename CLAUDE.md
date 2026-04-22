@@ -41,7 +41,7 @@ For developer-facing setup (scripts, directory tree, route map), see
         │   ├── terms-of-service.md
         │   ├── privacy-policy.md
         │   └── code-of-conduct.md
-        └── design-system.md       # /design-system (internal dev reference — noindex)
+        └── design-system.md       # /design-system (brand guidelines + design token reference)
 ```
 
 `prd/PRD.md` is the top-level document. Each file in `prd/pages/` fully

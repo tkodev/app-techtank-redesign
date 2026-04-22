@@ -108,7 +108,7 @@ under Ontario/Canadian jurisdiction.
 │   ├── terms-of-service
 │   ├── privacy-policy
 │   └── code-of-conduct
-└── design-system                (internal dev reference — noindex)
+└── design-system                (brand guidelines + design token reference)
 ```
 
 ### 2.1 Route map
@@ -127,7 +127,7 @@ under Ontario/Canadian jurisdiction.
 | `/legal/terms-of-service` | Terms of Service | — |
 | `/legal/privacy-policy` | Privacy Policy | — |
 | `/legal/code-of-conduct` | Code of Conduct | — |
-| `/design-system` | Design System | Internal dev reference — noindex; colours, type, components |
+| `/design-system` | Design System | Brand guidelines — colours, typography, and component reference |
 
 ### 2.2 Shared layouts (Next.js)
 
@@ -197,7 +197,7 @@ relative to this file, `prd/PRD.md`):
 - [pages/legal/terms-of-service.md](pages/legal/terms-of-service.md)
 - [pages/legal/privacy-policy.md](pages/legal/privacy-policy.md)
 - [pages/legal/code-of-conduct.md](pages/legal/code-of-conduct.md)
-- [pages/design-system.md](pages/design-system.md) *(internal — noindex)*
+- [pages/design-system.md](pages/design-system.md)
 
 ---
 
