@@ -78,7 +78,7 @@ conventions, and per-page content requirements.
 
 ## Contributing
 
-See [`CONTRIBUTORS.md`](./CONTRIBUTORS.md) for contribution guidelines.
+See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines.
 
 1. Read [`CLAUDE.md`](./CLAUDE.md) and [`prd/PRD.md`](./prd/PRD.md) before making
    structural changes — they define the IA, brand, and content conventions.
