@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 const legalDocs = [
   { name: "Code of Conduct", href: "/legal/code-of-conduct" },
@@ -30,17 +31,9 @@ export default function LegalLayout({
                 {legalDocs.map((doc) => {
                   const isActive = pathname === doc.href;
                   return (
-                    <Link
-                      key={doc.href}
-                      href={doc.href}
-                      className={`block px-3 py-2 rounded-lg text-sm transition-colors ${
-                        isActive
-                          ? "bg-teal/10 text-teal font-medium"
-                          : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
-                      }`}
-                    >
-                      {doc.name}
-                    </Link>
+                    <Button key={doc.href} variant="nav" size="sm" isActive={isActive} asChild>
+                      <Link href={doc.href}>{doc.name}</Link>
+                    </Button>
                   );
                 })}
               </nav>
@@ -65,17 +58,9 @@ export default function LegalLayout({
               {legalDocs.map((doc) => {
                 const isActive = pathname === doc.href;
                 return (
-                  <Link
-                    key={doc.href}
-                    href={doc.href}
-                    className={`shrink-0 px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                      isActive
-                        ? "bg-teal text-white"
-                        : "bg-muted/60 text-muted-foreground hover:text-foreground"
-                    }`}
-                  >
-                    {doc.name}
-                  </Link>
+                  <Button key={doc.href} variant="nav" size="sm" isActive={isActive} className="shrink-0" asChild>
+                    <Link href={doc.href}>{doc.name}</Link>
+                  </Button>
                 );
               })}
             </div>
