@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { Button } from "@/components/ui/button";
 
 const subNav = [
   { name: "Overview", href: "/get-involved" },
@@ -33,17 +34,9 @@ export default function GetInvolvedLayout({
                     : pathname.startsWith(item.href);
 
                 return (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    className={`px-4 py-2 text-sm font-medium rounded-full transition-colors ${
-                      isActive
-                        ? "bg-teal text-white"
-                        : "text-muted-foreground hover:text-foreground hover:bg-muted/60"
-                    }`}
-                  >
-                    {item.name}
-                  </Link>
+                  <Button key={item.name} variant="nav" size="sm" isActive={isActive} asChild>
+                    <Link href={item.href}>{item.name}</Link>
+                  </Button>
                 );
               })}
             </div>

@@ -12,6 +12,11 @@ const buttonVariants = cva(
         secondary: "bg-amber text-teal-dark hover:bg-amber-dark hover:text-teal-dark focus-visible:ring-amber-dark",
         outline: "border-2 border-teal-dark text-teal-dark hover:bg-teal-dark hover:text-white focus-visible:ring-teal-dark",
         ghost: "text-teal-dark hover:bg-teal-dark/5 focus-visible:ring-teal-dark",
+        nav: "font-medium focus-visible:ring-teal",
+      },
+      isActive: {
+        true: "",
+        false: "",
       },
       size: {
         sm: "px-4 py-2 text-sm",
@@ -19,6 +24,18 @@ const buttonVariants = cva(
         lg: "px-8 py-4 text-lg",
       },
     },
+    compoundVariants: [
+      {
+        variant: "nav",
+        isActive: true,
+        className: "bg-teal text-white hover:bg-teal/90",
+      },
+      {
+        variant: "nav",
+        isActive: false,
+        className: "text-muted-foreground hover:text-foreground hover:bg-muted/60",
+      },
+    ],
     defaultVariants: {
       variant: "primary",
       size: "md",
@@ -33,11 +50,11 @@ export interface ButtonProps
 }
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant, size, asChild = false, ...props }, ref) => {
+  ({ className, variant, size, isActive, asChild = false, ...props }, ref) => {
     const Comp = asChild ? Slot : "button";
     return (
       <Comp
-        className={cn(buttonVariants({ variant, size }), className)}
+        className={cn(buttonVariants({ variant, size, isActive }), className)}
         ref={ref}
         {...props}
       />
