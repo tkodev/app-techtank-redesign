@@ -28,7 +28,7 @@ export const lumaEvents: LumaEvent[] = [
     venue: "Prema Coffee and Bar",
     status: "upcoming",
     url: "https://lu.ma/3ea6eq1s",
-    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.avif",
+    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpg",
   },
   // --- Past ---
   {
@@ -39,7 +39,7 @@ export const lumaEvents: LumaEvent[] = [
     venue: "Dina's Tavern",
     status: "past",
     url: "https://lu.ma/qwpt54ke",
-    imagePath: "/images/luma/024f2a7f-8df2-47c2-b24d-a7c48aeab793.avif",
+    imagePath: "/images/luma/024f2a7f-8df2-47c2-b24d-a7c48aeab793.jpg",
   },
   {
     slug: "7h4g008b",
@@ -49,7 +49,7 @@ export const lumaEvents: LumaEvent[] = [
     venue: "BrainStation",
     status: "past",
     url: "https://lu.ma/7h4g008b",
-    imagePath: "/images/luma/2bbde763-1e1f-429d-8491-c9af40b479ab.avif",
+    imagePath: "/images/luma/2bbde763-1e1f-429d-8491-c9af40b479ab.jpg",
   },
   {
     slug: "cye39lls",
@@ -59,7 +59,7 @@ export const lumaEvents: LumaEvent[] = [
     venue: "Prema Coffee and Bar",
     status: "past",
     url: "https://lu.ma/cye39lls",
-    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.avif",
+    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpg",
   },
   {
     slug: "wzaj4vzy",
@@ -69,7 +69,7 @@ export const lumaEvents: LumaEvent[] = [
     venue: "Creeds Coffee Bar",
     status: "past",
     url: "https://lu.ma/wzaj4vzy",
-    imagePath: "/images/luma/5d9909f0-ece1-4b30-bdde-b4af7ec8b4da.avif",
+    imagePath: "/images/luma/5d9909f0-ece1-4b30-bdde-b4af7ec8b4da.jpg",
   },
 ];
 

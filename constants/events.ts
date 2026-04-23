@@ -53,7 +53,7 @@ export const events: Event[] = [
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "upcoming",
     eventUrl: "https://lu.ma/3ea6eq1s",
-    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.avif",
+    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpg",
   },
   // ─── 2026 ────────────────────────────────────────────────────────────────────
   {
@@ -100,7 +100,7 @@ export const events: Event[] = [
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
     eventUrl: "https://lu.ma/cye39lls",
-    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.avif",
+    imagePath: "/images/luma/bca86cee-3fdb-403a-bb09-ccc095690401.jpg",
   },
   {
     id: "code-diversity-iwd-pottery-2026",
@@ -123,7 +123,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/311812267/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/312122429/",
     imagePath: "/images/meetup/highres_531054652.jpeg",
   },
   // ─── 2025 ────────────────────────────────────────────────────────────────────
@@ -136,7 +136,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/312122530/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/311812267/",
     imagePath: "/images/meetup/highres_531054652.jpeg",
   },
   {
@@ -148,7 +148,7 @@ export const events: Event[] = [
     venue: "The Pilot",
     tags: ["Social", "Holiday", "Multi-community"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/311811712/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/312122530/",
     imagePath: "/images/meetup/highres_531423712.jpeg",
   },
   {
@@ -160,7 +160,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/308164572/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/311811712/",
     imagePath: "/images/meetup/highres_531054652.jpeg",
   },
   {
@@ -172,7 +172,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/311105172/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/308164572/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
   },
   {
@@ -184,7 +184,7 @@ export const events: Event[] = [
     venue: "Rakuten Kobo",
     tags: ["Tech Talk", "Panel", "Frameworks"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/310620439/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/311105172/",
     photoAlbum: photoAlbums["AF1QipPPmVC7Jg5of2zIp8CgLxyavCSvyu-3ekKf_nEVwqqNA3lX4VBuVijVBSvZ62dNng"],
   },
   {
@@ -196,7 +196,7 @@ export const events: Event[] = [
     venue: "7shifts",
     tags: ["Tech Talk", "AI", "Beginner-friendly"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/310493631/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/310620439/",
     host: sponsors["7shifts"],
     photoAlbum: photoAlbums["AF1QipNHIuIQ3GEwyuE7hRn3rrREKk2jRULCv3DkSatNFoAVgNYpQrzOd3VHmpsbT5L15w"],
   },
@@ -209,7 +209,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["Mentorship", "Career", "Beginner-friendly"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/308163824/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/310493631/",
     imagePath: "/images/meetup/highres_529607775.jpeg",
   },
   {
@@ -221,7 +221,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/308895464/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/308163824/",
     imagePath: "/images/meetup/highres_528812977.jpeg",
   },
   {
@@ -232,7 +232,7 @@ export const events: Event[] = [
     time: "1:30 PM - 5:00 PM",
     tags: ["Social", "Food", "Summer"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/308163788/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/308895464/",
     imagePath: "/images/meetup/highres_528916938.jpeg",
   },
   {
@@ -244,7 +244,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/307828751/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/308163788/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
   },
   {
@@ -265,7 +265,7 @@ export const events: Event[] = [
     venue: "Greta Bar",
     tags: ["Social", "Tech Week", "Multi-community"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/307623203/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/307828751/",
     imagePath: "/images/meetup/highres_527960195.jpeg",
   },
   {
@@ -277,7 +277,7 @@ export const events: Event[] = [
     venue: "7shifts",
     tags: ["CodeDiversity", "Tech Week"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/307465132/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/307623203/",
     photoAlbum: photoAlbums["AF1QipMingUvuBFdNA4ES6wYi3UCHzRT3k9Il3wlWnFoUu_-5X8jztaoTjtAloU7TLIMJg"],
   },
   {
@@ -289,7 +289,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/306889689/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/307465132/",
     imagePath: "/images/meetup/highres_527561328.jpeg",
   },
   {
@@ -311,7 +311,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/306752010/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/306889689/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
   },
   {
@@ -323,7 +323,7 @@ export const events: Event[] = [
     venue: "Vena Solutions",
     tags: ["Tech Talk", "Cloud", "Architecture"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/306586846/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/306752010/",
     sponsors: [sponsors.vena],
     speakers: [
       { name: "Saiid Douaihy", title: "Senior Software Manager", talkTitle: "Cloud Migration Strategies" },
@@ -342,7 +342,7 @@ export const events: Event[] = [
     venue: "Prema Coffee and Bar",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/305857202/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/306586846/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
   },
   {
@@ -354,7 +354,7 @@ export const events: Event[] = [
     venue: "Carbonic Coffee",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/305400630/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/305857202/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
   },
   {
@@ -366,7 +366,7 @@ export const events: Event[] = [
     venue: "Cohere",
     tags: ["Tech Talk", "Browser Extensions"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/305395398/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/305400630/",
     host: sponsors.cohere,
     youtubeVideo: youtubeVideos["f8ONw6O_rco"],
     photoAlbum: photoAlbums["AF1QipMrTfiNbI7_NSGioh-DLR6Slvp51pBjf1cShVzeToyKNr982BbkOEPmrqFYhd7vMg"],
@@ -380,7 +380,7 @@ export const events: Event[] = [
     venue: "Carbonic Coffee",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/304806485/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/305395398/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
   },
   // ─── 2024 ────────────────────────────────────────────────────────────────────
@@ -402,7 +402,7 @@ export const events: Event[] = [
     venue: "Carbonic Coffee",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/304348630/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/304806485/",
     imagePath: "/images/meetup/highres_524928803.jpeg",
   },
   {
@@ -423,7 +423,7 @@ export const events: Event[] = [
     venue: "Carbonic Coffee",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/304263016/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/304348630/",
     imagePath: "/images/meetup/highres_524471440.jpeg",
   },
   {
@@ -435,7 +435,7 @@ export const events: Event[] = [
     venue: "Vena Solutions",
     tags: ["Tech Talk", "AI", "FinTech"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/303655206/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/304263016/",
     youtubeVideo: youtubeVideos["2UTsy-Lbulk"],
     photoAlbum: photoAlbums["AF1QipMfuV2mdrwgETwmivv4zQUu8pSRAzOG0D9J6j4nCpnNDKPMAgWL5ru6sYqMaMOOQg"],
   },
@@ -448,7 +448,7 @@ export const events: Event[] = [
     venue: "Rakuten Kobo",
     tags: ["Panel", "EdTech", "AI", "Accessibility"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/303601353/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/303655206/",
     youtubeVideo: youtubeVideos["N50r7eIEIS0"],
     photoAlbum: photoAlbums["AF1QipMwzeGDJqNkRSSagw_D8v3F73XeaPR9kmpQcpYjHCCuMx7nZ94feDaTGMA55whrLg"],
   },
@@ -461,7 +461,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Testing", "Web Dev"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/302940980/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/303601353/",
     imagePath: "/images/meetup/highres_523676979.jpeg",
   },
   {
@@ -473,7 +473,7 @@ export const events: Event[] = [
     venue: "Points.com",
     tags: ["Tech Talk", "React", "Web Dev"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/303330348/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/302940980/",
     youtubeVideo: youtubeVideos["NOlSKs5PLpM"],
     photoAlbum: photoAlbums["AF1QipMPoK9UuL4g8MKPP8Tk8tI2FTppYtQQ-Nf0ga6DZXjFmqXT5SHTYikca8rhmltqhg"],
   },
@@ -486,7 +486,7 @@ export const events: Event[] = [
     venue: "Carbonic Coffee",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/302337555/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/303330348/",
     imagePath: "/images/meetup/highres_521950379.jpeg",
   },
   {
@@ -507,7 +507,7 @@ export const events: Event[] = [
     venue: "1 Roof Garden Lane",
     tags: ["Panel", "AI"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/302503778/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/302337555/",
     youtubeVideo: youtubeVideos["RUco7XrbMqk"],
     photoAlbum: photoAlbums["AF1QipMlGtrOSia0VXZaDqAcjItENfxwXFdxJO2A9QCKGwXcRPn46nY5e_DB9puMgfky9Q"],
   },
@@ -520,7 +520,7 @@ export const events: Event[] = [
     venue: "Carbonic Coffee",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/301699806/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/302503778/",
     imagePath: "/images/meetup/highres_521950379.jpeg",
   },
   {
@@ -550,7 +550,7 @@ export const events: Event[] = [
     venue: "225 King St W",
     tags: ["Tech Talk", "Web Dev", "JavaScript"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/301852269/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/301699806/",
     imagePath: "/images/meetup/highres_521809945.jpeg",
   },
   {
@@ -571,7 +571,7 @@ export const events: Event[] = [
     venue: "Carbonic Coffee",
     tags: ["CodeDiversity", "Social", "Coffee Chat"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/301198832/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/301852269/",
     imagePath: "/images/meetup/highres_521950379.jpeg",
   },
   {
@@ -592,7 +592,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Career", "Networking"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/300591167/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/301198832/",
     imagePath: "/images/meetup/highres_521252023.jpeg",
   },
   {
@@ -604,7 +604,7 @@ export const events: Event[] = [
     venue: "1 Roof Garden Lane",
     tags: ["Tech Talk", "HealthTech", "Panel"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/300782288/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/300591167/",
     imagePath: "/images/meetup/highres_520941912.jpeg",
   },
   {
@@ -616,7 +616,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "AI", "Beginner-friendly"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/300175753/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/300782288/",
     imagePath: "/images/meetup/highres_520806256.jpeg",
   },
   {
@@ -637,7 +637,7 @@ export const events: Event[] = [
     venue: "482 Front St W",
     tags: ["Tech Talk", "JavaScript", "Web Dev"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/299326496/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/300175753/",
     imagePath: "/images/meetup/highres_520152027.jpeg",
   },
   {
@@ -649,7 +649,7 @@ export const events: Event[] = [
     venue: "Cohere",
     tags: ["Panel", "CodeDiversity", "Career"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/299380715/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/299326496/",
     imagePath: "/images/meetup/highres_519276676.jpeg",
   },
   {
@@ -661,7 +661,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Accessibility", "Web Dev"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/298712672/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/299380715/",
     imagePath: "/images/meetup/highres_519308057.jpeg",
   },
   {
@@ -673,7 +673,7 @@ export const events: Event[] = [
     venue: "Microsoft Reactor Toronto",
     tags: ["Tech Talk", "AI", "Workshop"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/299017176/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/298712672/",
     imagePath: "/images/meetup/highres_518649638.jpeg",
   },
   {
@@ -685,7 +685,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Career", "Culture"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/298854685/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/299017176/",
     imagePath: "/images/meetup/highres_518943016.jpeg",
   },
   {
@@ -697,7 +697,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "DevOps", "Docker"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/298329281/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/298854685/",
     imagePath: "/images/meetup/highres_518949413.jpeg",
   },
   {
@@ -709,7 +709,7 @@ export const events: Event[] = [
     venue: "Intuit Canada",
     tags: ["Tech Talk", "CSS", "Web Dev"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/298283794/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/298329281/",
     imagePath: "/images/meetup/highres_518418480.jpeg",
   },
   {
@@ -730,7 +730,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Career", "Wellness"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/298165707/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/298283794/",
     imagePath: "/images/meetup/highres_518284688.jpeg",
   },
   {
@@ -742,7 +742,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "DevOps", "Engineering"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/297602552/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/298165707/",
     imagePath: "/images/meetup/highres_518139051.jpeg",
   },
   // ─── 2023 ────────────────────────────────────────────────────────────────────
@@ -755,7 +755,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Design", "Workshop"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/297145894/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/297602552/",
     imagePath: "/images/meetup/highres_517574457.jpeg",
   },
   {
@@ -767,7 +767,7 @@ export const events: Event[] = [
     venue: "Rakuten Kobo",
     tags: ["Tech Talk", "DevOps", "Performance"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/297176805/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/297145894/",
     imagePath: "/images/meetup/highres_517035730.jpeg",
   },
   {
@@ -779,7 +779,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Career", "Full Stack"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/296957170/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/297176805/",
     imagePath: "/images/meetup/highres_517192330.jpeg",
   },
   {
@@ -791,7 +791,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Accessibility", "Beginner-friendly"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/296408305/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/296957170/",
     imagePath: "/images/meetup/highres_516817887.jpeg",
   },
   {
@@ -821,7 +821,7 @@ export const events: Event[] = [
     venue: "Cohere",
     tags: ["Tech Talk", "AI", "LLM"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/296505054/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/296408305/",
     imagePath: "/images/meetup/highres_516203971.jpeg",
   },
   {
@@ -833,7 +833,7 @@ export const events: Event[] = [
     venue: "Online",
     tags: ["Tech Talk", "Career", "Beginner-friendly"],
     status: "past",
-    eventUrl: "https://www.meetup.com/techtank-to/events/295642016/",
+    eventUrl: "https://www.meetup.com/techtank-to/events/296505054/",
     imagePath: "/images/meetup/highres_516306438.jpeg",
   },
   {
