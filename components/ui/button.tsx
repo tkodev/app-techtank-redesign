@@ -12,7 +12,7 @@ const buttonVariants = cva(
         secondary: "bg-amber text-teal-dark hover:bg-amber-dark hover:text-teal-dark focus-visible:ring-amber-dark",
         outline: "border-2 border-teal-dark text-teal-dark hover:bg-teal-dark hover:text-white focus-visible:ring-teal-dark",
         ghost: "text-teal-dark hover:bg-teal-dark/5 focus-visible:ring-teal-dark",
-        nav: "font-medium focus-visible:ring-teal",
+        nav: "font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 focus-visible:ring-teal",
       },
       isActive: {
         true: "",
@@ -29,11 +29,6 @@ const buttonVariants = cva(
         variant: "nav",
         isActive: true,
         className: "bg-teal text-white hover:bg-teal/90",
-      },
-      {
-        variant: "nav",
-        isActive: false,
-        className: "text-muted-foreground hover:text-foreground hover:bg-muted/60",
       },
     ],
     defaultVariants: {
