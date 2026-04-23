@@ -14,6 +14,8 @@ The initial UI scaffold was generated from the PRD via v0 —
 - [Next.js 16](https://nextjs.org/) (App Router, Turbopack)
 - React 19 + TypeScript
 - [Tailwind CSS 4](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/) component pattern (`components.json` config)
+- [class-variance-authority](https://cva.style/) (CVA) for type-safe component variants
 - [Radix UI primitives](https://www.radix-ui.com/) (via `@radix-ui/react-slot`)
 - [lucide-react](https://lucide.dev/) for icons
 - Inter + Space Grotesk via `next/font`
