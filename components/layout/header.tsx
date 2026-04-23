@@ -2,10 +2,10 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
+import { useAppStore } from "@/lib/store";
 
 const navigation = [
   { name: "About", href: "/about" },
@@ -15,17 +15,17 @@ const navigation = [
 ];
 
 export function Header() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const { mobileMenuOpen, setMobileMenuOpen, toggleMobileMenu } = useAppStore();
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/70 dark:bg-background/80 backdrop-blur-xl border-b border-white/20 dark:border-border">
+    <header className="sticky top-0 z-50 w-full bg-background/80 backdrop-blur-xl border-b border-border">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
             src="/images/logos/light.svg"
             alt="TechTank TO"
-            width={128}
+            width={160}
             height={56}
             className="h-10 w-auto dark:hidden"
             priority
@@ -33,7 +33,7 @@ export function Header() {
           <Image
             src="/images/logos/dark.svg"
             alt="TechTank TO"
-            width={128}
+            width={160}
             height={56}
             className="h-10 w-auto hidden dark:block"
             priority
@@ -46,7 +46,7 @@ export function Header() {
             <Link
               key={item.name}
               href={item.href}
-              className="text-sm font-medium text-teal-dark/70 hover:text-teal-dark dark:text-foreground/70 dark:hover:text-foreground transition-colors"
+              className="text-sm font-medium text-foreground/70 hover:text-foreground transition-colors"
             >
               {item.name}
             </Link>
@@ -69,7 +69,7 @@ export function Header() {
           <button
             type="button"
             className="p-2 -m-2 text-foreground"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            onClick={toggleMobileMenu}
             aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
           >
             {mobileMenuOpen ? (
@@ -83,13 +83,13 @@ export function Header() {
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
-        <div className="lg:hidden border-t border-white/20 dark:border-border">
+        <div className="lg:hidden border-t border-border">
           <div className="px-4 py-4 space-y-4">
             {navigation.map((item) => (
               <Link
                 key={item.name}
                 href={item.href}
-                className="block text-base font-medium text-teal-dark hover:text-amber-dark dark:text-foreground dark:hover:text-primary transition-colors"
+                className="block text-base font-medium text-foreground hover:text-ring transition-colors"
                 onClick={() => setMobileMenuOpen(false)}
               >
                 {item.name}

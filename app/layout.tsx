@@ -64,7 +64,7 @@ export default function RootLayout({
       className={`${inter.variable} ${spaceGrotesk.variable} bg-background`}
     >
       <body className="min-h-screen flex flex-col font-sans antialiased">
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem disableTransitionOnChange themes={["light", "dark", "system"]}>
           <Header />
           <main className="flex-1">{children}</main>
           <Footer />

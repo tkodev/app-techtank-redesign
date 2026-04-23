@@ -8,11 +8,11 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        primary: "bg-teal-dark text-white hover:bg-teal-dark/90 focus-visible:ring-teal-dark",
-        secondary: "bg-amber text-teal-dark hover:bg-amber-dark hover:text-teal-dark focus-visible:ring-amber-dark",
-        outline: "border-2 border-teal-dark text-teal-dark hover:bg-teal-dark hover:text-white focus-visible:ring-teal-dark",
-        ghost: "text-foreground/70 hover:bg-teal-dark/5 hover:text-foreground focus-visible:ring-teal-dark",
-        nav: "font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 focus-visible:ring-teal",
+        primary: "bg-primary text-primary-foreground hover:bg-primary/90 focus-visible:ring-ring",
+        secondary: "bg-warning text-warning-foreground hover:bg-warning/90 hover:text-warning-foreground focus-visible:ring-ring",
+        outline: "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground focus-visible:ring-ring",
+        ghost: "text-foreground/70 hover:bg-foreground/5 hover:text-foreground focus-visible:ring-ring",
+        nav: "font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 focus-visible:ring-ring",
       },
       isActive: {
         true: "",
@@ -29,7 +29,7 @@ const buttonVariants = cva(
       {
         variant: "nav",
         isActive: true,
-        className: "bg-teal text-white hover:bg-teal/90",
+        className: "bg-ring text-primary-foreground hover:bg-ring/90",
       },
     ],
     defaultVariants: {

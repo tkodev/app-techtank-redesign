@@ -17,6 +17,8 @@ const badgeVariants = cva(
         outline: "text-foreground",
         warning:
           "border-transparent bg-warning text-warning-foreground hover:bg-warning/80",
+        success:
+          "border-transparent bg-success text-success-foreground hover:bg-success/80",
       },
       size: {
         sm: "gap-1 px-2 py-0.5 text-[10px]",

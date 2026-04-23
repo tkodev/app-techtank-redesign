@@ -40,7 +40,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
             )}
           </div>
 
-          <h3 className="font-display text-xl font-bold text-teal-dark mb-2 line-clamp-2">
+          <h3 className="font-display text-xl font-bold text-foreground mb-2 line-clamp-2">
             {event.title}
           </h3>
 
@@ -71,7 +71,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
           {(event.photoAlbum || event.youtubeVideo) && (
             <div className="flex flex-wrap items-center gap-2">
               {event.photoAlbum && (
-                <Badge variant="secondary" asChild>
+                <Badge variant="success" asChild>
                   <a href={event.photoAlbum.url} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
                     <Camera className="h-3 w-3" />
                     Photos
@@ -79,7 +79,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
                 </Badge>
               )}
               {event.youtubeVideo && (
-                <Badge variant="secondary" asChild>
+                <Badge variant="success" asChild>
                   <a href={event.youtubeVideo.url} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
                     <Play className="h-3 w-3 fill-current" />
                     Recap
@@ -104,7 +104,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
         )}
       </div>
 
-      <h3 className="font-display text-sm font-bold text-teal-dark mb-2 line-clamp-2">
+      <h3 className="font-display text-sm font-bold text-foreground mb-2 line-clamp-2">
         {event.title}
       </h3>
 
@@ -130,7 +130,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
       {(event.photoAlbum || event.youtubeVideo) && (
         <div className="flex flex-wrap items-center gap-1.5 mt-auto pt-1">
           {event.photoAlbum && (
-            <Badge variant="secondary" size="sm" asChild>
+            <Badge variant="success" size="sm" asChild>
               <a href={event.photoAlbum.url} target="_blank" rel="noopener noreferrer" aria-label="View event photos">
                 <Camera className="h-2.5 w-2.5" />
                 Photos
@@ -138,7 +138,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
             </Badge>
           )}
           {event.youtubeVideo && (
-            <Badge variant="secondary" size="sm" asChild>
+            <Badge variant="success" size="sm" asChild>
               <a href={event.youtubeVideo.url} target="_blank" rel="noopener noreferrer" aria-label="Watch recap on YouTube">
                 <Play className="h-2.5 w-2.5 fill-current" />
                 Recap
