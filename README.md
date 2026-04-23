@@ -80,8 +80,10 @@ conventions, and per-page content requirements.
 
 See [`CONTRIBUTING.md`](./CONTRIBUTING.md) for contribution guidelines.
 
-1. Read [`CLAUDE.md`](./CLAUDE.md) and [`prd/PRD.md`](./prd/PRD.md) before making
-   structural changes — they define the IA, brand, and content conventions.
+1. Read [`prd/PRD.md`](./prd/PRD.md) before making structural changes — it
+   defines the IA, brand, and content conventions.
+   - **AI agents only:** also read [`CLAUDE.md`](./CLAUDE.md) for agent-specific
+     working conventions and constraints.
 2. When adding or renaming a route, update both the route table in
    `prd/PRD.md` §2.1 and the corresponding spec in `prd/pages/`.
 3. Keep one dominant CTA per page. Role pages under `/get-involved/*` must end
