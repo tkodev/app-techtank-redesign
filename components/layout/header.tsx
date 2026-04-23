@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { ThemeToggle } from "@/components/ui/theme-toggle";
-import { useAppStore } from "@/lib/store";
+import { useAppStore } from "@/stores/app-state";
 
 const navigation = [
   { name: "About", href: "/about" },
