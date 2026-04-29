@@ -46,176 +46,40 @@ export default function EventsPage() {
         </div>
       </section>
 
-      {/* Next Up */}
-      {nextEvent && (
-        <Section>
-          <SectionHeader overline="Next up" title="" className="mb-8" />
-          <div className="rounded-2xl bg-card border border-border overflow-hidden">
-            <div className="p-6 lg:p-8">
-              <div className="grid gap-8 lg:grid-cols-3">
-                {/* Main content */}
-                <div className="lg:col-span-2">
-                  <div className="flex items-center gap-4 mb-4">
-                    <span className="inline-flex items-center px-3 py-1 rounded-full bg-ring/10 text-ring text-xs font-semibold uppercase tracking-wider">
-                      Upcoming
-                    </span>
-                  </div>
-
-                  <h2 className="font-display text-2xl lg:text-3xl font-semibold text-foreground mb-3">
-                    {nextEvent.eventUrl ? (
-                      <a href={nextEvent.eventUrl} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                        {nextEvent.title}
-                      </a>
-                    ) : nextEvent.title}
-                  </h2>
-                  <p className="text-muted-foreground mb-6">{nextEvent.pitch}</p>
-
-                  {/* Event details */}
-                  <div className="flex flex-wrap gap-4 mb-6">
-                    <div className="flex items-center gap-2 text-sm text-foreground">
-                      <Calendar className="h-4 w-4 text-ring" />
-                      <span>
-                        {new Date(nextEvent.date).toLocaleDateString("en-CA", {
-                          weekday: "long",
-                          month: "long",
-                          day: "numeric",
-                          year: "numeric",
-                        })}
-                      </span>
-                    </div>
-                    {nextEvent.time && (
-                      <div className="flex items-center gap-2 text-sm text-foreground">
-                        <Clock className="h-4 w-4 text-ring" />
-                        <span>{nextEvent.time}</span>
-                      </div>
-                    )}
-                    {(nextEvent.venue ?? nextEvent.host) && (
-                      <div className="flex items-center gap-2 text-sm text-foreground">
-                        <MapPin className="h-4 w-4 text-ring" />
-                        {nextEvent.host ? (
-                          <a href={nextEvent.host.url} target="_blank" rel="noopener noreferrer" className="hover:underline">
-                            {nextEvent.host.name}
-                          </a>
-                        ) : (
-                          <span>{nextEvent.venue}</span>
-                        )}
-                      </div>
-                    )}
-                    {nextEvent.capacity && (
-                      <div className="flex items-center gap-2 text-sm text-foreground">
-                        <Users className="h-4 w-4 text-ring" />
-                        <span>{nextEvent.capacity} seats</span>
-                      </div>
-                    )}
-                  </div>
-
-                  {/* Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {nextEvent.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-flex items-center px-3 py-1 rounded-full bg-background text-xs font-medium text-muted-foreground"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  {/* CTA */}
-                  {nextEvent.eventUrl && (
-                    <Button variant="primary" size="lg" asChild>
-                      <a
-                        href={nextEvent.eventUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                      >
-                        RSVP on Luma
-                        <ExternalLink className="ml-2 h-5 w-5" />
-                      </a>
-                    </Button>
-                  )}
-                </div>
-
-                {/* Supported by */}
-                <div className="lg:border-l lg:border-border lg:pl-8">
-                  {nextEvent.host ? (
-                    <div>
-                      <p className="text-sm text-muted-foreground mb-3">Supported by</p>
-                      <div className="flex items-center gap-3">
-                        <div className="h-12 w-12 rounded-lg bg-background flex items-center justify-center text-lg font-semibold text-muted-foreground">
-                          {nextEvent.host.name[0]}
-                        </div>
-                        <div>
-                          <a href={nextEvent.host.url} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:underline">
-                            {nextEvent.host.name}
-                          </a>
-                          <p className="text-sm text-muted-foreground">Host venue</p>
-                        </div>
-                      </div>
-                    </div>
-                  ) : (
-                    <div className="bg-amber/5 rounded-xl border border-amber/20 p-4">
-                      <p className="text-sm font-medium text-foreground mb-2">
-                        Looking for a host
-                      </p>
-                      <p className="text-sm text-muted-foreground mb-3">
-                        Want to bring TechTank to your space?
-                      </p>
-                      <Button variant="outline" size="sm" asChild>
-                        <Link href="/get-involved/host">Learn about hosting</Link>
-                      </Button>
-                    </div>
-                  )}
-
-                  {/* Speaker */}
-                  {nextEvent.speakers && nextEvent.speakers.length > 0 && (
-                    <div className="mt-6 pt-6 border-t border-border">
-                      <p className="text-sm text-muted-foreground mb-3">Speaker</p>
-                      {nextEvent.speakers.map((speaker, index) => (
-                        <div key={index}>
-                          <p className="font-semibold text-foreground">
-                            {speaker.name}
-                          </p>
-                          <p className="text-sm text-muted-foreground">{speaker.title}</p>
-                          <p className="text-sm text-ring mt-1">
-                            {speaker.talkTitle}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              </div>
-            </div>
-          </div>
-        </Section>
-      )}
-
-      {/* Subscribe Section */}
-      <Section background="white">
-        <SectionHeader
-          overline="Calendar"
-          title="Subscribe to stay updated"
-          className="mb-8"
-        />
-        <div className="rounded-xl border border-border bg-background p-8 text-center">
-          <Calendar className="h-12 w-12 text-ring mx-auto mb-4" />
-          <h3 className="font-display text-xl font-semibold text-foreground mb-2">
-            Never miss an event
-          </h3>
-          <p className="text-muted-foreground mb-6 max-w-md mx-auto">
-            Subscribe on Luma to get notified when new events are announced.
-          </p>
-          <Button variant="primary" asChild>
-            <a
-              href="https://lu.ma/techtank"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Follow on Luma
-              <ExternalLink className="ml-2 h-4 w-4" />
-            </a>
-          </Button>
+      {/* Luma Calendar Embed Section */}
+      <Section className="bg-[#f7f8f9] dark:bg-[#212325] text-center">
+        <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
+          Next Up
+        </span>
+        <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
+          Subscribe on Luma
+        </h2>
+        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+          Subscribe on Luma to get notified when new events are announced.
+        </p>
+        <Button variant="outline" asChild className="mb-8">
+          <Link href="https://lu.ma/techtank" target="_blank" rel="noopener noreferrer">
+            Follow us on Luma
+            <ExternalLink className="ml-2 h-4 w-4" />
+          </Link>
+        </Button>
+        <div className="flex justify-center w-full">
+          {/* Light Mode Embed */}
+          <iframe
+            src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
+            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] xl:h-[700px] block dark:hidden overflow-hidden"
+            allowFullScreen
+            aria-hidden={false}
+            tabIndex={0}
+          />
+          {/* Dark Mode Embed */}
+          <iframe
+            src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=dark"
+            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] xl:h-[700px] hidden dark:block overflow-hidden"
+            allowFullScreen
+            aria-hidden={false}
+            tabIndex={0}
+          />
         </div>
       </Section>
 
