@@ -39,11 +39,11 @@ export default function LegalLayout({
       </nav>
 
       {/* Main Content */}
-      <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:pb-16">
+      <main className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:pb-16">
         <article className="prose prose-slate max-w-none">
           {children}
         </article>
-      </div>
+      </main>
     </div>
   );
 }
