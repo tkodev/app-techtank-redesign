@@ -66,15 +66,15 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
         </div>
       )}
       <div className="p-6 flex flex-col flex-1">
-        <div className="flex items-center gap-2 mb-4">
+        <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-4">
           <span className="text-[#E4405F]">
             <InstagramIcon className="h-5 w-5" />
           </span>
-          <span className="text-xs text-muted-foreground uppercase tracking-wide font-medium">
+          <span className="text-xs text-muted-foreground uppercase tracking-wide font-medium shrink-0">
             Instagram
           </span>
-          <span className="text-xs text-muted-foreground/50">·</span>
-          <span className="text-xs text-muted-foreground">
+          <span className="text-xs text-muted-foreground/50 shrink-0">·</span>
+          <span className="text-xs text-muted-foreground min-w-[8.5em] shrink-0">
             {formatDate(post.date, post.createdAtRaw)}
           </span>
         </div>
@@ -102,7 +102,7 @@ export function SocialFeed() {
 
   return (
     <div className="space-y-8">
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
         {posts.map((post) => (
           <InstagramPostCard key={post.id} post={post} />
         ))}
