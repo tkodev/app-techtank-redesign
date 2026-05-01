@@ -8,14 +8,14 @@ import { EventCard } from "@/components/ui/event-card";
 import { cn } from "@/utils/theme";
 import type { Event } from "@/constants/events";
 
-type CategoryFilter = "all" | "tech-talks" | "code-diversity" | "socials" | "sports" | "other";
+type CategoryFilter = "all" | "tech-talks" | "coffee-chats" | "socials" | "sports" | "other";
 type TimeFilter = "all" | "upcoming" | "past";
 type DisplayMode = "cards" | "grid" | "list";
 type SortBy = "date" | "title";
 
 const CATEGORY_TAGS: Record<Exclude<CategoryFilter, "all" | "other">, string[]> = {
   "tech-talks": ["Tech Talk", "Panel", "Workshop"],
-  "code-diversity": ["CodeDiversity"],
+  "coffee-chats": ["Coffee Chat"],
   "socials": ["Social"],
   "sports": ["Sports"],
 };
@@ -75,7 +75,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
   const categories: { id: CategoryFilter; label: string }[] = [
     { id: "all", label: "All" },
     { id: "tech-talks", label: "Tech Talks" },
-    { id: "code-diversity", label: "Code Diversity" },
+    { id: "coffee-chats", label: "Coffee Chats" },
     { id: "socials", label: "Socials" },
     { id: "sports", label: "Sports" },
     { id: "other", label: "Other" },
