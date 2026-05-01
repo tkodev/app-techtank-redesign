@@ -75,7 +75,7 @@ export default function EventsPage() {
           {/* Light Mode Embed */}
           <iframe
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
-            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] xl:h-[700px] block dark:hidden overflow-hidden"
+            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] block dark:hidden overflow-hidden"
             allowFullScreen
             aria-hidden={false}
             tabIndex={0}
@@ -83,7 +83,7 @@ export default function EventsPage() {
           {/* Dark Mode Embed */}
           <iframe
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=dark"
-            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] xl:h-[700px] hidden dark:block overflow-hidden"
+            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] hidden dark:block overflow-hidden"
             allowFullScreen
             aria-hidden={false}
             tabIndex={0}
