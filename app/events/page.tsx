@@ -57,12 +57,20 @@ export default function EventsPage() {
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Subscribe on Luma to get notified when new events are announced.
         </p>
-        <Button variant="outline" asChild className="mb-8">
-          <Link href="https://lu.ma/techtank" target="_blank" rel="noopener noreferrer">
-            Follow us on Luma
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
+        <div className="flex flex-wrap gap-4 justify-center mb-8">
+          <Button variant="primary" asChild>
+            <Link href="https://lu.ma/techtank" target="_blank" rel="noopener noreferrer">
+              Follow us on Luma
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
+              Follow us on Meetup
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
         <div className="flex justify-center w-full">
           {/* Light Mode Embed */}
           <iframe

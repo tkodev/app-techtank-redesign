@@ -293,7 +293,7 @@ export default function PressKitPage() {
           <div className="flex flex-wrap gap-4 justify-center">
             <Button variant="outline" asChild>
               <a
-                href="https://ca.linkedin.com/company/techtank-to"
+                href="https://linkedin.com/company/techtank-to"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -303,7 +303,7 @@ export default function PressKitPage() {
             </Button>
             <Button variant="outline" asChild>
               <a
-                href="https://www.instagram.com/techtankto/"
+                href="https://instagram.com/techtankto"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -313,7 +313,7 @@ export default function PressKitPage() {
             </Button>
             <Button variant="outline" asChild>
               <a
-                href="https://www.youtube.com/@TechTankTo"
+                href="https://youtube.com/@TechTankTo"
                 target="_blank"
                 rel="noopener noreferrer"
               >
