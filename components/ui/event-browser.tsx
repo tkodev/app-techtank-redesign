@@ -90,7 +90,6 @@ export function EventBrowser({ events }: EventBrowserProps) {
   return (
     <div>
       {/* Controls */}
-      <div className="rounded-xl bg-card border border-border p-4 flex flex-col gap-4 mb-8">
         {/* Category filters */}
         <div className="flex flex-wrap gap-2">
           {categories.map((c) => (
@@ -98,7 +97,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
               key={c.id}
               onClick={() => setCategory(c.id)}
               className={cn(
-                "px-3 py-1.5 rounded-full text-sm font-medium transition-colors",
+                "px-3 py-1.5 rounded-full text-sm font-medium transition-colors hover:cursor-pointer hover:underline",
                 category === c.id
                   ? "bg-primary text-primary-foreground"
                   : "bg-muted text-muted-foreground hover:bg-muted/80"
@@ -108,85 +107,6 @@ export function EventBrowser({ events }: EventBrowserProps) {
             </button>
           ))}
         </div>
-
-        {/* Time filter + display mode + sort */}
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <div className="flex gap-1.5">
-            {timeFilters.map((t) => (
-              <button
-                key={t.id}
-                onClick={() => setTimeFilter(t.id)}
-                className={cn(
-                  "px-3 py-1 rounded-md text-xs font-medium transition-colors",
-                  timeFilter === t.id
-                    ? "bg-secondary text-secondary-foreground"
-                    : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                {t.label}
-              </button>
-            ))}
-          </div>
-
-          <div className="flex items-center gap-3">
-            {/* Sort */}
-            <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-              <button
-                onClick={() => setSortBy("date")}
-                className={cn(
-                  "px-3 py-1 rounded-md text-xs font-medium transition-colors",
-                  sortBy === "date" ? "bg-secondary text-secondary-foreground" : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                Date
-              </button>
-              <button
-                onClick={() => setSortBy("title")}
-                className={cn(
-                  "px-3 py-1 rounded-md text-xs font-medium transition-colors",
-                  sortBy === "title" ? "bg-secondary text-secondary-foreground" : "text-muted-foreground hover:text-foreground"
-                )}
-              >
-                Title
-              </button>
-            </div>
-
-            {/* Display mode */}
-            <div className="flex items-center gap-0.5 rounded-lg bg-muted p-0.5">
-              <button
-                onClick={() => setDisplayMode("cards")}
-                className={cn(
-                  "p-1.5 rounded-md transition-colors",
-                  displayMode === "cards" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
-                )}
-                aria-label="Cards view"
-              >
-                <Columns2 className="h-3.5 w-3.5" />
-              </button>
-              <button
-                onClick={() => setDisplayMode("grid")}
-                className={cn(
-                  "p-1.5 rounded-md transition-colors",
-                  displayMode === "grid" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
-                )}
-                aria-label="Grid view"
-              >
-                <LayoutGrid className="h-3.5 w-3.5" />
-              </button>
-              <button
-                onClick={() => setDisplayMode("list")}
-                className={cn(
-                  "p-1.5 rounded-md transition-colors",
-                  displayMode === "list" ? "bg-background text-foreground shadow-sm" : "text-muted-foreground hover:text-foreground"
-                )}
-                aria-label="List view"
-              >
-                <List className="h-3.5 w-3.5" />
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
 
       {/* Result count */}
       <p className="text-xs text-muted-foreground mb-6 text-center">
