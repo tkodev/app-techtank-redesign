@@ -57,17 +57,25 @@ export default function EventsPage() {
         <p className="text-lg text-muted-foreground leading-relaxed mb-8">
           Subscribe on Luma to get notified when new events are announced.
         </p>
-        <Button variant="outline" asChild className="mb-8">
-          <Link href="https://lu.ma/techtank" target="_blank" rel="noopener noreferrer">
-            Follow us on Luma
-            <ExternalLink className="ml-2 h-4 w-4" />
-          </Link>
-        </Button>
+        <div className="flex flex-wrap gap-4 justify-center mb-8">
+          <Button variant="primary" asChild>
+            <Link href="https://lu.ma/techtank" target="_blank" rel="noopener noreferrer">
+              Follow us on Luma
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+          <Button variant="outline" asChild>
+            <Link href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
+              Follow us on Meetup
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+        </div>
         <div className="flex justify-center w-full">
           {/* Light Mode Embed */}
           <iframe
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=light"
-            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] xl:h-[700px] block dark:hidden overflow-hidden"
+            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] block dark:hidden overflow-hidden"
             allowFullScreen
             aria-hidden={false}
             tabIndex={0}
@@ -75,7 +83,7 @@ export default function EventsPage() {
           {/* Dark Mode Embed */}
           <iframe
             src="https://lu.ma/embed/calendar/cal-ZopuHimRKxPa5U0/events?lt=dark"
-            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] xl:h-[700px] hidden dark:block overflow-hidden"
+            className="w-full md:w-3/4 h-[1200px] sm:h-[1000px] md:h-[900px] lg:h-[800px] hidden dark:block overflow-hidden"
             allowFullScreen
             aria-hidden={false}
             tabIndex={0}

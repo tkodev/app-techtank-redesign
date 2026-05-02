@@ -45,7 +45,7 @@ a narrow column, table of contents sidebar, and a last-updated stamp.
 
 4. **Third-party platforms**
    - Explicit list of platforms and what they process:
-     - **Luma** — RSVPs, attendee lists.
+     - **Luma, Meetup** — RSVPs, attendee lists.
      - **Slack** — community messages.
      - **YouTube, Instagram, LinkedIn, GitHub** — embedded content.
    - Each platform has its own privacy policy; links included.

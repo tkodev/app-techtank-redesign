@@ -54,8 +54,8 @@ professional and credible.
 
 3. **Social Feed (replaces testimonials)**
    - Embedded posts from TechTank's LinkedIn and Instagram accounts.
-   - LinkedIn: https://www.linkedin.com/company/techtank-to/
-   - Instagram: https://www.instagram.com/techtankto/
+   - LinkedIn: https://linkedin.com/company/techtank-to
+   - Instagram: https://instagram.com/techtankto
    - Shows real, organic content from organizers and community members.
    - Content tone: genuine reactions, welcoming energy—inspired by the
      organic warmth of the Code Diversity meetup. Professional yet

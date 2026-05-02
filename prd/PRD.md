@@ -18,7 +18,7 @@ visitors into active contributors — attendees, speakers, hosts, sponsors,
 and volunteers.
 
 The site remains content-driven marketing: it does not own accounts or
-ticketing. It funnels visitors to external platforms (Luma, Slack,
+ticketing. It funnels visitors to external platforms (Luma, Meetup, Slack,
 LinkedIn, GitHub, YouTube, Instagram) and captures intake via email to
 `techtankto@gmail.com`.
 
@@ -144,7 +144,7 @@ under Ontario/Canadian jurisdiction.
 - **Primary nav:** About, Get Involved, Events, Code of Conduct
 - **Header CTA:** "Join our Slack" (secondary: "RSVP on Luma")
 - **Footer:**
-  - Column 1 — Community: Luma, Slack, LinkedIn, Instagram, GitHub, YouTube
+  - Column 1 — Community: Luma, Meetup, Slack, LinkedIn, Instagram, GitHub, YouTube
   - Column 2 — Get Involved: Speak, Host, Sponsor, Volunteer
   - Column 3 — Resources: Press Kit, Events
   - Column 4 — Legal: Terms of Service, Privacy Policy, Code of Conduct
@@ -153,10 +153,11 @@ under Ontario/Canadian jurisdiction.
 ### 2.4 External destinations
 
 - Luma: https://luma.com/techtank
-- Slack: direct invite link
-- LinkedIn: https://ca.linkedin.com/company/techtank-to
-- Instagram: https://www.instagram.com/techtankto/
-- YouTube: https://www.youtube.com/@TechTankTo
+- Meetup: https://meetup.com/techtank-to
+- Slack: https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA
+- LinkedIn: https://linkedin.com/company/techtank-to
+- Instagram: https://instagram.com/techtankto
+- YouTube: https://youtube.com/@TechTankTo
 - GitHub: https://github.com/tech-tankorg
 - Google Photos albums (per-event)
 - Email intake: `techtankto@gmail.com` (one inbox for all `/get-involved/*` roles)
@@ -227,8 +228,8 @@ CTAs are fine; tertiary links belong in the footer.
 - **Social feed over testimonials:** Embedded LinkedIn and Instagram posts
   from organizers showing real, organic community moments. No curated
   quotes—let the genuine reactions speak for themselves.
-  - LinkedIn: https://www.linkedin.com/company/techtank-to/
-  - Instagram: https://www.instagram.com/techtankto/
+  - LinkedIn: https://linkedin.com/company/techtank-to
+  - Instagram: https://instagram.com/techtankto
 - Numeric facts: 40-100 attendees per event, 45+ events hosted (25+ main
   events + 20+ CodeDiversity events), monthly cadence since 2023
 - Sponsor / host logo cloud
