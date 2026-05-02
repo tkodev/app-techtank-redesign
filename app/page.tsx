@@ -170,6 +170,16 @@ export default function HomePage() {
             </a>
           </Button>
           <Button variant="outline" size="md" asChild>
+            <a
+              href="https://meetup.com/techtank-to"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Meetup
+              <ExternalLink className="ml-2 h-4 w-4" />
+            </a>
+          </Button>
+          <Button variant="outline" size="md" asChild>
             <Link href="/events">
               View all
               <ArrowRight className="ml-2 h-4 w-4" />

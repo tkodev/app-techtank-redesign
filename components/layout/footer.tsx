@@ -7,11 +7,12 @@ const footerLinks = {
     title: "Community",
     links: [
       { name: "Luma", href: "https://luma.com/techtank", external: true },
+      { name: "Meetup", href: "https://meetup.com/techtank-to", external: true },
       { name: "Slack", href: "https://join.slack.com/t/thetechtank/shared_invite/zt-2oou5qbue-LXNB4M7~C_6CBAImj1kpJA", external: true },
-      { name: "LinkedIn", href: "https://ca.linkedin.com/company/techtank-to", external: true },
-      { name: "Instagram", href: "https://www.instagram.com/techtankto/", external: true },
+      { name: "LinkedIn", href: "https://linkedin.com/company/techtank-to", external: true },
+      { name: "Instagram", href: "https://instagram.com/techtankto", external: true },
       { name: "GitHub", href: "https://github.com/tech-tankorg", external: true },
-      { name: "YouTube", href: "https://www.youtube.com/@TechTankTo", external: true },
+      { name: "YouTube", href: "https://youtube.com/@TechTankTo", external: true },
     ],
   },
   getInvolved: {

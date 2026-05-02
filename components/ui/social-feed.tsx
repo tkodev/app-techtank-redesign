@@ -31,8 +31,8 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
   const cover = getCoverImage(post);
   const video = getCoverVideo(post);
   const postUrl = post.shortcode
-    ? `https://www.instagram.com/p/${post.shortcode}/`
-    : instagramUrl ?? "https://www.instagram.com/techtankto/";
+    ? `https://instagram.com/p/${post.shortcode}`
+    : instagramUrl ?? "https://instagram.com/techtankto";
 
   return (
     <article className="group relative glass rounded-2xl overflow-hidden transition-all flex flex-col">
