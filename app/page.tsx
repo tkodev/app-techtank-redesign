@@ -14,6 +14,7 @@ import {
   getCoverVideo,
   getInstagramPostsByIds,
 } from "@/constants/instagram-posts";
+import { getLumaEvents, getPastLumaEvents } from "./events/actions";
 
 function captionToAlt(caption: string): string {
   const firstLine = caption.split("\n")[0] ?? "";
@@ -21,14 +22,13 @@ function captionToAlt(caption: string): string {
   return stripped.length > 0 ? stripped : "TechTank Instagram post";
 }
 
-export default function HomePage() {
-  const allRecentEvents = getRecentEvents(8);
-  const featuredEvents = allRecentEvents.slice(0, 2);
-  const smallerEvents = allRecentEvents.slice(2, 6);
+export default async function HomePage() {
+  const featuredEvents = await getLumaEvents();
+  const pastEvents = await getPastLumaEvents();
 
   const heroPosts = getInstagramPostsByIds([
     "2025-07-07-DLz4I7KOww6", // BBQ season
-    "2026-04-10-DW9vcgiPHx",  // Code diversity (Apr 2026)
+    "2026-04-10-DW9vcgiPHx", // Code diversity (Apr 2026)
   ]).map((post) => ({
     id: post.id,
     imageSrc: getCoverImage(post),
@@ -51,7 +51,8 @@ export default function HomePage() {
                 Toronto&apos;s home for tech community
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6 lg:max-w-md">
-                Tech talks, panels, socials, sports, and more—hosted at companies across the city.
+                Tech talks, panels, socials, sports, and more—hosted at
+                companies across the city.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Button variant="primary" size="md" asChild>
@@ -144,7 +145,7 @@ export default function HomePage() {
           ))}
         </div>
         <div className="grid gap-3 grid-cols-2 lg:grid-cols-4 mb-8">
-          {smallerEvents.map((event) => (
+          {pastEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="compact" />
           ))}
         </div>
@@ -191,7 +192,7 @@ export default function HomePage() {
       {/* Ways to Get Involved */}
       <Section background="brand">
         <SectionHeader
-          overline="There&apos;s a spot for you"
+          overline="There's a spot for you"
           title="Jump in"
           description="TechTank runs on people who show up."
           className="mb-8"
@@ -213,7 +214,8 @@ export default function HomePage() {
             Community first. Always.
           </h2>
           <p className="text-muted-foreground mb-6">
-            No gatekeeping—just people who genuinely want to learn, share, and lift each other up.
+            No gatekeeping—just people who genuinely want to learn, share, and
+            lift each other up.
           </p>
           <Button variant="primary" asChild>
             <Link href="/about">More about us</Link>
@@ -222,7 +224,11 @@ export default function HomePage() {
       </Section>
 
       {/* Two-flow CTA */}
-      <Section id="join-us" background="brand-vertical" className="py-8 lg:py-12">
+      <Section
+        id="join-us"
+        background="brand-vertical"
+        className="py-8 lg:py-12"
+      >
         <SectionHeader
           overline="Take the next step"
           title="Where to next?"
