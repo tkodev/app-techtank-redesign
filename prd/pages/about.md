@@ -21,7 +21,7 @@ page a potential speaker, host, sponsor, or member can point to and say
 
 ## 3. Key messages
 
-- TechTank is volunteer-run, Toronto-based, founded 2022.
+- TechTank is volunteer-run, Toronto-based, founded 2023.
 - The community rests on four pillars: **Community, Innovation,
   Teamwork, Respect**.
 - We are beginner-safe, explicitly inclusive, and explicitly non-commercial.
@@ -41,7 +41,7 @@ page a potential speaker, host, sponsor, or member can point to and say
    - Each pillar: icon + short heading + 2–3 sentence statement.
 
 3. **Origin story**
-   - One or two paragraphs: founded in 2022 in Toronto; grown to monthly
+   - One or two paragraphs: founded in 2023 in Toronto; grown to monthly
      events with 40–100 attendees; entirely volunteer-run.
 
 4. **What we do**
