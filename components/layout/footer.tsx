@@ -101,7 +101,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 dark:border-foreground/10">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:justify-between">
             <p className="text-sm text-primary-foreground/60 dark:text-foreground/60">
-              &copy; {new Date().getFullYear()} TechTank TO. All rights reserved.
+              &copy; 2023 - {new Date().getFullYear()} TechTank TO. All rights reserved.
             </p>
             <a
               href="mailto:techtankto@gmail.com"
