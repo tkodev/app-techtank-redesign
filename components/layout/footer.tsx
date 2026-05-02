@@ -60,7 +60,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70 dark:text-foreground/70 leading-relaxed">
-              Toronto&apos;s inclusive tech community. Monthly events since 2022.
+              Toronto&apos;s inclusive tech community. Monthly events since 2023.
             </p>
           </div>
 

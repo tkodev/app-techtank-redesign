@@ -34,7 +34,7 @@ giving them a full past-events timeline with recaps.
    - Overline kicker: `TECHTANK TO`.
    - Headline: "All Events".
    - Sub-headline: "Every TechTank meetup — most recent first."
-   - Right-aligned counter strip: "<N> EVENTS · SINCE 2022" (counts
+   - Right-aligned counter strip: "<N> EVENTS · SINCE 2023" (counts
      pulled from the structured event content; no hardcoded numbers).
 
 2. **Next Up (featured upcoming event)**

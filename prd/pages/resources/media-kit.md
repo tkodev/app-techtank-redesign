@@ -24,7 +24,7 @@ press kit signals that the community is serious.
 ## 3. Key messages
 
 - TechTank is Toronto's inclusive, volunteer-run tech community,
-  founded in 2022.
+  founded in 2023.
 - All assets on this page are free to use with attribution.
 - Please don't modify the logo or use brand colors outside the
   guidelines.
@@ -38,7 +38,7 @@ press kit signals that the community is serious.
    - Primary CTA: "Download all assets (ZIP)".
 
 2. **Fast facts**
-   - Founded: 2022
+   - Founded: 2023
    - Location: Toronto, Canada
    - Cadence: monthly in-person events + ongoing Slack community
    - Typical attendance: 40–100 / event
