@@ -14,12 +14,12 @@ foreach ($video in $videos) {
 
     # 1. Generate optimized WebM (VP9) - lower resolution, higher CRF
     Write-Host "Generating WebM..."
-    $webmArgs = @("-y", "-i", $video.FullName, "-vf", "scale='min(480,iw)':-2", "-c:v", "libvpx-vp9", "-crf", "40", "-b:v", "0", "-c:a", "libopus", $webmPath)
+    $webmArgs = @("-y", "-i", $video.FullName, "-vf", "scale='w=min(1080,iw):h=min(1080,ih):force_original_aspect_ratio=decrease'", "-c:v", "libvpx-vp9", "-crf", "40", "-b:v", "0", "-c:a", "libopus", $webmPath)
     & $ffmpegPath $webmArgs
 
     # 2. Generate optimized MP4 (H.264) - lower resolution, higher CRF
     Write-Host "Generating optimized MP4..."
-    $mp4Args = @("-y", "-i", $video.FullName, "-vf", "scale='min(480,iw)':-2", "-c:v", "libx264", "-preset", "medium", "-crf", "28", "-c:a", "aac", "-movflags", "+faststart", $compressedMp4Path)
+    $mp4Args = @("-y", "-i", $video.FullName, "-vf", "scale='w=min(1080,iw):h=min(1080,ih):force_original_aspect_ratio=decrease'", "-c:v", "libx264", "-preset", "medium", "-crf", "28", "-c:a", "aac", "-movflags", "+faststart", $compressedMp4Path)
     & $ffmpegPath $mp4Args
 
     # 3. Replace original MP4 with compressed MP4
