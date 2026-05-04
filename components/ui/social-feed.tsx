@@ -40,7 +40,6 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
         <div className="relative aspect-4/5 w-full overflow-hidden bg-muted">
           {video ? (
             <video
-              src={video}
               poster={cover}
               autoPlay
               loop
@@ -48,7 +47,10 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
               playsInline
               preload="auto"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
-            />
+            >
+              <source src={video.replace(/\.mp4$/, '.webm')} type="video/webm" />
+              <source src={video} type="video/mp4" />
+            </video>
           ) : cover ? (
             <Image
               src={cover}
