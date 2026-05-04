@@ -60,7 +60,7 @@ export function Footer() {
               />
             </Link>
             <p className="mt-4 text-sm text-primary-foreground/70 dark:text-foreground/70 leading-relaxed">
-              Toronto&apos;s inclusive tech community. Monthly events since 2022.
+              Toronto&apos;s inclusive tech community. Monthly events since 2023.
             </p>
           </div>
 
@@ -101,7 +101,7 @@ export function Footer() {
         <div className="mt-12 pt-8 border-t border-primary-foreground/10 dark:border-foreground/10">
           <div className="flex flex-col items-center gap-4 lg:flex-row lg:justify-between">
             <p className="text-sm text-primary-foreground/60 dark:text-foreground/60">
-              &copy; {new Date().getFullYear()} TechTank TO. All rights reserved.
+              &copy; 2023 - {Math.max(new Date().getFullYear(), 2026)} TechTank TO. All rights reserved.
             </p>
             <a
               href="mailto:techtankto@gmail.com"

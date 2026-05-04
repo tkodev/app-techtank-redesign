@@ -30,14 +30,14 @@ professional and credible.
 ## 3. Key messages
 
 - A lively, inclusive tech community that welcomes all walks of life.
-- Volunteer-run, Toronto-based, founded 2022.
+- Volunteer-run, Toronto-based, founded 2023.
 - Monthly in-person events: technical talks + networking.
 - Built by and for the Toronto tech community.
 
 ## 4. Content sections (top to bottom)
 
 1. **Hero**
-   - Overline kicker: `TORONTO · MONTHLY · SINCE 2022`.
+   - Overline kicker: `TORONTO · MONTHLY · SINCE 2023`.
    - Brand lockup + one-sentence mission.
    - Primary CTA: **"RSVP on Luma"** → `/events`.
    - Secondary CTA: "Join our Slack".

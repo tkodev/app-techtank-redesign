@@ -11,7 +11,7 @@ import { getUpcomingEvents, events } from "@/constants/events";
 export const metadata: Metadata = {
   title: "Events",
   description:
-    "All TechTank TO events — upcoming meetups and past recaps. Monthly in-person events in Toronto since 2022.",
+    "All TechTank TO events — upcoming meetups and past recaps. Monthly in-person events in Toronto since 2023.",
 };
 
 export default function EventsPage() {
@@ -34,12 +34,12 @@ export default function EventsPage() {
               <p className="text-xl text-muted-foreground">
                 RSVP to what&apos;s next — and scroll back through the
                 talks, photos, and recaps from every meetup we&apos;ve
-                hosted since 2022.
+                hosted since 2023.
               </p>
             </div>
             <div className="shrink-0">
               <p className="text-sm font-semibold text-foreground">
-                {events.length} EVENTS · SINCE 2022
+                {events.length} EVENTS · SINCE 2023
               </p>
             </div>
           </div>

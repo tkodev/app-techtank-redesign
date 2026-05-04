@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 };
 
 const fastFacts = [
-  { label: "Founded", value: "2022" },
+  { label: "Founded", value: "2023" },
   { label: "Location", value: "Toronto, Canada" },
   { label: "Cadence", value: "Monthly in-person events via Luma + ongoing Slack community" },
   { label: "Typical attendance", value: "40-100 per event" },
@@ -106,7 +106,7 @@ export default function PressKitPage() {
             <p className="text-foreground leading-relaxed mb-4">
               <strong>Full paragraph:</strong> TechTank TO is Toronto&apos;s
               volunteer-run tech community, hosting monthly in-person events
-              since 2022. Each event brings together 40-100 attendees,
+              since 2023. Each event brings together 40-100 attendees,
               including developers, designers, and tech professionals for
               technical talks and networking. TechTank is committed to
               fostering a supportive and inclusive environment where people of
@@ -121,7 +121,7 @@ export default function PressKitPage() {
             <p className="text-foreground leading-relaxed mb-4">
               <strong>One-liner:</strong> TechTank TO is Toronto&apos;s
               volunteer-run tech community, hosting monthly events for
-              developers, designers, and tech professionals since 2022.
+              developers, designers, and tech professionals since 2023.
             </p>
             <Button variant="ghost" size="sm">
               <Copy className="mr-2 h-4 w-4" />

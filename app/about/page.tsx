@@ -49,34 +49,28 @@ const pillars = [
 
 const timeline = [
   {
-    year: "2022",
+    year: "2023",
     title: "TechTank is founded",
     description:
       "A small group of Toronto developers started monthly meetups with a simple goal: create the tech community they wished they had.",
   },
   {
-    year: "2023",
+    year: "2024",
     title: "Growing momentum",
     description:
-      "Word spread. Attendance grew from 30 to over 100 per event. Companies started reaching out to host and sponsor.",
-  },
-  {
-    year: "2024",
-    title: "Community programs launch",
-    description:
-      "Code Diversity for underrepresented voices. The volunteer crew expanded to support larger events.",
+      "Word spread. Attendance grew from 30 to over 100 per event. Code Diversity for underrepresented voices. Companies started reaching out to host and sponsor.",
   },
   {
     year: "2025",
-    title: "Toronto's tech home",
+    title: "Community programs launch",
     description:
-      "Monthly events, active Slack community, YouTube talks, and a growing reputation as Toronto's most inclusive tech meetup.",
+      "The volunteer crew expanded to support larger events. Monthly events, active Slack community and YouTube talks.",
   },
   {
     year: "2026",
-    title: "Building the future",
+    title: "Toronto's tech home",
     description:
-      "Expanding programs, welcoming new hosts, and continuing to serve Toronto tech with events that matter.",
+      "Expanding programs, welcoming new hosts, and a growing reputation as Toronto's most inclusive tech meetup.",
   },
 ];
 
@@ -99,7 +93,7 @@ export default function AboutPage() {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               TechTank TO is a volunteer-run, Toronto-based tech community
-              founded in 2022. We host monthly in-person events where
+              founded in 2023. We host monthly in-person events where
               developers, designers, PMs, and tech-curious people gather to
               learn, share, and connect. No gatekeeping—just people
               helping people grow in tech.
