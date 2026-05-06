@@ -12,7 +12,7 @@ const buttonVariants = cva(
         secondary: "bg-warning text-warning-foreground hover:bg-warning/90 hover:text-warning-foreground focus-visible:ring-ring",
         outline: "border-2 border-primary text-primary hover:bg-primary hover:text-primary-foreground focus-visible:ring-ring",
         ghost: "text-foreground/70 hover:bg-foreground/5 hover:text-foreground focus-visible:ring-ring",
-        nav: "font-medium text-muted-foreground hover:text-foreground hover:bg-muted/60 focus-visible:ring-ring",
+        nav: "font-medium text-muted-foreground hover:bg-muted/60 focus-visible:ring-ring",
       },
       isActive: {
         true: "",
