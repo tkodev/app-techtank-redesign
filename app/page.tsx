@@ -70,13 +70,15 @@ export default function HomePage() {
                 <div className="relative w-[45%] lg:w-[55%] aspect-[4/5] photo-frame overflow-hidden shadow-xl transition-transform duration-300 -rotate-2 translate-y-6 hover:scale-[1.02]">
                   {heroPosts[0].videoSrc ? (
                     <video
-                      src={heroPosts[0].videoSrc}
                       autoPlay
                       loop
                       muted
                       playsInline
                       className="absolute inset-0 h-full w-full object-cover"
-                    />
+                    >
+                      <source src={heroPosts[0].videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                      <source src={heroPosts[0].videoSrc} type="video/mp4" />
+                    </video>
                   ) : heroPosts[0].imageSrc ? (
                     <Image
                       src={heroPosts[0].imageSrc}
@@ -93,13 +95,15 @@ export default function HomePage() {
                 <div className="relative w-[45%] lg:w-[55%] aspect-[4/5] -ml-[10%] z-10 photo-frame overflow-hidden shadow-xl transition-transform duration-300 rotate-2 hover:scale-[1.02]">
                   {heroPosts[1].videoSrc ? (
                     <video
-                      src={heroPosts[1].videoSrc}
                       autoPlay
                       loop
                       muted
                       playsInline
                       className="absolute inset-0 h-full w-full object-cover"
-                    />
+                    >
+                      <source src={heroPosts[1].videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                      <source src={heroPosts[1].videoSrc} type="video/mp4" />
+                    </video>
                   ) : heroPosts[1].imageSrc ? (
                     <Image
                       src={heroPosts[1].imageSrc}
