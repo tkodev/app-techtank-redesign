@@ -149,14 +149,15 @@ export default function SponsorPage() {
             <div className="relative aspect-[4/3] rounded-2xl overflow-hidden bg-gradient-to-br from-peach via-lavender to-aqua">
               {featuredVideo ? (
                 <video
-                  src={featuredVideo}
-                  poster={featuredImage}
                   autoPlay
                   loop
                   muted
                   playsInline
                   className="absolute inset-0 h-full w-full object-cover"
-                />
+                >
+                  <source src={featuredVideo.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                  <source src={featuredVideo} type="video/mp4" />
+                </video>
               ) : featuredImage ? (
                 <Image
                   src={featuredImage}
