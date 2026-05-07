@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { Section, SectionHeader } from "@/components/ui/section";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
@@ -78,6 +79,42 @@ export default function DesignSystemPage() {
           </div>
         </div>
       </section>
+
+      {/* Logo */}
+      <Section>
+        <SectionHeader
+          overline="Logo"
+          title="Logo"
+          description="The TechTank TO logo uses gradient colours that work on both light and dark backgrounds — no separate light/dark variants needed."
+          className="mb-12"
+        />
+        <div className="grid gap-6 lg:grid-cols-2 mb-8">
+          <div className="bg-card dark:bg-white rounded-xl border border-border p-8 flex items-center justify-center">
+            <Image
+              src="/images/logos/techtank-joint.svg"
+              alt="TechTank TO Logo on light background"
+              width={2302}
+              height={1537}
+              className="h-16 w-auto"
+              style={{ width: "auto" }}
+            />
+          </div>
+          <div className="glass-dark rounded-xl p-8 flex items-center justify-center">
+            <Image
+              src="/images/logos/techtank-joint.svg"
+              alt="TechTank TO Logo on dark background"
+              width={2302}
+              height={1537}
+              className="h-16 w-auto"
+              style={{ width: "auto" }}
+            />
+          </div>
+        </div>
+        <p className="text-sm text-muted-foreground">
+          Download logos and usage guidelines in the{" "}
+          <a href="/resources/media-kit" className="text-ring hover:underline">Media Kit</a>.
+        </p>
+      </Section>
 
       {/* Colors — Brand */}
       <Section>

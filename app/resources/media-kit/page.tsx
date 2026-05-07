@@ -142,22 +142,22 @@ export default function PressKitPage() {
 
         {/* Logo Preview */}
         <div className="grid gap-6 lg:grid-cols-2 mb-12">
-          <div className="bg-card rounded-xl border border-border p-8 flex items-center justify-center">
+          <div className="bg-card dark:bg-white rounded-xl border border-border p-8 flex items-center justify-center">
             <Image
-              src="/images/logos/light.svg"
-              alt="TechTank TO Logo (light)"
-              width={240}
-              height={80}
+              src="/images/logos/techtank-joint.svg"
+              alt="TechTank TO Logo on light background"
+              width={2302}
+              height={1537}
               className="h-16 w-auto"
               style={{ width: "auto" }}
             />
           </div>
           <div className="glass-dark rounded-xl p-8 flex items-center justify-center">
             <Image
-              src="/images/logos/dark.svg"
-              alt="TechTank TO Logo (dark)"
-              width={240}
-              height={80}
+              src="/images/logos/techtank-joint.svg"
+              alt="TechTank TO Logo on dark background"
+              width={2302}
+              height={1537}
               className="h-16 w-auto"
               style={{ width: "auto" }}
             />

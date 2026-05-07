@@ -23,19 +23,11 @@ export function Header() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/images/logos/light.svg"
+            src="/images/logos/techtank-joint.svg"
             alt="TechTank TO"
-            width={192}
-            height={56}
-            className="h-10 w-auto dark:hidden"
-            priority
-          />
-          <Image
-            src="/images/logos/dark.svg"
-            alt="TechTank TO"
-            width={192}
-            height={56}
-            className="h-10 w-auto hidden dark:block"
+            width={2302}
+            height={1537}
+            className="h-10 w-auto"
             priority
           />
         </Link>
