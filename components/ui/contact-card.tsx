@@ -25,7 +25,7 @@ export function ContactCard({
       <p className="text-sm text-muted-foreground">{context}</p>
       
       {/* Email */}
-      <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
           <Mail className="h-5 w-5" />
         </div>
@@ -51,7 +51,7 @@ export function ContactCard({
       </div>
 
       {/* Slack */}
-      <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+      <div className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-4">
         <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-secondary text-secondary-foreground">
           <MessageSquare className="h-5 w-5" />
         </div>
