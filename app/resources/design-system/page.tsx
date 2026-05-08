@@ -378,9 +378,9 @@ export default function DesignSystemPage() {
             <p className="text-sm text-muted-foreground">White 35%, blur 16px, saturate 150%</p>
           </div>
           <div className="glass-dark rounded-2xl p-8">
-            <Zap className="h-8 w-8 text-secondary mb-4" />
-            <p className="font-semibold text-primary-foreground mb-1">.glass-dark</p>
-            <p className="text-sm text-primary-foreground/70">Teal-dark 80%, blur 20px, saturate 180%</p>
+            <Zap className="h-8 w-8 text-seafoam mb-4" />
+            <p className="font-semibold text-white mb-1">.glass-dark</p>
+            <p className="text-sm text-seafoam/70">Teal-dark 80%, blur 20px, saturate 180%</p>
           </div>
         </div>
 
