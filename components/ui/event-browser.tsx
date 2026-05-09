@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { EventCard } from "@/components/ui/event-card";
 import { cn } from "@/utils/theme";
-import type { Event } from "@/constants/events";
+import type { Event } from "@/app/events/actions";
 
 type CategoryFilter = "all" | "tech-talks" | "coffee-chats" | "socials" | "sports" | "other";
 type TimeFilter = "all" | "upcoming" | "past";
@@ -56,7 +56,7 @@ export function EventBrowser({ events }: EventBrowserProps) {
     if (sortBy === "date") {
       result = result.sort((a, b) => {
         if (a.status !== b.status) return a.status === "upcoming" ? -1 : 1;
-        const diff = new Date(a.date).getTime() - new Date(b.date).getTime();
+        const diff = new Date(a.start_at).getTime() - new Date(b.start_at).getTime();
         return a.status === "upcoming" ? diff : -diff;
       });
     } else {
@@ -242,7 +242,7 @@ function GridView({ events }: { events: Event[] }) {
       {events.map((event) => {
         const img = event.imagePath;
         const isUpcoming = event.status === "upcoming";
-        const dateObj = new Date(event.date + "T12:00:00");
+        const dateObj = new Date(event.start_at);
         const formattedDate = dateObj.toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
@@ -332,7 +332,7 @@ function ListView({ events }: { events: Event[] }) {
   return (
     <div className="divide-y divide-border rounded-xl border border-border overflow-hidden">
       {events.map((event) => {
-        const dateObj = new Date(event.date + "T12:00:00");
+        const dateObj = new Date(event.start_at);
         const formattedDate = dateObj.toLocaleDateString("en-US", {
           month: "short",
           day: "numeric",
