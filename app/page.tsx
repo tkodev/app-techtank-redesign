@@ -244,7 +244,7 @@ export default async function HomePage() {
             href="/events"
             className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
           >
-            <Calendar className="absolute top-4 right-4 h-14 w-14 text-foreground/10" />
+            <Calendar className="absolute top-4 right-4 h-14 w-14 text-foreground/15" />
             <div className="relative">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
                 Show up
@@ -266,7 +266,7 @@ export default async function HomePage() {
             href="/get-involved"
             className="group relative overflow-hidden rounded-xl glass p-5 lg:p-6 transition-all hover:scale-[1.01]"
           >
-            <Users className="absolute top-4 right-4 h-14 w-14 text-amber-dark/10" />
+            <Users className="absolute top-4 right-4 h-14 w-14 text-foreground/15" />
             <div className="relative">
               <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
                 Contribute

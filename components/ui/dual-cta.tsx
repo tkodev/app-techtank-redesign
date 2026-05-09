@@ -12,7 +12,7 @@ export function DualCTA() {
     <div className="grid gap-4 lg:grid-cols-2">
       {/* Never miss an event */}
       <div className="relative overflow-hidden rounded-xl glass p-5 lg:p-6">
-        <Calendar className="absolute top-4 right-4 h-16 w-16 text-foreground/10" />
+        <Calendar className="absolute top-4 right-4 h-16 w-16 text-foreground/15" />
         <div className="relative">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
             Stay in the loop
@@ -64,7 +64,7 @@ export function DualCTA() {
 
       {/* Want to contribute? */}
       <div className="relative overflow-hidden rounded-xl glass p-5 lg:p-6">
-        <Users className="absolute top-4 right-4 h-16 w-16 text-amber-dark/10" />
+        <Users className="absolute top-4 right-4 h-16 w-16 text-foreground/15" />
         <div className="relative">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-amber-dark mb-2">
             Get involved
