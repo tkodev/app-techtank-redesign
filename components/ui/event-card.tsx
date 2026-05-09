@@ -2,7 +2,7 @@
 
 import { Camera, Calendar, MapPin, Play } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
-import type { Event } from "@/constants/events";
+import type { Event } from "@/app/events/actions";
 
 interface EventCardProps {
   event: Event;
@@ -12,13 +12,19 @@ interface EventCardProps {
 export function EventCard({ event, variant = "compact" }: EventCardProps) {
   const isUpcoming = event.status === "upcoming";
 
-  const dateObj = new Date(event.date + "T12:00:00");
+  const dateObj = new Date(event.start_at);
   const formattedDate = dateObj.toLocaleDateString("en-US", {
     month: "short",
     day: "numeric",
     year: "numeric",
     timeZone: "America/Toronto",
   });
+  const formattedTime = dateObj.toLocaleTimeString("en-US", {
+    hour: "numeric",
+    minute: "2-digit",
+    timeZone: "America/Toronto",
+  });
+  const showTime = !event.start_at.includes("T12:00:00");
 
   const locationText = event.host ? event.host.name : (event.venue ?? null);
   const locationUrl = event.host?.url ?? null;
@@ -55,7 +61,7 @@ export function EventCard({ event, variant = "compact" }: EventCardProps) {
           <div className="flex items-center gap-2 text-sm text-muted-foreground mb-1.5">
             <Calendar className="h-4 w-4 shrink-0" />
             <span>{formattedDate}</span>
-            {event.time && <span className="text-muted-foreground/60">· {event.time}</span>}
+            {showTime && <span className="text-muted-foreground/60">· {formattedTime}</span>}
           </div>
 
           {locationText && (
