@@ -95,10 +95,10 @@ export default function AboutPage() {
               TechTank TO is a volunteer-run, Toronto-based tech community
               founded in 2023. We host monthly in-person events where
               developers, designers, PMs, and tech-curious people gather to
-              learn, share, and connect. No gatekeeping—just people
-              helping people grow in tech.
+              learn, share, and connect. No gatekeeping—just people helping
+              people grow in tech.
             </p>
-            <div className="flex flex-wrap gap-3">
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3">
               <Button variant="primary" size="lg" asChild>
                 <Link href="/events">See upcoming events</Link>
               </Button>
@@ -137,7 +137,9 @@ export default function AboutPage() {
                 <h3 className="font-display text-xl font-semibold text-foreground mb-2">
                   {pillar.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">{pillar.description}</p>
+                <p className="text-muted-foreground leading-relaxed">
+                  {pillar.description}
+                </p>
               </div>
             </div>
           ))}
@@ -146,21 +148,25 @@ export default function AboutPage() {
 
       {/* Code of Conduct Teaser */}
       <Section background="white">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto sm:text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Safety first
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
             Our commitment to a safe community
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-balance">
             TechTank is committed to providing a harassment-free experience for
             everyone. Our Code of Conduct applies to all community spaces,
             online and in-person.
           </p>
-          <Button variant="outline" asChild>
-            <Link href="/legal/code-of-conduct">Read our Code of Conduct</Link>
-          </Button>
+          <span className="flex flex-col flex-wrap sm:flex-row sm:justify-center">
+            <Button variant="outline" asChild>
+              <Link href="/legal/code-of-conduct">
+                Read our Code of Conduct
+              </Link>
+            </Button>
+          </span>
         </div>
       </Section>
 
@@ -206,7 +212,10 @@ export default function AboutPage() {
                   playsInline
                   className="absolute inset-0 h-full w-full object-cover"
                 >
-                  <source src={featuredVideo.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                  <source
+                    src={featuredVideo.replace(/\.mp4$/, ".webm")}
+                    type="video/webm"
+                  />
                   <source src={featuredVideo} type="video/mp4" />
                 </video>
               ) : featuredImage ? (
@@ -231,18 +240,18 @@ export default function AboutPage() {
 
       {/* How We Fund It */}
       <Section>
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto sm:text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             How we fund it
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground lg:text-4xl mb-6">
             Volunteer-run, company-supported
           </h2>
-          <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+          <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-balance">
             TechTank is 100% volunteer-run. Companies provide venue and food for
             events; TechTank handles speakers, marketing, and coordination.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
             <Button variant="primary" asChild>
               <Link href="/get-involved/host">Host an event</Link>
             </Button>
@@ -300,22 +309,22 @@ export default function AboutPage() {
 
       {/* Closing CTA */}
       <Section background="brand-soft">
-        <div className="max-w-2xl mx-auto text-center">
+        <div className="max-w-2xl mx-auto sm:text-center">
           <span className="inline-block text-xs font-semibold uppercase tracking-widest text-ring mb-4">
             Join us
           </span>
           <h2 className="font-display text-3xl font-semibold text-foreground mb-4">
             Ready to be part of TechTank?
           </h2>
-          <p className="text-muted-foreground mb-8">
+          <p className="text-muted-foreground mb-8 text-balance">
             Whether you want to attend, speak, host, or volunteer — there&apos;s
             a place for you here.
           </p>
-          <div className="flex flex-wrap gap-4 justify-center">
-            <Button variant="primary" size="lg" asChild>
+          <div className="flex flex-col sm:flex-row flex-wrap gap-4 justify-center">
+            <Button variant="primary" asChild>
               <Link href="/events">See upcoming events</Link>
             </Button>
-            <Button variant="outline" size="lg" asChild>
+            <Button variant="outline" asChild>
               <Link href="/get-involved">Get involved</Link>
             </Button>
           </div>

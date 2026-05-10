@@ -19,7 +19,10 @@ function truncateCaption(caption: string): string {
   return `${caption.slice(0, CAPTION_CHAR_LIMIT).trimEnd()}…`;
 }
 
-function formatDate(date: string | undefined, fallbackRaw: number | undefined): string {
+function formatDate(
+  date: string | undefined,
+  fallbackRaw: number | undefined,
+): string {
   if (!date && !fallbackRaw) return "";
   const d = date ? new Date(date) : new Date((fallbackRaw ?? 0) * 1000);
   return d.toLocaleDateString("en-US", { month: "long", year: "numeric" });
@@ -32,7 +35,7 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
   const video = getCoverVideo(post);
   const postUrl = post.shortcode
     ? `https://instagram.com/p/${post.shortcode}`
-    : instagramUrl ?? "https://instagram.com/techtankto";
+    : (instagramUrl ?? "https://instagram.com/techtankto");
 
   return (
     <article className="group relative glass rounded-2xl overflow-hidden transition-all flex flex-col">
@@ -48,7 +51,10 @@ function InstagramPostCard({ post }: { post: InstagramPostWithId }) {
               preload="auto"
               className="absolute inset-0 h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.03]"
             >
-              <source src={video.replace(/\.mp4$/, '.webm')} type="video/webm" />
+              <source
+                src={video.replace(/\.mp4$/, ".webm")}
+                type="video/webm"
+              />
               <source src={video} type="video/mp4" />
             </video>
           ) : cover ? (
@@ -104,15 +110,17 @@ export function SocialFeed() {
 
   return (
     <div className="space-y-8">
-      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 md:grid-cols-4">
+      <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
         {posts.map((post) => (
           <InstagramPostCard key={post.id} post={post} />
         ))}
       </div>
 
-      <div className="flex flex-wrap items-center justify-center gap-3 pt-6">
+      <div className="flex flex-col sm:flex-row flex-wrap sm:items-center sm:justify-center gap-3 pt-6">
         {getAllSocialLinks()
-          .filter((link) => ["slack", "linkedin", "instagram"].includes(link.id))
+          .filter((link) =>
+            ["slack", "linkedin", "instagram"].includes(link.id),
+          )
           .map((link) => (
             <Button
               key={link.id}
@@ -121,7 +129,11 @@ export function SocialFeed() {
               asChild
             >
               <a
-                href={link.id === "instagram" ? instagramUrl ?? link.url : link.url}
+                href={
+                  link.id === "instagram"
+                    ? (instagramUrl ?? link.url)
+                    : link.url
+                }
                 target="_blank"
                 rel="noopener noreferrer"
               >

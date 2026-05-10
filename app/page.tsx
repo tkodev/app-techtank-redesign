@@ -54,7 +54,7 @@ export default async function HomePage() {
                 Tech talks, panels, socials, sports, and more—hosted at
                 companies across the city.
               </p>
-              <div className="flex flex-wrap gap-3">
+              <div className="flex flex-col lg:flex-row flex-wrap gap-3">
                 <Button variant="primary" size="md" asChild>
                   <Link href="/events">See events</Link>
                 </Button>
@@ -77,7 +77,10 @@ export default async function HomePage() {
                       playsInline
                       className="absolute inset-0 h-full w-full object-cover"
                     >
-                      <source src={heroPosts[0].videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                      <source
+                        src={heroPosts[0].videoSrc.replace(/\.mp4$/, ".webm")}
+                        type="video/webm"
+                      />
                       <source src={heroPosts[0].videoSrc} type="video/mp4" />
                     </video>
                   ) : heroPosts[0].imageSrc ? (
@@ -102,7 +105,10 @@ export default async function HomePage() {
                       playsInline
                       className="absolute inset-0 h-full w-full object-cover"
                     >
-                      <source src={heroPosts[1].videoSrc.replace(/\.mp4$/, '.webm')} type="video/webm" />
+                      <source
+                        src={heroPosts[1].videoSrc.replace(/\.mp4$/, ".webm")}
+                        type="video/webm"
+                      />
                       <source src={heroPosts[1].videoSrc} type="video/mp4" />
                     </video>
                   ) : heroPosts[1].imageSrc ? (
@@ -148,7 +154,7 @@ export default async function HomePage() {
             <EventCard key={event.id} event={event} variant="featured" />
           ))}
         </div>
-        <div className="grid gap-3 grid-cols-2 lg:grid-cols-4 mb-8">
+        <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mb-8">
           {pastEvents.map((event) => (
             <EventCard key={event.id} event={event} variant="compact" />
           ))}
@@ -163,7 +169,7 @@ export default async function HomePage() {
         </div>
 
         {/* CTAs */}
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        <div className="flex flex-col flex-wrap sm:flex-row sm:items-center sm:justify-center gap-3">
           <Button variant="primary" size="md" asChild>
             <a
               href="https://luma.com/techtank"
@@ -210,20 +216,22 @@ export default async function HomePage() {
 
       {/* Values Teaser */}
       <Section>
-        <div className="glass rounded-2xl p-6 lg:p-10 text-center max-w-2xl mx-auto">
+        <div className="glass rounded-2xl p-6 lg:p-10 sm:text-center max-w-2xl mx-auto">
           <span className="tag-outline mb-4 inline-block text-sm">
             What we&apos;re about
           </span>
           <h2 className="font-display text-2xl lg:text-3xl font-bold text-foreground mb-4">
             Community first. Always.
           </h2>
-          <p className="text-muted-foreground mb-6">
+          <p className="text-muted-foreground mb-6 text-balance">
             No gatekeeping—just people who genuinely want to learn, share, and
             lift each other up.
           </p>
-          <Button variant="primary" asChild>
-            <Link href="/about">More about us</Link>
-          </Button>
+          <div className="flex flex-wrap flex-col sm:flex-row sm:justify-center">
+            <Button variant="primary" asChild>
+              <Link href="/about">More about us</Link>
+            </Button>
+          </div>
         </div>
       </Section>
 

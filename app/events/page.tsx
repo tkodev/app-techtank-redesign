@@ -32,9 +32,9 @@ export default function EventsPage() {
                 All Events
               </h1>
               <p className="text-xl text-muted-foreground">
-                RSVP to what&apos;s next — and scroll back through the
-                talks, photos, and recaps from every meetup we&apos;ve
-                hosted since 2023.
+                RSVP to what&apos;s next — and scroll back through the talks,
+                photos, and recaps from every meetup we&apos;ve hosted since
+                2023.
               </p>
             </div>
             <div className="shrink-0">
@@ -54,18 +54,26 @@ export default function EventsPage() {
         <h2 className="font-display text-3xl font-semibold text-foreground mb-6">
           Subscribe on Luma
         </h2>
-        <p className="text-lg text-muted-foreground leading-relaxed mb-8">
+        <p className="text-lg text-muted-foreground leading-relaxed mb-8 text-balance">
           Subscribe on Luma to get notified when new events are announced.
         </p>
-        <div className="flex flex-wrap gap-4 justify-center mb-8">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-4 sm:justify-center mb-8">
           <Button variant="primary" asChild>
-            <Link href="https://lu.ma/techtank" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://lu.ma/techtank"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Follow us on Luma
               <ExternalLink className="ml-2 h-4 w-4" />
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="https://meetup.com/techtank-to" target="_blank" rel="noopener noreferrer">
+            <Link
+              href="https://meetup.com/techtank-to"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Follow us on Meetup
               <ExternalLink className="ml-2 h-4 w-4" />
             </Link>
