@@ -15,6 +15,13 @@ const footerLinks = {
       { name: "YouTube", href: "https://youtube.com/@TechTankTo", external: true },
     ],
   },
+  about: {
+    title: "About",
+    links: [
+      { name: "TechTank", href: "/about", external: false },
+      { name: "Team", href: "/about/team", external: false },
+    ],
+  },
   getInvolved: {
     title: "Get Involved",
     links: [
@@ -47,7 +54,7 @@ export function Footer() {
     <footer className="bg-primary dark:bg-background text-primary-foreground dark:text-foreground">
       <div className="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-16">
         {/* Top section */}
-        <div className="grid grid-cols-2 gap-8 lg:grid-cols-5">
+        <div className="grid grid-cols-2 gap-8 lg:grid-cols-6">
           {/* Brand column */}
           <div className="col-span-2 lg:col-span-1">
             <Link href="/" className="flex items-center">

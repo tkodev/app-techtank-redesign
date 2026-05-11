@@ -318,6 +318,9 @@ export default function AboutPage() {
             <Button variant="outline" size="lg" asChild>
               <Link href="/get-involved">Get involved</Link>
             </Button>
+            <Button variant="outline" size="lg" asChild>
+              <Link href="/about/team">Meet the team</Link>
+            </Button>
           </div>
         </div>
       </Section>
