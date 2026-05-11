@@ -71,7 +71,7 @@ export const teamGroups: TeamGroup[] = [
       { name: "Rohan Villoth", pronouns: "he/him" },
       { name: "Danyal Imran", pronouns: "he/him" },
       { name: "Justin Bento", pronouns: "he/him" },
-      { name: "Jyle V.", pronouns: "she/her" },
+      { name: "Jyle Vergara", pronouns: "she/her" },
       { name: "John Malapit", pronouns: "he/him" },
     ],
   },
