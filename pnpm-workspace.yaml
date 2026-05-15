@@ -1,5 +1,6 @@
 allowBuilds:
   sharp: false
+trustPolicy: no-downgrade
 overrides:
   next@>=16.0.0 <16.2.5: '>=16.2.5'
   next@>=16.0.0 <16.2.6: '>=16.2.6'
