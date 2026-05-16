@@ -4,7 +4,9 @@
   "description": "TechTank TO - Toronto's tech community website",
   "type": "module",
   "private": true,
+  "sideEffects": false,
   "scripts": {
+    "analyze": "next experimental-analyze",
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
@@ -19,25 +21,27 @@
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.2.4",
-    "@tailwindcss/postcss": "^4.2.2",
-    "@types/node": "^25.6.0",
-    "@types/react": "^19.2.14",
-    "@types/react-dom": "^19.2.3",
     "@vercel/analytics": "^2.0.1",
     "@vercel/speed-insights": "^2.0.0",
-    "autoprefixer": "^10.5.0",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "lucide-react": "^1.8.0",
     "next": "^16.2.4",
     "next-themes": "^0.4.6",
-    "postcss": "^8.5.10",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
     "tailwind-merge": "^3.5.0",
-    "tailwindcss": "^4.2.2",
-    "typescript": "^6.0.3",
     "zod": "^4.4.2",
     "zustand": "^5.0.12"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.2.2",
+    "@types/node": "^25.6.0",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.10",
+    "tailwindcss": "^4.2.2",
+    "typescript": "^6.0.3"
   }
 }
