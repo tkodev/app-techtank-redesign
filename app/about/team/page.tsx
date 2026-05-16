@@ -10,18 +10,10 @@ export const metadata: Metadata = {
     "Meet the volunteers, organizers, and board members who make TechTank TO happen.",
 };
 
-// Deterministic color slot from name — cycles through brand palette
-const AVATAR_PALETTES = [
-  { bg: "bg-teal/15 dark:bg-teal/20", text: "text-teal dark:text-seafoam", ring: "ring-teal/20" },
-  { bg: "bg-amber/20 dark:bg-amber/15", text: "text-amber-dark dark:text-amber", ring: "ring-amber/25" },
-  { bg: "bg-mint/15 dark:bg-mint/20", text: "text-mint dark:text-seafoam", ring: "ring-mint/20" },
-  { bg: "bg-coral/10 dark:bg-coral/15", text: "text-coral dark:text-peach", ring: "ring-coral/20" },
-  { bg: "bg-seafoam/30 dark:bg-seafoam/10", text: "text-teal-dark dark:text-seafoam", ring: "ring-seafoam/30" },
-] as const;
+const AVATAR_PALETTE = { bg: "bg-teal/15 dark:bg-teal/20", text: "text-teal dark:text-seafoam", ring: "ring-teal/20" };
 
-function paletteFor(name: string) {
-  const sum = name.split("").reduce((acc, c) => acc + c.charCodeAt(0), 0);
-  return AVATAR_PALETTES[sum % AVATAR_PALETTES.length];
+function paletteFor(_name: string) {
+  return AVATAR_PALETTE;
 }
 
 function initials(name: string) {
