@@ -73,6 +73,7 @@ export const teamGroups: TeamGroup[] = [
       { name: "Justin Bento", pronouns: "he/him" },
       { name: "Jyle Vergara", pronouns: "she/her" },
       { name: "John Malapit", pronouns: "he/him" },
+      { name: "Jacky Tea", pronouns: "he/him" },
     ],
   },
   {
