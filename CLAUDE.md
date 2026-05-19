@@ -167,7 +167,8 @@ Components follow [shadcn/ui](https://ui.shadcn.com/) patterns with
 - Feature work happens on the branch specified in the session brief
   (currently `claude/techtank-toronto-prd-kuQxt`).
 - Create new commits rather than amending. Use HEREDOC commit messages.
-- Never force-push or skip hooks without explicit permission.
+- Never force-push to any branch, especially `main`. No exceptions.
+- Never skip hooks without explicit permission.
 - Do not open a pull request unless explicitly asked.
 - Do not sign commits or PRs as Claude, and do not include
   `claude.ai/code` session links, `Co-Authored-By: Claude` trailers,

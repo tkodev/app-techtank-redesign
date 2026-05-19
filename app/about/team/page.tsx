@@ -71,7 +71,7 @@ function AvatarSm({ name }: { name: string }) {
 
 function BoardCard({ name, pronouns, role, bio }: TeamMember) {
   return (
-    <div className="poster-card group relative overflow-hidden p-8 flex flex-col gap-6 shadow-soft-lg">
+    <div className="poster-card gradient-brand group relative overflow-hidden p-8 flex flex-col gap-6 shadow-soft-lg">
       {/* Decorative circle */}
       <div className="pointer-events-none absolute -top-8 -right-8 h-40 w-40 rounded-full bg-white/10 dark:bg-white/5" />
       <div className="pointer-events-none absolute -bottom-12 -left-6 h-32 w-32 rounded-full bg-white/10 dark:bg-white/5" />
